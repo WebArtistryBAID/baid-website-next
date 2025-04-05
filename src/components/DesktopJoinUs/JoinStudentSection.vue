@@ -2,7 +2,7 @@
   <div class="section font-sans">
     <div>
       <NotFancyTitle
-        :cn="t('JoinUs.Student.Title')"
+        :cn="$t('JoinUs.Student.Title')"
         color="red"
         en="Admission"
       />

@@ -22,7 +22,7 @@
       <span
         :style="{ color: props.color }"
         class="w-max font-sans tracking-wide"
-      >{{ t('HomePage.ReadMore') }}</span>
+      >{{ $t('HomePage.ReadMore') }}</span>
     </div>
   </router-link>
 </template>

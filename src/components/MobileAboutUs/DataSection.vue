@@ -1,7 +1,7 @@
 <template>
   <div class="text-white bg-[var(--standard-blue)]">
     <section class="section">
-      <MobileTitle>{{ t('AboutUs.Data.Title') }}</MobileTitle>
+      <MobileTitle>{{ $t('AboutUs.Data.Title') }}</MobileTitle>
       <div class="flex flex-col gap-5">
         <div
           v-for="datum in pageData.data"

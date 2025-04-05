@@ -15,7 +15,7 @@
         class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60"
         style="line-height: 70px"
       >
-        {{ t(`views.${route.name}`) }}
+        {{ $t(`views.${route.name}`) }}
       </router-link>
     </li>
     <!-- Block -->
@@ -42,7 +42,7 @@
         :href="subRoute.path"
         class="h-13 w-full text-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
       >
-        {{ t(subRoute.name) }}
+        {{ $t(subRoute.name) }}
       </a>
     </div>
   </div>

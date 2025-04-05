@@ -4,7 +4,7 @@
     class="my-10 py-5 flex flex-col justify-center items-center bg-gray-200"
   >
     <h1 class="text-10 font-300 font-title text-center">
-      {{ t('StudentLife.Clubs.Title') }}
+      {{ $t('StudentLife.Clubs.Title') }}
     </h1>
     <div class="flex justify-center items-center w-274">
       <DesktopSwiper

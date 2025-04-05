@@ -21,7 +21,7 @@
                 {{ item.description }}
               </p>
               <p class="op-50 text-white">
-                {{ t('NewsPage.Publish') }} {{ item.date }}
+                {{ $t('NewsPage.Publish') }} {{ item.date }}
               </p>
               <p class="text-right mt-5">
                 <RouterLink

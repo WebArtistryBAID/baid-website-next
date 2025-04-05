@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <MobileTitle>{{ t('AboutUs.Accreditation.Title') }}</MobileTitle>
+    <MobileTitle>{{ $t('AboutUs.Accreditation.Title') }}</MobileTitle>
     <pre v-html="pageData.accreditation" />
     <MobileCard
       :autoplay="true"
@@ -13,7 +13,7 @@
             :src="image"
             class="max-h-15 w-auto h-auto object-cover m-b-2"
           >
-          <span class="font-sans">{{ t(name) }}</span>
+          <span class="font-sans">{{ $t(name) }}</span>
         </div>
       </template>
     </MobileCard>

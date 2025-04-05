@@ -2,7 +2,7 @@
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
       <h1 class="text-18 font-sans text-white">
-        {{ t('views.AboutUs') }}
+        {{ $t('views.AboutUs') }}
       </h1>
     </CarouselHorizontal>
     <section id="overview">
@@ -20,7 +20,7 @@
     <section id="data">
       <div class="section important:p-b-0">
         <NotFancyTitle
-          :cn="t('AboutUs.Data.Title')"
+          :cn="$t('AboutUs.Data.Title')"
           color="blue"
           en="Data"
         />
@@ -45,15 +45,12 @@ import NotFancyTitle from '../../components/NotFancyTitle.vue'
 import dataZH from '@data/zh-CN/AboutUs.json'
 import dataEN from '@data/en-US/AboutUs.json'
 
-import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n({ useScope: 'global' })
 
 // Provide page data
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
-
-// i18n
-const { t } = useI18n()
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <NotFancyTitle
-      :cn="t('AboutUs.Overview.Title')"
+      :cn="$t('AboutUs.Overview.Title')"
       color="blue"
       en="Overview"
     />

@@ -2,7 +2,7 @@
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
       <h1 class="text-18 font-sans text-white">
-        {{ t('views.JoinUs') }}
+        {{ $t('views.JoinUs') }}
       </h1>
     </CarouselHorizontal>
     <div class="max-w-5xl mx-auto">
@@ -33,5 +33,5 @@ const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
 
 // i18n
-const { t } = useI18n()
+
 </script>

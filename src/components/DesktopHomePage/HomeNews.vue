@@ -10,7 +10,7 @@
         :to="'/' + $i18n.locale + '/news'"
         class="flex items-center gap-1 text-black decoration-none op-80 hover:op-100 transition"
       >
-        <span class="font-sans">{{ t('HomePage.ReadMore') }}</span>
+        <span class="font-sans">{{ $t('HomePage.ReadMore') }}</span>
         <svg
           height="25"
           viewBox="0 0 16 16"

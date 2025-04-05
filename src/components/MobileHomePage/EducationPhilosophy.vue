@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <MobileTitle>{{ t('HomePage.EducationPhilosophy.Title') }}</MobileTitle>
+    <MobileTitle>{{ $t('HomePage.EducationPhilosophy.Title') }}</MobileTitle>
     <MobileCard
       :autoplay="true"
       :bg="swiperBg"

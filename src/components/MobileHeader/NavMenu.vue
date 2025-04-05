@@ -18,7 +18,7 @@
             class="inline-block decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 leading-16"
             @click="emit('close')"
           >
-            {{ t(`views.${route.name}`) }}
+            {{ $t(`views.${route.name}`) }}
           </router-link>
         </li>
       </div>

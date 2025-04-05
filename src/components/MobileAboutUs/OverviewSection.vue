@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <MobileTitle>{{ t('AboutUs.Overview.Title') }}</MobileTitle>
+    <MobileTitle>{{ $t('AboutUs.Overview.Title') }}</MobileTitle>
     <pre v-html="pageData.overview" />
   </section>
 </template>

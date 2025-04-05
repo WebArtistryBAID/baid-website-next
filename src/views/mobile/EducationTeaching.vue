@@ -1,8 +1,8 @@
 <template>
   <div class="font-sans">
     <MobileTitleSplash
-      :bottom="t('EducationTeaching.Splash.Bottom')"
-      :top="t('EducationTeaching.Splash.Top')"
+      :bottom="@t('EducationTeaching.Splash.Bottom')"
+      :top="@t('EducationTeaching.Splash.Top')"
       color="red"
     >
       <div class="placeholder" />
@@ -36,5 +36,5 @@ const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
 
 // i18n
-const { t } = useI18n()
+
 </script>

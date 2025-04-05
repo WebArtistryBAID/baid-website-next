@@ -25,6 +25,7 @@ declare module '*.svg' {
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    $clientType: 'mobile' | 'desktop'
+    $clientType: 'mobile' | 'desktop',
+    $t: (key: string) => string
   }
 }

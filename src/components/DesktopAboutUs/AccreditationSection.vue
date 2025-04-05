@@ -2,7 +2,7 @@
   <div class="section text-white flex items-center">
     <div class="w-1/2 p-r-16 border-0 border-r-2 border-white/50 border-solid">
       <NotFancyTitle
-        :cn="t('AboutUs.Accreditation.Title')"
+        :cn="$t('AboutUs.Accreditation.Title')"
         color="white"
         en="Accreditation"
       />
@@ -26,12 +26,12 @@
           >
             <div class="h-30 text-center">
               <img
-                :alt="t(acc.name)"
+                :alt="$t(acc.name)"
                 :src="acc.image"
                 class="h-24 mb-5"
               >
               <p class="font-sans text-black">
-                {{ t(acc.name) }}
+                {{ $t(acc.name) }}
               </p>
             </div>
           </div>

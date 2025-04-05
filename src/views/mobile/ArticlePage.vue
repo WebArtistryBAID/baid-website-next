@@ -23,7 +23,6 @@ import MobileHead from '../../components/MobileHead.vue'
 import '../../assets/styles/article.css'
 import { useRoute } from 'vue-router'
 import { ref, watchEffect } from 'vue'
-import { useI18n } from 'vue-i18n'
 
 const route = useRoute()
 
@@ -43,7 +42,7 @@ watchEffect(async () => {
 
 
 // i18n
-const { t } = useI18n()
+
 </script>
 
 <style>

@@ -5,7 +5,7 @@
       class="items-center"
     >
       <NotFancyTitle
-        :cn="t('AboutUs.Alumni.Title')"
+        :cn="$t('AboutUs.Alumni.Title')"
         color="red"
         en="Alumni"
       />

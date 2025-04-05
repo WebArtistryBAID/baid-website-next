@@ -2,7 +2,7 @@
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
       <h1 class="text-18 font-sans text-white">
-        {{ t('views.StudentLife') }}
+        {{ $t('views.StudentLife') }}
       </h1>
     </CarouselHorizontal>
     <section id="activities">
@@ -33,5 +33,5 @@ const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
 
 // i18n
-const { t } = useI18n()
+
 </script>

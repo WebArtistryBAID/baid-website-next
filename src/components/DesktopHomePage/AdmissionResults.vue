@@ -9,7 +9,7 @@
       <div class="w-full bg-gray-300 h-60" />
       <div class="w-full h-max bg-[var(--standard-red)] p-8">
         <h3 class="text-white text-8">
-          {{ t('HomePage.AdmissionResults.TitleSub') }}
+          {{ $t('HomePage.AdmissionResults.TitleSub') }}
         </h3>
         <pre
           class="text-white op-90 m-b-10"

@@ -16,7 +16,7 @@
         {{ props.news.intro }}
       </p>
       <p class="op-50">
-        {{ t('NewsPage.Publish') }} {{ props.news.date }}
+        {{ $t('NewsPage.Publish') }} {{ props.news.date }}
       </p>
     </div>
 

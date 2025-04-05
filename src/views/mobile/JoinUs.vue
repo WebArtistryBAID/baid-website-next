@@ -23,9 +23,9 @@
       />
       <JoinInfo
         v-else
-        :content="t(content)"
-        :join="t(join)"
-        :title="t(title)"
+        :content="$t(content)"
+        :join="$t(join)"
+        :title="$t(title)"
         @back="isNav = true"
       />
     </Transition>
@@ -54,5 +54,5 @@ const { locale } = useI18n({ useScope: 'global' })
 // Provide page data
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 
-const { t } = useI18n()
+
 </script>

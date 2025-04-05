@@ -2,7 +2,7 @@
   <div class="section">
     <div class="flex justify-end">
       <NotFancyTitle
-        :cn="t('StudentLife.Activities.Title')"
+        :cn="$t('StudentLife.Activities.Title')"
         color="red"
         en="Activities"
         right

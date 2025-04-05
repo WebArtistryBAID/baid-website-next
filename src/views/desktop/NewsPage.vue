@@ -49,7 +49,7 @@
         <div class="flex-1" />
 
         <p class="op-50">
-          {{ t('NewsPage.Publish') }} {{ item.date }}
+          {{ $t('NewsPage.Publish') }} {{ item.date }}
         </p>
       </div>
     </div>
@@ -62,7 +62,6 @@ import { useRoute, useRouter } from 'vue-router'
 import NotFancyTitle from '../../components/NotFancyTitle.vue'
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
-import { useI18n } from 'vue-i18n'
 
 const route = useRoute()
 const router = useRouter()
@@ -85,5 +84,5 @@ watchEffect(() => {
 })
 
 // i18n
-const { t } = useI18n()
+
 </script>

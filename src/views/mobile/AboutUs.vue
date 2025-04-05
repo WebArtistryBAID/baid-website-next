@@ -1,7 +1,7 @@
 <template>
   <MobileTitleSplash
-    :bottom="t('AboutUs.Splash.Bottom')"
-    :top="t('AboutUs.Splash.Top')"
+    :bottom="$t('AboutUs.Splash.Bottom')"
+    :top="$t('AboutUs.Splash.Top')"
     color="blue"
   >
     <MobileHead :img="imgHeader1" />
@@ -36,5 +36,5 @@ const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
 
 // i18n
-const { t } = useI18n()
+
 </script>

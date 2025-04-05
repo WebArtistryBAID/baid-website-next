@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <MobileTitle>{{ t('AboutUs.Alumni.Title') }}</MobileTitle>
+    <MobileTitle>{{ $t('AboutUs.Alumni.Title') }}</MobileTitle>
     <MobileCard
       :border="false"
       :items="pageData.alumni"

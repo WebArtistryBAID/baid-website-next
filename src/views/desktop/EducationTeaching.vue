@@ -2,7 +2,7 @@
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
       <h1 class="text-18 font-sans text-white">
-        {{ t('views.EducationTeaching') }}
+        {{ $t('views.EducationTeaching') }}
       </h1>
     </CarouselHorizontal>
     <section id="curriculums">

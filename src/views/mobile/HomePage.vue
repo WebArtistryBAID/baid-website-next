@@ -3,7 +3,7 @@
     <!-- BG -->
     <HomeBackground />
     <MobileHead :img="firstImg">
-      {{ t('views.HomePage') }}
+      {{ $t('views.HomePage') }}
     </MobileHead>
     <section class="section">
       <MobileTitle>{{ data.introduction_title }}</MobileTitle>
@@ -70,7 +70,4 @@ watchEffect(() => {
   })
   news.value = data
 })
-
-// i18n
-const { t } = useI18n()
 </script>
