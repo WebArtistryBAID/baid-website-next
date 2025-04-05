@@ -32,5 +32,5 @@
 </template>
 
 <script lang="ts" setup>
-import imgHeader1 from '../../assets/images/homeBg1.jpg'
+import imgHeader1 from '@/assets/images/homeBg1.jpg'
 </script>

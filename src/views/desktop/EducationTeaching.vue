@@ -20,11 +20,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
-import CurriculumsIntroduction from '../../components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
-import LearningMethods from '../../components/DesktopEducationTeaching/LearningMethods.vue'
-import StudentGuidance from '../../components/DesktopEducationTeaching/StudentGuidance.vue'
-import WonderfulMoments from '../../components/DesktopEducationTeaching/WonderfulMoments.vue'
+import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
+import CurriculumsIntroduction from '@/components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
+import LearningMethods from '@/components/DesktopEducationTeaching/LearningMethods.vue'
+import StudentGuidance from '@/components/DesktopEducationTeaching/StudentGuidance.vue'
+import WonderfulMoments from '@/components/DesktopEducationTeaching/WonderfulMoments.vue'
 
 // Data
 import dataZH from '@data/zh-CN/Education.json'

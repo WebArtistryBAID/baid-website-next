@@ -59,7 +59,7 @@
 <script lang="ts" setup>
 import { ref, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import NotFancyTitle from '../../components/NotFancyTitle.vue'
+import NotFancyTitle from '@/components/NotFancyTitle.vue'
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
 

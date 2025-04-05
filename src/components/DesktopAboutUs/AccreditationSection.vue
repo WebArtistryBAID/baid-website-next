@@ -42,11 +42,11 @@
 </template>
 
 <script lang="ts" setup>
-import imgACT from '../../assets/images/AboutUs/ACT.svg'
-import imgAP from '../../assets/images/AboutUs/AP.svg'
-import imgCIS from '../../assets/images/AboutUs/CIS.png'
-import imgApple from '../../assets/images/AboutUs/Apple.svg'
-import imgCam from '../../assets/images/AboutUs/Cambridge.png'
+import imgACT from '@/assets/images/AboutUs/ACT.svg'
+import imgAP from '@/assets/images/AboutUs/AP.svg'
+import imgCIS from '@/assets/images/AboutUs/CIS.png'
+import imgApple from '@/assets/images/AboutUs/Apple.svg'
+import imgCam from '@/assets/images/AboutUs/Cambridge.png'
 
 import NotFancyTitle from '../NotFancyTitle.vue'
 import DesktopSwiper from '@/components/DesktopSwiper.vue'

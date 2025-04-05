@@ -15,9 +15,9 @@
 </template>
 
 <script lang="ts" setup>
-import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
-import ClubsSection from '../../components/DesktopStudentLife/ClubsSection.vue'
-import ActivitiesSection from '../../components/DesktopStudentLife/ActivitiesSection.vue'
+import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
+import ClubsSection from '@/components/DesktopStudentLife/ClubsSection.vue'
+import ActivitiesSection from '@/components/DesktopStudentLife/ActivitiesSection.vue'
 
 // Data
 import dataZH from '@data/zh-CN/StudentLife.json'

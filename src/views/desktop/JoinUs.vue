@@ -16,9 +16,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
-import JoinStudentSection from '../../components/DesktopJoinUs/JoinStudentSection.vue'
-import JoinFacultySection from '../../components/DesktopJoinUs/JoinFacultySection.vue'
+import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
+import JoinStudentSection from '@/components/DesktopJoinUs/JoinStudentSection.vue'
+import JoinFacultySection from '@/components/DesktopJoinUs/JoinFacultySection.vue'
 
 import dataZH from '@data/zh-CN/JoinUs.json'
 import dataEN from '@data/en-US/JoinUs.json'

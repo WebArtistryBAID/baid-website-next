@@ -55,7 +55,7 @@
 </template>
 
 <script lang="ts" setup>
-import { routes } from '../../router'
+import { routes } from '@/router'
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'

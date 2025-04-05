@@ -1,10 +1,9 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "jsx": "preserve",
-    "esModuleInterop": true,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "preserveSymlinks": false,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -13,7 +12,9 @@
     }
   },
   "include": [
-    "src",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
     "vite.config.ts"
   ]
 }

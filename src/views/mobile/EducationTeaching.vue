@@ -17,11 +17,11 @@
 </template>
 
 <script lang="ts" setup>
-import Curriculums from '../../components/MobileEducationTeaching/CurriculumsIntroduction.vue'
-import LearningMethod from '../../components/MobileEducationTeaching/LearningMethod.vue'
-import StudentGuidance from '../../components/MobileEducationTeaching/StudentGuidance.vue'
-import WonderfulMoment from '../../components/MobileEducationTeaching/WonderfulMoments.vue'
-import MobileTitleSplash from '../../components/MobileTitleSplash.vue'
+import Curriculums from '@/components/MobileEducationTeaching/CurriculumsIntroduction.vue'
+import LearningMethod from '@/components/MobileEducationTeaching/LearningMethod.vue'
+import StudentGuidance from '@/components/MobileEducationTeaching/StudentGuidance.vue'
+import WonderfulMoment from '@/components/MobileEducationTeaching/WonderfulMoments.vue'
+import MobileTitleSplash from '@/components/MobileTitleSplash.vue'
 
 import dataZH from '@data/zh-CN/Education.json'
 import dataEN from '@data/en-US/Education.json'

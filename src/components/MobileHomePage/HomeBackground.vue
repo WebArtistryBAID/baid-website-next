@@ -6,5 +6,5 @@
 </template>
 
 <script lang="ts" setup>
-import bg from '../../assets/images/mobileHomeBg.svg'
+import bg from '@/assets/images/mobileHomeBg.svg'
 </script>

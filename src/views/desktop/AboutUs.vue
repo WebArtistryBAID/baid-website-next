@@ -33,20 +33,20 @@
 </template>
 
 <script lang="ts" setup>
-import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
-import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
-import AccreditationSection from '../../components/DesktopAboutUs/AccreditationSection.vue'
-import DataSection from '../../components/DesktopAboutUs/DataSection.vue'
+import OverviewSection from '@/components/DesktopAboutUs/OverviewSection.vue'
+import AlumniSection from '@/components/DesktopAboutUs/AlumniSection.vue'
+import AccreditationSection from '@/components/DesktopAboutUs/AccreditationSection.vue'
+import DataSection from '@/components/DesktopAboutUs/DataSection.vue'
 
-import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
-import NotFancyTitle from '../../components/NotFancyTitle.vue'
+import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
+import NotFancyTitle from '@/components/NotFancyTitle.vue'
 
 // Data
 import dataZH from '@data/zh-CN/AboutUs.json'
 import dataEN from '@data/en-US/AboutUs.json'
 
-import { computed, provide } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { computed, provide } from 'vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

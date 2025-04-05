@@ -33,9 +33,9 @@
 </template>
 
 <script lang="ts" setup>
-import number1 from '../../assets/images/Number_1.svg'
-import number2 from '../../assets/images/Number_2.svg'
-import number3 from '../../assets/images/Number_3.svg'
+import number1 from '@/assets/images/Number_1.svg'
+import number2 from '@/assets/images/Number_2.svg'
+import number3 from '@/assets/images/Number_3.svg'
 import MobileCard from '../MobileCard.vue'
 
 import 'swiper/css'

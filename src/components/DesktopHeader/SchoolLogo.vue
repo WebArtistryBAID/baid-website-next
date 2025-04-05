@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import logoNormal from '../../assets/images/logoNormal.png'
+import logoNormal from '@/assets/images/logoNormal.png'
 
 const props = defineProps({
   color: {

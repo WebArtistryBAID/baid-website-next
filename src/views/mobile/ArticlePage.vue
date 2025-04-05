@@ -18,9 +18,9 @@
 </template>
 
 <script lang="ts" setup>
-import MobileHead from '../../components/MobileHead.vue'
+import MobileHead from '@/components/MobileHead.vue'
 
-import '../../assets/styles/article.css'
+import '@/assets/styles/article.css'
 import { useRoute } from 'vue-router'
 import { ref, watchEffect } from 'vue'
 
@@ -33,7 +33,7 @@ watchEffect(async () => {
   loading.value = true
   content.value = (
     await import(
-      `../../../data/${route.params.lang}/News-${route.params.title}.json`
+        `@/../data/${route.params.lang}/News-${route.params.title}.json`
       )
   ).default
 

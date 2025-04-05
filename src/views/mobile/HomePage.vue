@@ -29,13 +29,13 @@ import HomeBackground from '@/components/MobileHomePage/HomeBackground.vue'
 import MobileCard from '@/components/MobileCard.vue'
 import MobileHead from '@/components/MobileHead.vue'
 
-import firstImg from '../../assets/images/HomePage/Autumn.jpg'
-import VideoCard from '../../components/VideoCard.vue'
-import MobileTitle from '../../components/MobileTitle.vue'
+import firstImg from '@/assets/images/HomePage/Autumn.jpg'
+import VideoCard from '@/components/VideoCard.vue'
+import MobileTitle from '@/components/MobileTitle.vue'
 import { computed, provide, ref, watchEffect } from 'vue'
-import NewsSection from '../../components/MobileHomePage/NewsSection.vue'
-import PrincipalMessage from '../../components/MobileHomePage/PrincipalMessage.vue'
-import HomeSplash from '../../components/MobileHomePage/HomeSplash.vue'
+import NewsSection from '@/components/MobileHomePage/NewsSection.vue'
+import PrincipalMessage from '@/components/MobileHomePage/PrincipalMessage.vue'
+import HomeSplash from '@/components/MobileHomePage/HomeSplash.vue'
 
 import { useI18n } from 'vue-i18n'
 // Data
@@ -44,7 +44,7 @@ import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'
 import dataEN from '@data/en-US/Home.json'
 import { useRoute } from 'vue-router'
-import EducationPhilosophy from '../../components/MobileHomePage/EducationPhilosophy.vue'
+import EducationPhilosophy from '@/components/MobileHomePage/EducationPhilosophy.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

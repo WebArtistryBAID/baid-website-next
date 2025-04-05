@@ -56,7 +56,7 @@
 
 <script lang="ts" setup>
 import ActivityBlock from '@/components/DesktopStudentLife/ActivityBlock.vue'
-import NotFancyTitle from '../../components/NotFancyTitle.vue'
+import NotFancyTitle from '@/components/NotFancyTitle.vue'
 import { inject } from 'vue'
 
 const pageData = inject('data')

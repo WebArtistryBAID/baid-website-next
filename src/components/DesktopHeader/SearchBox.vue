@@ -104,7 +104,7 @@ async function loadIndex(lang) {
   if (!idx[lang]) {
     // Load search index
     idx[lang] = lunr.Index.load(
-      await import(`../../../data/${lang}/search.json`)
+        await import(`@/../data/${lang}/search.json`)
     )
     console.log('Loaded index for', lang)
   }
@@ -115,7 +115,7 @@ const db = {}
 async function loadDb(lang) {
   if (!db[lang]) {
     // Load search index
-    db[lang] = (await import(`../../../data/${lang}/db.json`)).default
+    db[lang] = (await import(`@/../data/${lang}/db.json`)).default
     console.log('Loaded db for', lang)
   }
 }

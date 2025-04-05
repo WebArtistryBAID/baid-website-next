@@ -24,11 +24,11 @@
 import { inject } from 'vue'
 import MobileCard from '../MobileCard.vue'
 import MobileTitle from '../MobileTitle.vue'
-import imgACT from '../../assets/images/AboutUs/ACT.svg'
-import imgAP from '../../assets/images/AboutUs/AP.svg'
-import imgCIS from '../../assets/images/AboutUs/CIS.png'
-import imgApple from '../../assets/images/AboutUs/Apple.svg'
-import imgCam from '../../assets/images/AboutUs/Cambridge.png'
+import imgACT from '@/assets/images/AboutUs/ACT.svg'
+import imgAP from '@/assets/images/AboutUs/AP.svg'
+import imgCIS from '@/assets/images/AboutUs/CIS.png'
+import imgApple from '@/assets/images/AboutUs/Apple.svg'
+import imgCam from '@/assets/images/AboutUs/Cambridge.png'
 
 const pageData = inject('data')
 

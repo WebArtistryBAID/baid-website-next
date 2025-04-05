@@ -29,7 +29,20 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const props = defineProps([ 'top', 'bottom', 'color' ])
+const props = defineProps({
+  top: {
+    type: String,
+    required: true
+  },
+  bottom: {
+    type: String,
+    required: true
+  },
+  color: {
+    type: String,
+    required: true
+  }
+})
 
 const show = ref(true)
 </script>

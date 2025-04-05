@@ -62,7 +62,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import homeBg1 from '../../assets/images/homeBg1.jpg'
+import homeBg1 from '@/assets/images/homeBg1.jpg'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import { inject } from 'vue'
 

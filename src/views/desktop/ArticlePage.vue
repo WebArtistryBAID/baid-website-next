@@ -38,9 +38,9 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router'
 import { ref, watchEffect } from 'vue'
-import '../../assets/styles/article.css'
+import '@/assets/styles/article.css'
 
-import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
+import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
 
 const route = useRoute()
 
@@ -51,7 +51,7 @@ watchEffect(async () => {
   loading.value = true
   content.value = (
     await import(
-      `../../../data/${route.params.lang}/News-${route.params.title}.json`
+        `@/../data/${route.params.lang}/News-${route.params.title}.json`
       )
   ).default
 

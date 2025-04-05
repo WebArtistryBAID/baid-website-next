@@ -37,69 +37,7 @@
 </template>
 
 <script lang="ts" setup>
-// Images
-import CarouselVertical from '../CarouselVertical.vue'
 import { inject } from 'vue'
 
-// Data
 const pageData = inject('data')
-
-function scrollTo(id) {
-  const element = document.querySelector(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
-}
 </script>
-
-<style scoped>
-.arrow div {
-  position: absolute;
-  background-color: white;
-  /* border-radius: 3px; */
-}
-
-.right {
-  width: 50%;
-  height: 3px;
-  left: 50%;
-}
-
-.left {
-  width: 50%;
-  height: 3px;
-  right: 50%;
-}
-
-.middle {
-  width: 3px;
-  height: 10px;
-  left: 50%;
-  bottom: 0px;
-  transform: translateX(-50%);
-}
-
-.learnMore:hover .arrow {
-  margin-top: 25px;
-}
-
-.learnMore:hover .left {
-  width: 30px;
-  border-radius: 3px;
-
-  transform: rotate(40deg) translateX(6px);
-}
-
-.learnMore:hover .right {
-  width: 30px;
-  border-radius: 3px;
-  transform: rotate(-40deg) translateX(-6px);
-}
-
-.learnMore:hover .middle {
-  opacity: 1;
-  height: 30px;
-  border-radius: 3px;
-  bottom: -10px;
-}
-</style>

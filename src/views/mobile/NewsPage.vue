@@ -52,8 +52,8 @@
 import { ref, watchEffect } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 
-import MobileTitle from '../../components/MobileTitle.vue'
-import MobileCard from '../../components/MobileCard.vue'
+import MobileTitle from '@/components/MobileTitle.vue'
+import MobileCard from '@/components/MobileCard.vue'
 
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'

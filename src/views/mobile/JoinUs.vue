@@ -33,8 +33,8 @@
 </template>
 
 <script lang="ts" setup>
-import JoinInfo from '../../components/MobileJoinUs/JoinInfo.vue'
-import JoinNav from '../../components/MobileJoinUs/JoinNav.vue'
+import JoinInfo from '@/components/MobileJoinUs/JoinInfo.vue'
+import JoinNav from '@/components/MobileJoinUs/JoinNav.vue'
 
 import { computed, ref } from 'vue'
 
