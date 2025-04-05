@@ -6,9 +6,9 @@
     <div
       class="bg-white rd-5 p-6 max-w-80vw max-h-70vh box-border overflow-auto"
     >
-      <slot name="content"></slot>
+      <slot name="content" />
     </div>
-    <slot name="description"></slot>
+    <slot name="description" />
   </div>
 </template>
 <style scoped>

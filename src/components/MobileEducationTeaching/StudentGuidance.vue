@@ -7,23 +7,24 @@
     </div>
 
     <div
-      class="h-50 rd-5 drop-shadow flex flex-col justify-end box-border my-6 mx-2 bg-cover overflow-hidden"
       v-for="data in pageData.student_mentorship"
       :key="data.title"
       :style="{ backgroundImage: `url(${data.image})` }"
+      class="h-50 rd-5 drop-shadow flex flex-col justify-end box-border my-6 mx-2 bg-cover overflow-hidden"
     >
-      <div class="gradient-bg p-4 color-white">
+      <div class="gradient-bg p-4 text-white">
         <div class="text-6 font-black">
           {{ data.title }}
         </div>
-        <div v-html="data.content"></div>
+        <div v-html="data.content" />
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { inject } from 'vue'
+
 const pageData = inject('data')
 </script>
 

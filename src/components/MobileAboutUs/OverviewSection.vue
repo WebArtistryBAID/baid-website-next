@@ -1,11 +1,11 @@
 <template>
   <section class="section">
-    <MobileTitle>{{ $t('AboutUs.Overview.Title') }}</MobileTitle>
-    <pre v-html="pageData.overview"></pre>
+    <MobileTitle>{{ t('AboutUs.Overview.Title') }}</MobileTitle>
+    <pre v-html="pageData.overview" />
   </section>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import MobileTitle from '../MobileTitle.vue'
 
 import { inject } from 'vue'

@@ -1,14 +1,14 @@
 <template>
   <footer
-    class="w-full bg-black h-70 mt-45px font-sans"
     :style="{ 'background-image': 'url(' + imgFooter + ')' }"
+    class="w-full bg-black h-70 mt-45px font-sans"
   >
     <div class="cover w-full h-full">
-      <div class="flex color-white w-full h-full justify-center items-center">
+      <div class="flex text-white w-full h-full justify-center items-center">
         <div class="w-50% mx-24 flex items-center justify-end">
           <div>
             <a
-              class="color-white !decoration-none"
+              class="text-white !decoration-none"
               href="https://beian.miit.gov.cn"
               target="_blank"
             >
@@ -19,19 +19,19 @@
         </div>
         <div class="w-50% mx-24 flex items-center">
           <img
-            class="w-sm inline object-cover"
             :src="logoFullWhite"
             alt="logo"
-          />
+            class="w-sm inline object-cover"
+          >
           <span class="m-x-2 text-8 font-bold">国际部</span>
         </div>
       </div>
     </div>
   </footer>
 </template>
-<script setup>
-import logoFullWhite from '../assets/images/logoFullWhite.png?webp'
-import imgFooter from '../assets/images/Footer-blue.jpg?webp'
+<script lang="ts" setup>
+import logoFullWhite from '../assets/images/logoFullWhite.png'
+import imgFooter from '../assets/images/Footer-blue.jpg'
 </script>
 <style>
 footer {
@@ -39,6 +39,7 @@ footer {
   background-size: cover;
   background-position: center;
 }
+
 .cover {
   background-color: rgba(0, 0, 0, 0.5);
 }

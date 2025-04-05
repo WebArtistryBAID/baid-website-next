@@ -1,22 +1,22 @@
 <template>
   <div class="font-sans">
     <MobileTitleSplash
-      :top="$t('EducationTeaching.Splash.Top')"
-      :bottom="$t('EducationTeaching.Splash.Bottom')"
+      :bottom="t('EducationTeaching.Splash.Bottom')"
+      :top="t('EducationTeaching.Splash.Top')"
       color="red"
     >
-      <div class="placeholder"></div>
+      <div class="placeholder" />
       <section class="section">
-        <Curriculums></Curriculums>
-        <LearningMethod></LearningMethod>
-        <StudentGuidance></StudentGuidance>
-        <WonderfulMoment></WonderfulMoment>
+        <Curriculums />
+        <LearningMethod />
+        <StudentGuidance />
+        <WonderfulMoment />
       </section>
     </MobileTitleSplash>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import Curriculums from '../../components/MobileEducationTeaching/CurriculumsIntroduction.vue'
 import LearningMethod from '../../components/MobileEducationTeaching/LearningMethod.vue'
 import StudentGuidance from '../../components/MobileEducationTeaching/StudentGuidance.vue'
@@ -34,4 +34,7 @@ const { locale } = useI18n({ useScope: 'global' })
 // Provide page data
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
+
+// i18n
+const { t } = useI18n()
 </script>

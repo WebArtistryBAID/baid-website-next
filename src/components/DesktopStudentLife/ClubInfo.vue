@@ -10,29 +10,51 @@
         <h3 class="text-8">
           {{ props.name }}
         </h3>
-        <pre class="my-4" v-html="props.description"></pre>
+        <pre
+          class="my-4"
+          v-html="props.description"
+        />
       </div>
       <div class="flex items-center justify-center">
         <div class="flex items-center px-4 max-w-160 w-full">
-          <DesktopSwiper
-            ><swiper-slide v-for="(img, index) in props.images" :key="img"
-              ><img
+          <DesktopSwiper>
+            <swiper-slide
+              v-for="(img, index) in props.images"
+              :key="img"
+            >
+              <img
                 :src="img"
+                alt="pic1"
                 class="w-full object-cover aspect-3/2"
-                v-on:click="change(index)"
-                alt="pic1" /></swiper-slide
-          ></DesktopSwiper>
+                @click="change(index)"
+              >
+            </swiper-slide>
+          </DesktopSwiper>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { SwiperSlide } from 'swiper/vue'
 import DesktopSwiper from '../DesktopSwiper.vue'
 
-const props = defineProps(['name', 'description', 'images'])
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  images: {
+    type: Array,
+    required: true
+  }
+})
+
 </script>
 
 <style scoped>

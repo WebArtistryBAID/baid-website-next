@@ -1,27 +1,27 @@
 <template>
   <MobileTitleSplash
-    :top="$t('AboutUs.Splash.Top')"
-    :bottom="$t('AboutUs.Splash.Bottom')"
+    :bottom="t('AboutUs.Splash.Bottom')"
+    :top="t('AboutUs.Splash.Top')"
     color="blue"
   >
-    <MobileHead :img="imgHeader1"></MobileHead>
+    <MobileHead :img="imgHeader1" />
     <section>
-      <OverviewSection></OverviewSection>
-      <AlumniSection></AlumniSection>
-      <AccreditationSection></AccreditationSection>
-      <DataSection></DataSection>
+      <OverviewSection />
+      <AlumniSection />
+      <AccreditationSection />
+      <DataSection />
     </section>
   </MobileTitleSplash>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import OverviewSection from '../../components/MobileAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/MobileAboutUs/AlumniSection.vue'
 import DataSection from '../../components/MobileAboutUs/DataSection.vue'
 import AccreditationSection from '../../components/MobileAboutUs/AccreditationSection.vue'
 import MobileTitleSplash from '../../components/MobileTitleSplash.vue'
 import MobileHead from '../../components/MobileHead.vue'
-import imgHeader1 from '../../assets/images/AboutUs/Header_1.jpg?webp'
+import imgHeader1 from '../../assets/images/AboutUs/Header_1.jpg'
 
 import dataZH from '@data/zh-CN/AboutUs.json'
 import dataEN from '@data/en-US/AboutUs.json'
@@ -34,4 +34,7 @@ const { locale } = useI18n({ useScope: 'global' })
 // Provide page data
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
+
+// i18n
+const { t } = useI18n()
 </script>

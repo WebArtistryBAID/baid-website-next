@@ -1,22 +1,22 @@
 <template>
   <div class="w-screen h-[calc(100vh-5rem)] font-sans">
-    <div class="placeholder"></div>
+    <div class="placeholder" />
     <SplashBlock
-      title="特色活动"
       :image="archery"
       :items="data.activities"
-    ></SplashBlock>
+      title="特色活动"
+    />
     <SplashBlock
-      title="学生社团"
       :image="camping"
       :items="data.clubs"
-    ></SplashBlock>
+      title="学生社团"
+    />
   </div>
 </template>
 
-<script setup>
-import camping from '../../assets/images/StudentLife/Activities/Camping.jpg?webp'
-import archery from '../../assets/images/StudentLife/Activities/ZWTZY.jpg?webp'
+<script lang="ts" setup>
+import camping from '../../assets/images/StudentLife/Activities/Camping.jpg'
+import archery from '../../assets/images/StudentLife/Activities/ZWTZY.jpg'
 import SplashBlock from '../../components/MobileStudentLife/SplashBlock.vue'
 
 import dataZH from '@data/zh-CN/StudentLife.json'

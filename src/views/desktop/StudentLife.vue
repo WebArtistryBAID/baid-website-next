@@ -1,8 +1,8 @@
 <template>
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 font-sans color-white">
-        {{ $t('views.StudentLife') }}
+      <h1 class="text-18 font-sans text-white">
+        {{ t('views.StudentLife') }}
       </h1>
     </CarouselHorizontal>
     <section id="activities">
@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import ClubsSection from '../../components/DesktopStudentLife/ClubsSection.vue'
 import ActivitiesSection from '../../components/DesktopStudentLife/ActivitiesSection.vue'
@@ -31,4 +31,7 @@ const { locale } = useI18n({ useScope: 'global' })
 // Provide page data
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
+
+// i18n
+const { t } = useI18n()
 </script>

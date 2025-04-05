@@ -1,58 +1,60 @@
 <template>
   <div
     class="flex list-none p-0 relative h-full m-0 links"
-    v-on:mouseleave="showBlock = false"
+    @mouseleave="showBlock = false"
   >
     <li
       v-for="(route, index) in routesComputed"
-      v-bind:key="route.name"
-      v-on:mouseover="onHover(index, route.name)"
+      :key="route.name"
       class="h-full font-500 text-16px margin-left-right-10px"
+      @mouseover="onHover(index, route.name)"
     >
       <router-link
         :to="route.path"
-        class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-        style="line-height: 70px"
         active-class="important-opacity-100"
-        >{{ $t(`views.${route.name}`) }}
+        class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60"
+        style="line-height: 70px"
+      >
+        {{ t(`views.${route.name}`) }}
       </router-link>
     </li>
     <!-- Block -->
     <div
-      class="absolute w-30 h-17 bg-black opacity-0 z-10 pointer-events-none transition-opacity"
       :class="{ 'opacity-10': showBlock }"
       :style="{ left: blockLeft }"
-    ></div>
+      class="absolute w-30 h-17 bg-black opacity-0 z-10 pointer-events-none transition-opacity"
+    />
     <!-- Line -->
     <div
-      class="absolute w-15 h-1 z-10 bottom--0.5px translate-x-1/2 transition-opacity"
-      :style="{ left: lineLeft, 'background-color': lineColor }"
       :class="{ 'opacity-0': !lineLeft || !showLine }"
-    ></div>
+      :style="{ left: lineLeft, 'background-color': lineColor }"
+      class="absolute w-15 h-1 z-10 bottom--0.5px translate-x-1/2 transition-opacity"
+    />
     <!-- SubMenu -->
     <div
-      class="absolute top-17 w-60 bg-white opacity-0 z-10 transition-opacity shadow-lg"
       :class="{ '!opacity-100': showBlock }"
       :style="{ left: blockLeft }"
+      class="absolute top-17 w-60 bg-white opacity-0 z-10 transition-opacity shadow-lg"
     >
       <a
         v-for="(subRoute, index) in subRoutes[hover]"
         :key="index"
         :href="subRoute.path"
-        class="h-13 w-full color-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
+        class="h-13 w-full text-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
       >
-        {{ $t(subRoute.name) }}
+        {{ t(subRoute.name) }}
       </a>
     </div>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { routes } from '@/router'
 import { animate } from 'popmotion'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+
 const subRoutes = computed(() => ({
   HomePage: [
     {
@@ -143,7 +145,7 @@ const blockLeft = ref()
 // let submenuLeftAnimation
 const hover = ref()
 
-function onHover (index, name) {
+function onHover(index, name) {
   // OnHover: Block animation, Submenu animation
   if (!showBlock.value) {
     showBlock.value = true

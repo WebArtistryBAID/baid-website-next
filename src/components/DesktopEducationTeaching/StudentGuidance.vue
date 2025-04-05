@@ -4,41 +4,41 @@
       <div class="flex h-50vw max-h-180 min-h-80 justify-between my-45px">
         <div class="h-full mx-10 w-40% flex flex-col gap-10">
           <IntroductionBlock
-            :title="pageData.student_mentorship[0].title"
             :content="pageData.student_mentorship[0].content"
+            :title="pageData.student_mentorship[0].title"
             color="red"
           />
           <div
-            class="flex-1 bg-cover"
             :style="{
               backgroundImage: `url(${pageData.student_mentorship[0].image})`
             }"
+            class="flex-1 bg-cover"
           />
         </div>
         <div class="h-full mx-10 w-40% flex flex-col gap-10">
           <div
-            class="flex-1 bg-cover"
             :style="{
               backgroundImage: `url(${pageData.student_mentorship[1].image})`
             }"
+            class="flex-1 bg-cover"
           />
           <IntroductionBlock
-            :title="pageData.student_mentorship[1].title"
             :content="pageData.student_mentorship[1].content"
+            :title="pageData.student_mentorship[1].title"
             color="red"
           />
         </div>
         <NotFancyTitle
           cn="学生指导"
-          en="Student Guidance"
           color="red"
+          en="Student Guidance"
           vertical
-        ></NotFancyTitle>
+        />
       </div>
     </div>
   </div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import IntroductionBlock from './IntroductionBlock.vue'

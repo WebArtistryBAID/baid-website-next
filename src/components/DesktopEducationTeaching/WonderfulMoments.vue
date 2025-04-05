@@ -3,9 +3,9 @@
     <div class="mt-10">
       <NotFancyTitle
         cn="精彩瞬间"
-        en="Wonderful Moments"
         color="red"
-      ></NotFancyTitle>
+        en="Wonderful Moments"
+      />
     </div>
 
     <div
@@ -16,7 +16,7 @@
           :src="pageData.moments[0] || homeBg1"
           alt="Some Image Here"
           class="object-cover object-center w-full h-full"
-        />
+        >
       </div>
 
       <div class="col-start-2 row-start-1 row-span-2">
@@ -24,7 +24,7 @@
           :src="pageData.moments[1] || homeBg1"
           alt="Some Image Here"
           class="object-cover object-center w-full h-full"
-        />
+        >
       </div>
 
       <div class="col-start-3 row-start-1">
@@ -32,7 +32,7 @@
           :src="pageData.moments[2] || homeBg1"
           alt="Some Image Here"
           class="object-cover object-center w-full h-full"
-        />
+        >
       </div>
 
       <div class="col-start-1 row-start-2 row-span-2">
@@ -40,7 +40,7 @@
           :src="pageData.moments[3] || homeBg1"
           alt="Some Image Here"
           class="object-cover object-center w-full h-full"
-        />
+        >
       </div>
 
       <div class="col-start-2 row-start-3">
@@ -48,7 +48,7 @@
           :src="pageData.moments[4] || homeBg1"
           alt="Some Image Here"
           class="object-cover object-center w-full h-full"
-        />
+        >
       </div>
 
       <div class="col-start-3 row-start-2 row-span-2">
@@ -56,13 +56,13 @@
           :src="pageData.moments[5] || homeBg1"
           alt="Some Image Here"
           class="object-cover object-center w-full h-full"
-        />
+        >
       </div>
     </div>
   </div>
 </template>
-<script setup>
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+<script lang="ts" setup>
+import homeBg1 from '../../assets/images/homeBg1.jpg'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import { inject } from 'vue'
 

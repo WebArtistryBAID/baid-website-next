@@ -2,7 +2,10 @@
   <div class="">
     <component :is="$clientType === 'desktop' ? DesktopLayout : MobileLayout">
       <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
+        <transition
+          mode="out-in"
+          name="fade"
+        >
           <component :is="Component" />
         </transition>
       </router-view>
@@ -10,22 +13,22 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import DesktopLayout from './layouts/DesktopLayout.vue'
 import MobileLayout from './layouts/MobileLayout.vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+
 const { locale, t } = useI18n({ useScope: 'global' })
 
 const router = useRouter()
 router.beforeEach((to) => {
   const lang = to.params.lang || navigator.language
-  locale.value = lang
+  locale.value = lang as string
 
   // Set title
   console.log(to, lang)
-  const title = t('views.' + to.name)
-  document.title = title
+  document.title = t('views.' + (to.name as string))
 
   if (to.path === '/') {
     return { path: '/' + lang + '/' }

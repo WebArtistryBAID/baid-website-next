@@ -1,23 +1,23 @@
 <template>
   <div
-    class="h-120 color-white bg-cover relative transition-all transition-duration-.3s"
-    :style="{ backgroundImage: 'url(' + image + ')' }"
     :class="{ 'w-33%': thisActive, 'w-25%': !thisActive }"
-    @mousemove="$emit('activate')"
+    :style="{ backgroundImage: 'url(' + image + ')' }"
+    class="h-120 text-white bg-cover relative transition-all transition-duration-.3s"
     @mouseleave="$emit('deactivate')"
+    @mousemove="$emit('activate')"
   >
     <div
-      class="w-full h-full bg-#103c74 bg-op-80 transition transition-duration-.5s relative"
       :class="{ '!bg-op-40': thisActive }"
+      class="w-full h-full bg-#103c74 bg-op-80 transition transition-duration-.5s relative"
     >
       <pre
-        class="pcontent leading-normal text-right"
         :class="{ 'op-0': !delay, 'op-100': delay }"
+        class="pcontent leading-normal text-right"
         v-html="props.content"
-      ></pre>
+      />
       <h2
-        class="text-8 !m-0 tracking-wide text-center write-vertical-left"
         :class="{ center: !thisActive, right: thisActive }"
+        class="text-8 !m-0 tracking-wide text-center write-vertical-left"
       >
         {{ props.title }}
       </h2>
@@ -25,8 +25,8 @@
   </div>
 </template>
 
-<script setup>
-import { computed, watch, ref } from 'vue'
+<script lang="ts" setup>
+import { computed, ref, watch } from 'vue'
 
 const props = defineProps([
   'title',

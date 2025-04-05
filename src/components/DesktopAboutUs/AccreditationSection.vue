@@ -1,22 +1,38 @@
 <template>
-  <div class="section color-white flex items-center">
+  <div class="section text-white flex items-center">
     <div class="w-1/2 p-r-16 border-0 border-r-2 border-white/50 border-solid">
       <NotFancyTitle
-        :cn="$t('AboutUs.Accreditation.Title')"
-        en="Accreditation"
+        :cn="t('AboutUs.Accreditation.Title')"
         color="white"
-      ></NotFancyTitle>
-      <p class="opacity-80" v-html="pageData.accreditation"></p>
+        en="Accreditation"
+      />
+      <p
+        class="opacity-80"
+        v-html="pageData.accreditation"
+      />
     </div>
     <div class="w-1/2 p-l-16">
-      <DesktopSwiper :slides="1" arrow-color="white" :autoplay="true">
-        <swiper-slide v-for="acc in accs" :key="acc">
+      <DesktopSwiper
+        :autoplay="true"
+        :slides="1"
+        arrow-color="white"
+      >
+        <swiper-slide
+          v-for="acc in accs"
+          :key="acc"
+        >
           <div
             class="w-full h-72 my-12 bg-white rounded-xl flex flex-col justify-center items-center"
           >
             <div class="h-30 text-center">
-              <img class="h-24 mb-5" :src="acc.image" :alt="$t(acc.name)" />
-              <p class="font-sans text-black">{{ $t(acc.name) }}</p>
+              <img
+                :alt="t(acc.name)"
+                :src="acc.image"
+                class="h-24 mb-5"
+              >
+              <p class="font-sans text-black">
+                {{ t(acc.name) }}
+              </p>
             </div>
           </div>
         </swiper-slide>
@@ -25,12 +41,12 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import imgACT from '../../assets/images/AboutUs/ACT.svg'
 import imgAP from '../../assets/images/AboutUs/AP.svg'
-import imgCIS from '../../assets/images/AboutUs/CIS.png?webp'
+import imgCIS from '../../assets/images/AboutUs/CIS.png'
 import imgApple from '../../assets/images/AboutUs/Apple.svg'
-import imgCam from '../../assets/images/AboutUs/Cambridge.png?webp'
+import imgCam from '../../assets/images/AboutUs/Cambridge.png'
 
 import NotFancyTitle from '../NotFancyTitle.vue'
 import DesktopSwiper from '@/components/DesktopSwiper.vue'

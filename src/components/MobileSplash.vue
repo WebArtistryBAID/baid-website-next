@@ -1,15 +1,15 @@
 <template>
   <div>
-    <slot></slot>
+    <slot />
     <MobileLogo :animate="show" />
     <div
       v-if="show"
       class="z-4 fixed top-0 splash-bg bg-white h-screen w-screen"
-    ></div>
+    />
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import MobileLogo from './MobileLogo.vue'
 import { ref } from 'vue'

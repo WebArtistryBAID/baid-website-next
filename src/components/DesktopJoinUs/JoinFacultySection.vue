@@ -2,16 +2,24 @@
   <div class="section font-sans">
     <div>
       <NotFancyTitle
-        :cn="$t('JoinUs.Faculty.Title')"
-        en="Work with Us"
+        :cn="t('JoinUs.Faculty.Title')"
         color="blue"
-      ></NotFancyTitle>
+        en="Work with Us"
+      />
 
-      <pre class="mb-12" v-html="pageData.faculty" />
+      <pre
+        class="mb-12"
+        v-html="pageData.faculty"
+      />
 
-      <h2 class="mb-4">{{ pageData.faculty_requirements_title }}</h2>
+      <h2 class="mb-4">
+        {{ pageData.faculty_requirements_title }}
+      </h2>
       <div class="flex w-full mb-16">
-        <div class="w-1/2 pr-12" style="border-right: 1px solid darkgray">
+        <div
+          class="w-1/2 pr-12"
+          style="border-right: 1px solid darkgray"
+        >
           <pre v-html="pageData.faculty_requirements_left" />
         </div>
         <div class="w-1/2 pl-12">
@@ -29,7 +37,10 @@
 
       <h2>{{ pageData.faculty_process_title }}</h2>
       <div class="flex w-full mb-12">
-        <div class="w-1/2 pr-8" style="border-right: 1px solid darkgray">
+        <div
+          class="w-1/2 pr-8"
+          style="border-right: 1px solid darkgray"
+        >
           <pre v-html="pageData.faculty_process_left" />
         </div>
         <div class="w-1/2 pl-8">
@@ -40,10 +51,11 @@
     </div>
   </div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import ImageCard from './ImageCard.vue'
+
 const pageData = inject('data')
 
 // function open (url) {

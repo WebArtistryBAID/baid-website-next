@@ -3,13 +3,13 @@
   <div class="min-w-[var(--shrink-limit)] overflow-x-hidden">
     <DesktopHeader />
     <main>
-      <slot></slot>
+      <slot />
     </main>
     <DesktopFooter />
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import DesktopHeader from '../components/DesktopHeader.vue'
 import DesktopFooter from '../components/DesktopFooter.vue'
 </script>

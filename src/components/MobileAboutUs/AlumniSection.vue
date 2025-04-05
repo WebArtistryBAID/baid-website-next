@@ -1,11 +1,19 @@
 <template>
   <section class="section">
-    <MobileTitle>{{ $t('AboutUs.Alumni.Title') }}</MobileTitle>
-    <MobileCard :items="pageData.alumni" :border="false">
+    <MobileTitle>{{ t('AboutUs.Alumni.Title') }}</MobileTitle>
+    <MobileCard
+      :border="false"
+      :items="pageData.alumni"
+    >
       <template #item="{ content, name }">
-        <div class="flex flex-col h-auto color-black m-5">
-          <p class="p-3 box-border overflow-auto" v-html="content"></p>
-          <p class="text-right">——{{ name }}</p>
+        <div class="flex flex-col h-auto text-black m-5">
+          <p
+            class="p-3 box-border overflow-auto"
+            v-html="content"
+          />
+          <p class="text-right">
+            ——{{ name }}
+          </p>
           <!-- <img :src="image" class="w-40% object-cover" /> -->
         </div>
       </template>
@@ -13,10 +21,11 @@
   </section>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import MobileCard from '../MobileCard.vue'
 import MobileTitle from '../MobileTitle.vue'
 
 import { inject } from 'vue'
+
 const pageData = inject('data')
 </script>

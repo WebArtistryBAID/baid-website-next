@@ -1,50 +1,50 @@
 <template>
   <div
     v-if="ready"
-    class="flex items-center justify-center pointer-events-none z-3 fixed w-full"
     :class="{
       'top-50% m-t--12.5 h-25': stage < 2,
       'top-2.5': stage === 2,
       '!z-13': !dive,
       'transition-all-500': props.animate
     }"
+    class="flex items-center justify-center pointer-events-none z-3 fixed w-full"
   >
     <img
-      src="../assets/images/logoNormal.png?webp"
-      alt=""
-      class="w-25 h-25"
       :class="{
         '!w-15 !h-15': stage === 2,
         'transition-all-500': props.animate
       }"
-    />
+      alt=""
+      class="w-25 h-25"
+      src="../assets/images/logoNormal.png"
+    >
 
     <div
-      class="whitespace-nowrap truncate w-40"
       :class="{
         '!w-0': stage < 1,
         '!w-60': stage === 1,
         '!text-white': white,
         'transition-all-500': props.animate
       }"
+      class="whitespace-nowrap truncate w-40"
     >
       <h1
-        class="text-6 m-0"
         :class="{
           '!text-3.5': stage === 2,
           'transition-all-500': props.animate && !dive,
           'transition-all-25': dive
         }"
+        class="text-6 m-0"
       >
         北京中学国际部
       </h1>
       <p
-        class="font-sans text-3 m-b-0 m-t-1"
         :class="{
           '!text-2 !m-t-0.5': stage === 2,
           'transition-all-500': props.animate && !dive,
           'transition-all-25': dive
         }"
+        class="font-sans text-3 m-b-0 m-t-1"
       >
         Beijing Academy International Department
       </p>
@@ -52,12 +52,13 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+
 const route = useRoute()
 const router = useRouter()
-const props = defineProps(['animate'])
+const props = defineProps([ 'animate' ])
 const ready = ref(false)
 
 const stage = ref(0)
@@ -70,7 +71,7 @@ const dive = ref(false)
 
 const white = ref(false)
 
-function onScroll () {
+function onScroll() {
   if (route.meta.header?.alwaysFill) {
     white.value = false
     return
@@ -81,6 +82,7 @@ function onScroll () {
     white.value = true
   }
 }
+
 router.afterEach(onScroll)
 
 router.beforeEach((e) => {

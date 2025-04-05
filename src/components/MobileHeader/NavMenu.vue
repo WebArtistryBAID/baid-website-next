@@ -1,7 +1,7 @@
 <template>
   <div
-    class="fixed top-0 w-full h-full transition-all-300 flex z-4"
     :class="{ 'left-0': props.show, 'left--100%': !props.show }"
+    class="fixed top-0 w-full h-full transition-all-300 flex z-4"
   >
     <div
       class="bg-[var(--standard-blue)] w-70% flex flex-col justify-between py-20 px-12"
@@ -9,32 +9,38 @@
       <div class="h-full">
         <li
           v-for="route in routesComputed"
-          v-bind:key="route.name"
+          :key="route.name"
           class="font-500 text-6 text-white font-sans list-none"
         >
           <router-link
             :to="route.path"
-            class="inline-block decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60 leading-16"
             active-class="important-opacity-100"
+            class="inline-block decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 leading-16"
             @click="emit('close')"
-            >{{ $t(`views.${route.name}`) }}
+          >
+            {{ t(`views.${route.name}`) }}
           </router-link>
         </li>
       </div>
-      <div class="color-white">
-        <transition mode="out-in" name="fast-fade">
+      <div class="text-white">
+        <transition
+          mode="out-in"
+          name="fast-fade"
+        >
           <router-link
-            class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"
             v-if="$i18n.locale === 'zh-CN'"
             :to="route.path.replace('zh-CN', 'en-US')"
-            >English</router-link
+            class="decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"
           >
+            English
+          </router-link>
           <router-link
-            class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"
             v-else
             :to="route.path.replace('en-US', 'zh-CN')"
-            >中文</router-link
+            class="decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"
           >
+            中文
+          </router-link>
         </transition>
       </div>
     </div>
@@ -48,9 +54,9 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { routes } from '../../router'
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -61,7 +67,7 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['close'])
+const emit = defineEmits([ 'close' ])
 
 const routesComputed = computed(() => {
   return routes

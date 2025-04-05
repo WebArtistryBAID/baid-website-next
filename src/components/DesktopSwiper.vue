@@ -3,10 +3,10 @@
     <!-- arrow left -->
     <div @click="prev">
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        class="block"
         height="48"
         width="48"
-        class="block"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           :fill="props.arrowColor"
@@ -15,26 +15,26 @@
       </svg>
     </div>
     <Swiper
-      :modules="modules"
+      ref="swiper"
       :autoplay="{
         delay: 2500,
         disableOnInteraction: false
       }"
       :loop="true"
+      :modules="modules"
       :slides-per-view="props.slides"
       :space-between="10"
-      ref="swiper"
       @swiper="getRef"
     >
-      <slot></slot>
+      <slot />
     </Swiper>
     <!-- arrow right -->
     <div @click="next">
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        class="block"
         height="48"
         width="48"
-        class="block"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           :fill="props.arrowColor"
@@ -45,9 +45,9 @@
   </div>
 </template>
 
-<script setup>
-import { ref, computed } from 'vue'
-import { Navigation, Autoplay, A11y } from 'swiper'
+<script lang="ts" setup>
+import { computed, ref } from 'vue'
+import { A11y, Autoplay, Navigation } from 'swiper'
 import { Swiper } from 'swiper/vue'
 
 import 'swiper/css'
@@ -67,22 +67,23 @@ const props = defineProps({
 
 const modules = computed(() => {
   if (props.autoplay) {
-    return [Autoplay, A11y, Navigation]
+    return [ Autoplay, A11y, Navigation ]
   } else {
-    return [A11y, Navigation]
+    return [ A11y, Navigation ]
   }
 })
 
 const swiper = ref(null)
 
-function getRef (swiperInstance) {
+function getRef(swiperInstance) {
   swiper.value = swiperInstance
 }
 
-function prev () {
+function prev() {
   swiper.value.slidePrev()
 }
-function next () {
+
+function next() {
   swiper.value.slideNext()
 }
 </script>

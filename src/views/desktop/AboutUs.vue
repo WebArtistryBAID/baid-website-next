@@ -1,8 +1,8 @@
 <template>
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 font-sans color-white">
-        {{ $t('views.AboutUs') }}
+      <h1 class="text-18 font-sans text-white">
+        {{ t('views.AboutUs') }}
       </h1>
     </CarouselHorizontal>
     <section id="overview">
@@ -11,16 +11,19 @@
     <section id="alumni">
       <AlumniSection />
     </section>
-    <section id="accreditation" class="bg-[var(--standard-blue)]">
+    <section
+      id="accreditation"
+      class="bg-[var(--standard-blue)]"
+    >
       <AccreditationSection />
     </section>
     <section id="data">
       <div class="section important:p-b-0">
         <NotFancyTitle
-          :cn="$t('AboutUs.Data.Title')"
-          en="Data"
+          :cn="t('AboutUs.Data.Title')"
           color="blue"
-        ></NotFancyTitle>
+          en="Data"
+        />
       </div>
       <div class="h-90 flex items-center">
         <DataSection />
@@ -29,7 +32,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import AccreditationSection from '../../components/DesktopAboutUs/AccreditationSection.vue'
@@ -50,4 +53,7 @@ const { locale } = useI18n({ useScope: 'global' })
 // Provide page data
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
+
+// i18n
+const { t } = useI18n()
 </script>

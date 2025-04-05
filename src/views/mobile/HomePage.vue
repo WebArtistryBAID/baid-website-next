@@ -2,29 +2,37 @@
   <HomeSplash>
     <!-- BG -->
     <HomeBackground />
-    <MobileHead :img="firstImg"> {{ $t('views.HomePage') }}</MobileHead>
+    <MobileHead :img="firstImg">
+      {{ t('views.HomePage') }}
+    </MobileHead>
     <section class="section">
       <MobileTitle>{{ data.introduction_title }}</MobileTitle>
       <MobileCard>
-        <pre class="m-5 color-black" v-html="data.introduction"></pre>
+        <pre
+          class="m-5 text-black"
+          v-html="data.introduction"
+        />
       </MobileCard>
-      <VideoCard class="m-b-0" :cover="firstImg"></VideoCard>
+      <VideoCard
+        :cover="firstImg"
+        class="m-b-0"
+      />
     </section>
-    <EducationPhilosophy></EducationPhilosophy>
-    <PrincipalMessage></PrincipalMessage>
-    <NewsSection :news="news"></NewsSection>
+    <EducationPhilosophy />
+    <PrincipalMessage />
+    <NewsSection :news="news" />
   </HomeSplash>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import HomeBackground from '@/components/MobileHomePage/HomeBackground.vue'
 import MobileCard from '@/components/MobileCard.vue'
 import MobileHead from '@/components/MobileHead.vue'
 
-import firstImg from '../../assets/images/HomePage/Autumn.jpg?webp'
+import firstImg from '../../assets/images/HomePage/Autumn.jpg'
 import VideoCard from '../../components/VideoCard.vue'
 import MobileTitle from '../../components/MobileTitle.vue'
-import { ref, computed, provide, watchEffect } from 'vue'
+import { computed, provide, ref, watchEffect } from 'vue'
 import NewsSection from '../../components/MobileHomePage/NewsSection.vue'
 import PrincipalMessage from '../../components/MobileHomePage/PrincipalMessage.vue'
 import HomeSplash from '../../components/MobileHomePage/HomeSplash.vue'
@@ -44,11 +52,12 @@ const { locale } = useI18n({ useScope: 'global' })
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
 
-const news = ref([])
 const route = useRoute()
 
+const news = ref<never[]>([])
+
 watchEffect(() => {
-  let data
+  let data: any
   if (route.params.lang === 'zh-CN') {
     data = Object.values(dbZH)
   } else {
@@ -56,9 +65,12 @@ watchEffect(() => {
   }
 
   // Sort by date
-  data.sort((a, b) => {
-    return new Date(b.date) - new Date(a.date)
+  data.sort((a: any, b: any) => {
+    return (new Date(b.date)).getTime() - (new Date(a.date)).getTime()
   })
   news.value = data
 })
+
+// i18n
+const { t } = useI18n()
 </script>

@@ -1,15 +1,15 @@
 <template>
   <div class="section">
     <NotFancyTitle
-      :cn="$t('AboutUs.Overview.Title')"
-      en="Overview"
+      :cn="t('AboutUs.Overview.Title')"
       color="blue"
-    ></NotFancyTitle>
-    <pre v-html="pageData.overview"></pre>
+      en="Overview"
+    />
+    <pre v-html="pageData.overview" />
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import NotFancyTitle from '../NotFancyTitle.vue'
 import { inject } from 'vue'
 

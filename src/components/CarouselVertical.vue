@@ -1,36 +1,39 @@
 <template>
   <div class="h-screen w-full overflow-hidden relative">
-    <div class="absolute flex flex-col w-full" :style="{ top }">
+    <div
+      :style="{ top }"
+      class="absolute flex flex-col w-full"
+    >
       <img
         v-for="img in props.images"
         :key="img"
-        :src="img"
         :alt="img"
+        :src="img"
         class="h-screen w-full dimmer object-cover"
-      />
+      >
     </div>
     <div class="absolute right-10 bottom-10">
       <div
         v-for="(img, index) in props.images"
-        v-bind:key="img"
+        :key="img"
         :class="{ 'important-bg-white': current === index }"
         class="dot w-3 h-3 my-3 cursor-pointer"
-        v-on:click="
+        @click="
           () => {
             current = index
             resetInterval()
           }
         "
-      ></div>
+      />
     </div>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { animate } from 'popmotion'
 import { onUnmounted, ref, watch } from 'vue'
 
-const props = defineProps(['images'])
+const props = defineProps([ 'images' ])
 
 const current = ref(0)
 const top = ref('0vh')
@@ -42,7 +45,7 @@ watch(current, (index) => {
   topAnimation = animate({
     from: top.value,
     to: index * -100 + 'vh',
-    onUpdate (value) {
+    onUpdate(value) {
       top.value = value
     },
     duration: 300
@@ -57,7 +60,7 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
-function resetInterval () {
+function resetInterval() {
   clearInterval(interval)
   interval = setInterval(() => {
     current.value = (current.value + 1) % props.images.length

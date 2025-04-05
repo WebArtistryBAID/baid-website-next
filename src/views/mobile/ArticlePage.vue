@@ -1,36 +1,33 @@
 <template>
   <div>
-    <MobileHead :img="content?.cover"></MobileHead>
+    <MobileHead :img="content?.cover" />
 
     <section class="section">
-      <h3 v-if="loading">Now loading...</h3>
+      <h3 v-if="loading">
+        Now loading...
+      </h3>
       <div v-else>
         <article>
           <h1>{{ content.title }}</h1>
-          <p></p>
+          <p />
         </article>
-        <article v-html="content.body"></article>
+        <article v-html="content.body" />
       </div>
     </section>
   </div>
 </template>
 
-<style>
-article img {
-  width: 100%;
-}
-</style>
-
-<script setup>
+<script lang="ts" setup>
 import MobileHead from '../../components/MobileHead.vue'
 
 import '../../assets/styles/article.css'
 import { useRoute } from 'vue-router'
 import { ref, watchEffect } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const route = useRoute()
 
-const content = ref(null)
+const content = ref<any>(null)
 const loading = ref(true)
 
 watchEffect(async () => {
@@ -38,9 +35,19 @@ watchEffect(async () => {
   content.value = (
     await import(
       `../../../data/${route.params.lang}/News-${route.params.title}.json`
-    )
+      )
   ).default
 
   loading.value = false
 })
+
+
+// i18n
+const { t } = useI18n()
 </script>
+
+<style>
+article img {
+  width: 100%;
+}
+</style>

@@ -11,34 +11,33 @@
     </section>
     <section id="quote">
       <QuoteMessage
+        :avatar="avatar"
         author="WHO"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
-        :avatar="avatar"
       />
     </section>
     <!-- <section id="admissionResults"> -->
     <!--   <AdmissionResults /> -->
     <!-- </section> -->
-    <section id="news" v-if="news.length">
-      <HomeNews :newsList="news" />
+    <section
+      v-if="news.length"
+      id="news"
+    >
+      <HomeNews :news-list="news" />
     </section>
   </div>
 </template>
 
-<script setup>
-// Modules
+<script lang="ts" setup>
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { computed, provide, ref, watchEffect } from 'vue'
-// Components
 import FirstSection from '../../components/DesktopHomePage/FirstSection.vue'
 import SecondSection from '../../components/DesktopHomePage/SecondSection.vue'
 import EducationPhilosophy from '../../components/DesktopHomePage/EducationPhilosophy.vue'
 import QuoteMessage from '../../components/QuoteMessage.vue'
 import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
-// Assets
 import avatar from '../../assets/images/homeBg1.jpg'
-// Data
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'
@@ -52,10 +51,10 @@ provide('data', data)
 
 const route = useRoute()
 
-const news = ref([])
+const news = ref<never[]>([])
 
 watchEffect(() => {
-  let data
+  let data: any
   if (route.params.lang === 'zh-CN') {
     data = Object.values(dbZH)
   } else {
@@ -63,8 +62,8 @@ watchEffect(() => {
   }
 
   // Sort by date
-  data.sort((a, b) => {
-    return new Date(b.date) - new Date(a.date)
+  data.sort((a: any, b: any) => {
+    return (new Date(b.date)).getTime() - (new Date(a.date)).getTime()
   })
   news.value = data
 })

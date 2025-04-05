@@ -1,39 +1,42 @@
 <template>
   <section>
-    <div class="placeholder"></div>
-    <Transition name="fade" mode="out-in">
+    <div class="placeholder" />
+    <Transition
+      mode="out-in"
+      name="fade"
+    >
       <JoinNav
         v-if="isNav"
-        @student="
-          ;(isNav = false),
-            (title = 'JoinUs.Student.Title'),
-            (content = data.student),
-            (join = 'JoinUs.Student.Join')
-        "
+        class="section"
         @faculty="
           ;(isNav = false),
             (title = 'JoinUs.Faculty.Title'),
             (content = data.faculty),
             (join = 'JoinUs.Faculty.Join')
         "
-        class="section"
-      ></JoinNav>
+        @student="
+          ;(isNav = false),
+            (title = 'JoinUs.Student.Title'),
+            (content = data.student),
+            (join = 'JoinUs.Student.Join')
+        "
+      />
       <JoinInfo
-        :title="$t(title)"
-        :content="$t(content)"
-        :join="$t(join)"
-        @back="isNav = true"
         v-else
-      ></JoinInfo>
+        :content="t(content)"
+        :join="t(join)"
+        :title="t(title)"
+        @back="isNav = true"
+      />
     </Transition>
   </section>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import JoinInfo from '../../components/MobileJoinUs/JoinInfo.vue'
 import JoinNav from '../../components/MobileJoinUs/JoinNav.vue'
 
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 
 import dataZH from '@data/zh-CN/JoinUs.json'
 import dataEN from '@data/en-US/JoinUs.json'
@@ -50,4 +53,6 @@ const { locale } = useI18n({ useScope: 'global' })
 
 // Provide page data
 const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
+
+const { t } = useI18n()
 </script>

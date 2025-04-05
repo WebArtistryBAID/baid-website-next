@@ -1,8 +1,8 @@
 <template>
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 font-sans color-white">
-        {{ $t('views.EducationTeaching') }}
+      <h1 class="text-18 font-sans text-white">
+        {{ t('views.EducationTeaching') }}
       </h1>
     </CarouselHorizontal>
     <section id="curriculums">
@@ -19,7 +19,7 @@
     </section>
   </div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import CurriculumsIntroduction from '../../components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
 import LearningMethods from '../../components/DesktopEducationTeaching/LearningMethods.vue'

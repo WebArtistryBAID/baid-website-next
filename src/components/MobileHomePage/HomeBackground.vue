@@ -1,10 +1,10 @@
 <template>
   <div
-    class="z--1 absolute w-screen h-screen top-0 bg-cover bg-center"
     :style="{ 'background-image': 'url(' + bg + ')' }"
-  ></div>
+    class="z--1 absolute w-screen h-screen top-0 bg-cover bg-center"
+  />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import bg from '../../assets/images/mobileHomeBg.svg'
 </script>

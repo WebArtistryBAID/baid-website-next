@@ -20,12 +20,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Lock
-*.lock
-package-lock.json
-pnpm-lock.yaml
-bun.lockb
+.vscode
+*.code-workspace
 
 # Articles
 public/en-US
@@ -33,7 +29,3 @@ public/zh-CN
 articles
 
 data
-
-# JetBrains IDE
-.idea/
-*.iml

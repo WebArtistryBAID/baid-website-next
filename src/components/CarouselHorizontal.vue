@@ -1,13 +1,16 @@
 <template>
   <div class="h-45rem w-full overflow-hidden relative mb-45px">
-    <div class="absolute flex" :style="{ left }">
+    <div
+      :style="{ left }"
+      class="absolute flex"
+    >
       <img
-        class="h-45rem w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"
         v-for="img in props.images"
-        :src="img"
-        :alt="img"
         :key="img"
-      />
+        :alt="img"
+        :src="img"
+        class="h-45rem w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"
+      >
     </div>
     <div
       v-if="props.images.length > 1"
@@ -15,30 +18,30 @@
     >
       <div
         v-for="(img, index) in props.images"
-        v-bind:key="img"
+        :key="img"
         :class="{ 'important-bg-white': current === index }"
         class="dot w-3 h-3 mx-3 cursor-pointer"
-        v-on:click="
+        @click="
           () => {
             current = index
             resetInterval()
           }
         "
-      ></div>
+      />
     </div>
     <div class="absolute pointer-events-none w-full">
       <div class="flex justify-center items-center w-full h-40rem">
-        <slot></slot>
+        <slot />
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { animate } from 'popmotion'
 import { onUnmounted, ref, watch } from 'vue'
 
-const props = defineProps(['images'])
+const props = defineProps([ 'images' ])
 
 const current = ref(0)
 const left = ref('0vw')
@@ -50,7 +53,7 @@ watch(current, (index) => {
   leftAnimation = animate({
     from: left.value,
     to: index * -100 + 'vw',
-    onUpdate (value) {
+    onUpdate(value) {
       left.value = value
     },
     duration: 300
@@ -65,7 +68,7 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
-function resetInterval () {
+function resetInterval() {
   clearInterval(interval)
   interval = setInterval(() => {
     current.value = (current.value + 1) % props.images.length

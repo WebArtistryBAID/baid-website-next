@@ -1,20 +1,29 @@
 <template>
-  <div class="section" id="curriculum">
-    <NotFancyTitle cn="课程体系" en="Curriculums" color="blue"></NotFancyTitle>
+  <div
+    id="curriculum"
+    class="section"
+  >
+    <NotFancyTitle
+      cn="课程体系"
+      color="blue"
+      en="Curriculums"
+    />
     <div class="flex gap-16 h-100">
       <div class="w-40% flex flex-col justify-around">
         <div
           v-for="(c, i) in pageData.curriculums"
-          class="op-70 container w-50"
           :key="i"
           :class="{ '!op-100 active': current == i }"
+          class="op-70 container w-50"
           @mouseover="current = i"
         >
-          <h2 class="m0 w-max">{{ c.name }}</h2>
+          <h2 class="m0 w-max">
+            {{ c.name }}
+          </h2>
 
           <div
-            class="absolute top-10 left-0 op-0"
             :class="{ '!op-100': current == i }"
+            class="absolute top-10 left-0 op-0"
           >
             <ReadMore to="/education" />
           </div>
@@ -23,10 +32,10 @@
 
       <div class="relative w-full">
         <div
-          class="w-full flex flex-col justify-center gap-5 absolute top-0 op-0 h-full"
           v-for="(c, i) in pageData.curriculums"
-          :class="{ '!op-100': current == i, 'flex-col-reverse': i % 2 == 0 }"
           :key="i"
+          :class="{ '!op-100': current == i, 'flex-col-reverse': i % 2 == 0 }"
+          class="w-full flex flex-col justify-center gap-5 absolute top-0 op-0 h-full"
         >
           <!-- <div -->
           <!--   class="flex w-full gap-5" -->
@@ -41,14 +50,14 @@
           <!--     class="flex-1 w-full h-50" -->
           <!--   /> -->
           <!-- </div> -->
-          <pre v-html="c.content"></pre>
+          <pre v-html="c.content" />
         </div>
       </div>
     </div>
   </div>
 </template>
-<script setup>
-import { ref, inject } from 'vue'
+<script lang="ts" setup>
+import { inject, ref } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import ReadMore from '@/components/ReadMore.vue'
 

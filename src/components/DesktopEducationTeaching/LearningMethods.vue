@@ -3,45 +3,51 @@
     <div class="flex justify-end">
       <NotFancyTitle
         cn="学习方式"
-        en="Learning Methods"
         color="red"
+        en="Learning Methods"
         right
-      ></NotFancyTitle>
+      />
     </div>
 
-    <div class="grid gap-1" style="grid-template-columns: 3fr 1fr">
+    <div
+      class="grid gap-1"
+      style="grid-template-columns: 3fr 1fr"
+    >
       <div class="relative">
         <img
           :src="pageData.learning_methods[current].image"
           class="w-full h-full object-cover"
-        />
+        >
         <div
-          class="absolute bottom-0 pa-10 pt-20 color-white special-bg transition-opacity-300"
           :class="{ 'op-0': transition }"
+          class="absolute bottom-0 pa-10 pt-20 text-white special-bg transition-opacity-300"
         >
           <h2>{{ pageData.learning_methods[current].title }}</h2>
-          <p v-html="pageData.learning_methods[current].content"></p>
+          <p v-html="pageData.learning_methods[current].content" />
         </div>
       </div>
       <div class="grid gap-1">
-        <div v-for="(method, index) in pageData.learning_methods" :key="method">
+        <div
+          v-for="(method, index) in pageData.learning_methods"
+          :key="method"
+        >
           <img
-            :src="method.image"
-            class="w-full h-full object-cover block opacity-60 transition-all"
             :class="{
               '!opacity-100': current === index,
               'hover:opacity-100 active:brightness-90':
                 current !== index && !transition
             }"
-            v-on:click="change(index)"
+            :src="method.image"
             alt="Bg"
-          />
+            class="w-full h-full object-cover block opacity-60 transition-all"
+            @click="change(index)"
+          >
         </div>
       </div>
     </div>
   </div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import { inject, ref } from 'vue'
 
 import NotFancyTitle from '../NotFancyTitle.vue'
@@ -51,7 +57,7 @@ const pageData = inject('data')
 const current = ref(0)
 const transition = ref(false)
 
-function change (index) {
+function change(index) {
   if (index === current.value || transition.value) return
   transition.value = true
   setTimeout(() => {

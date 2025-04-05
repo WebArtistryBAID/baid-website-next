@@ -2,13 +2,13 @@
   <MobileSplash>
     <MobileHeader />
     <main>
-      <slot></slot>
+      <slot />
     </main>
   </MobileSplash>
   <!-- <MobileFooter /> -->
 </template>
 
-<script setup>
+<script lang="ts" setup>
 // import MobileFooter from '../components/MobileFooter.vue'
 import MobileHeader from '../components/MobileHeader.vue'
 import MobileSplash from '../components/MobileSplash.vue'

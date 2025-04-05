@@ -6,17 +6,22 @@
         :key="datum"
         class="items-center text-center flex flex-col m-24"
       >
-        <div v-html="datum.icon" class="color-[var(--standard-blue)]"></div>
+        <div
+          class="text-[var(--standard-blue)]"
+          v-html="datum.icon"
+        />
         <span class="text-16 font-bold font-title">
           {{ datum.content }}
         </span>
-        <p class="text-xl op-70">{{ datum.name }}</p>
+        <p class="text-xl op-70">
+          {{ datum.name }}
+        </p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { inject } from 'vue'
 
 const pageData = inject('data')
