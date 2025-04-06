@@ -10,7 +10,7 @@
         <li
           v-for="route in routesComputed"
           :key="route.name"
-          class="font-500 text-6 text-white font-sans list-none"
+          class="font-500 text-6 text-white !font-sans list-none"
         >
           <router-link
             :to="route.path"
@@ -30,14 +30,14 @@
           <router-link
             v-if="$i18n.locale === 'zh-CN'"
             :to="route.path.replace('zh-CN', 'en-US')"
-            class="decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"
+            class="decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 text-5 text-white !font-sans leading-16"
           >
             English
           </router-link>
           <router-link
             v-else
             :to="route.path.replace('en-US', 'zh-CN')"
-            class="decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"
+            class="decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60 text-5 text-white !font-sans leading-16"
           >
             中文
           </router-link>

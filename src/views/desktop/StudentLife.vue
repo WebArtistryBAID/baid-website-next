@@ -1,7 +1,7 @@
 <template>
   <div>
     <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 font-sans text-white">
+      <h1 class="text-18 !font-sans text-white">
         {{ $t('views.StudentLife') }}
       </h1>
     </CarouselHorizontal>

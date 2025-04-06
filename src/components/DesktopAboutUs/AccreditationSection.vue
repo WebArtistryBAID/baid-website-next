@@ -30,7 +30,7 @@
                 :src="acc.image"
                 class="h-24 mb-5"
               >
-              <p class="font-sans text-black">
+              <p class="!font-sans text-black">
                 {{ $t(acc.name) }}
               </p>
             </div>

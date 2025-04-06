@@ -17,7 +17,7 @@
         />
         <router-link
           :to="`${locale}/about`"
-          class="text-white op-70 hover:op-100 active:op-80 transition-opacity font-sans"
+          class="text-white op-70 hover:op-100 active:op-80 transition-opacity !font-sans"
         >
           Read More
         </router-link>

@@ -4,7 +4,7 @@
     class="h-screen w-screen flex flex-col justify-center py-24 px-48 relative"
   >
     <h1
-      class="font-bold pb-24 text-white font-sans"
+      class="font-bold pb-24 text-white !font-sans"
       style="font-size: 12rem"
     >
       Beijing<br>

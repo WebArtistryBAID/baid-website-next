@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-[calc(100vh-5rem)] font-sans">
+  <div class="w-screen h-[calc(100vh-5rem)] !font-sans">
     <div class="placeholder" />
     <SplashBlock
       :image="archery"

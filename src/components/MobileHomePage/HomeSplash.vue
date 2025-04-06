@@ -41,7 +41,7 @@
           <h2 class="m-t-3 mb-1 font-black text-8">
             这里是<br>北京中学国际部！
           </h2>
-          <p class="font-sans m0 m-b-3">
+          <p class="!font-sans m0 m-b-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
           </p>
         </div>
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div
-        class="text-center font-sans text-white absolute bottom-0 left-50% translate-x--50%"
+        class="text-center !font-sans text-white absolute bottom-0 left-50% translate-x--50%"
         @click="show = false"
       >
         <span>Learn More</span>

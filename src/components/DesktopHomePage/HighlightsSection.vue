@@ -12,7 +12,7 @@
             class="max-w-4/5 mb-5"
           >
         </div>
-        <p class="text-3xl mb-1 font-bold font-sans">
+        <p class="text-3xl mb-1 font-bold !font-sans">
           Applying to BAID
         </p>
         <p class="text-lg !font-serif">
@@ -31,12 +31,13 @@
             class="max-w-4/5 mb-5"
           >
         </div>
-        <p class="text-3xl mb-1 font-bold font-sans">
+        <p class="text-3xl mb-1 font-bold !font-sans">
           Academic Excellence
         </p>
         <p class="text-lg !font-serif">
-          With over 20 AP courses, undergraduate-level courses, the MFP research program, and more, BAID prepares
-          students for success in college and beyond.
+          With over 20 AP courses, undergraduate-level courses, the MFP research program, project-based learning and
+          more,
+          BAID prepares students for success in college and beyond.
         </p>
         <div class="mt-2">
           <ReadMore to="/education#curriculum" />
@@ -50,7 +51,7 @@
             class="max-w-4/5 mb-5"
           >
         </div>
-        <p class="text-3xl mb-1 font-bold font-sans">
+        <p class="text-3xl mb-1 font-bold !font-sans">
           Life at BAID
         </p>
         <p class="text-lg !font-serif">

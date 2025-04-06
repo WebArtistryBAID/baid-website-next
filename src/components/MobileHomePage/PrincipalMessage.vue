@@ -55,7 +55,7 @@
       <!-- Content Part -->
       <div class="w-48%">
         <p
-          class="m-0 my-3 font-sans"
+          class="m-0 my-3 !font-sans"
           v-html="pageData.principal_message"
         />
       </div>

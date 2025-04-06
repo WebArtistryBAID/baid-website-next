@@ -43,7 +43,7 @@
           </svg>
           <input
             v-model="text"
-            class="input font-sans"
+            class="input !font-sans"
             type="search"
           >
         </div>

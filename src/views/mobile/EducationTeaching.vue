@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans">
+  <div class="!font-sans">
     <MobileTitleSplash
       :bottom="@t('EducationTeaching.Splash.Bottom')"
       :top="@t('EducationTeaching.Splash.Top')"

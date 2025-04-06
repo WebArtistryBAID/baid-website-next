@@ -3,7 +3,7 @@
     :style="{
       'background-image': `url(${props.image})`
     }"
-    class="flex justify-center items-center flex-col h-50% w-full bg-cover font-sans"
+    class="flex justify-center items-center flex-col h-50% w-full bg-cover !font-sans"
   >
     <h2 class="text-white font-title text-10">
       <span>{{ props.title[0] }}</span>

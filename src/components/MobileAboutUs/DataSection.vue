@@ -8,7 +8,7 @@
           :key="datum"
           class="text-center"
         >
-          <span class="text-24 font-bold font-sans">{{ datum.content }}</span>
+          <span class="text-24 font-bold !font-sans">{{ datum.content }}</span>
           <p>{{ datum.name }}</p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section font-sans">
+  <div class="section !font-sans">
     <div>
       <NotFancyTitle
         :cn="$t('JoinUs.Student.Title')"

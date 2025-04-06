@@ -13,7 +13,7 @@
     </div>
     <div class="h-full">
       <h2
-        class="h-full bg-[var(--standard-red)] font-sans font-900 flex justify-center items-center m-0!"
+        class="h-full bg-[var(--standard-red)] !font-sans font-900 flex justify-center items-center m-0!"
       >
         <div class="flex flex-col leading-tight">
           <div class="text-white z-2 text-12">
@@ -31,7 +31,7 @@
             国际部
           </div>
           <a
-            class="decoration-none font-sans text-right text-white m-y-6 text-6"
+            class="decoration-none !font-sans text-right text-white m-y-6 text-6"
             href="#"
           >{{ props.join }}></a>
           <div

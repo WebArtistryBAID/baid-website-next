@@ -26,7 +26,7 @@
         :to="$BASE_URL + '/' + $i18n.locale + '/news'"
         class="flex items-center gap-1 text-black decoration-none op-100 font-18px"
       >
-        <span class="font-sans">{{ $t('HomePage.ReadMore') }}</span>
+        <span class="!font-sans">{{ $t('HomePage.ReadMore') }}</span>
         <svg
           height="25"
           viewBox="0 0 16 16"

@@ -7,23 +7,23 @@
     >
       <div
         v-if="loading"
-        class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center font-sans"
+        class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center !font-sans"
       >
-        <h1 class="font-sans">
+        <h1 class="!font-sans">
           Loading...
         </h1>
       </div>
       <div v-else>
         <section>
           <CarouselHorizontal :images="[content?.cover]">
-            <h1 class="text-16 text-white font-sans">
+            <h1 class="text-16 text-white !font-sans">
               {{ content?.title }}
             </h1>
           </CarouselHorizontal>
         </section>
         <section class="section">
           <article>
-            <h1 class="font-sans">
+            <h1 class="!font-sans">
               {{ content?.title }}
             </h1>
             <p />

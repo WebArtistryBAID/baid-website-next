@@ -5,7 +5,7 @@
       style="max-width: 77rem"
     >
       <h2
-        class="!text-7xl font-bold font-sans mr-auto"
+        class="!text-7xl font-bold !font-sans mr-auto"
         style="margin-bottom: -9px"
       >
         BAID Stories
@@ -15,7 +15,7 @@
         :to="'/' + $i18n.locale + '/news'"
         class="flex items-center gap-1 text-black decoration-none op-80 hover:op-100 transition"
       >
-        <span class="font-sans">{{ $t('HomePage.ReadMore') }}</span>
+        <span class="!font-sans">{{ $t('HomePage.ReadMore') }}</span>
         <svg
           height="25"
           viewBox="0 0 16 16"

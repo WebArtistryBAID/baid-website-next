@@ -1,7 +1,7 @@
 <template>
   <footer
     :style="{ 'background-image': 'url(' + imgFooter + ')' }"
-    class="w-full bg-black h-70 mt-45px font-sans"
+    class="w-full bg-black h-70 mt-45px !font-sans"
   >
     <div class="cover w-full h-full">
       <div class="flex text-white w-full h-full justify-center items-center">

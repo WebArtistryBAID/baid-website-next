@@ -15,7 +15,7 @@
       <p class="opacity-80 text-sm !mb-3">
         {{ props.news.date }}
       </p>
-      <p class="op-80 line-clamp-3 !font-serif">
+      <p class="op-80 line-clamp-3 font-serif">
         {{ props.news.intro }}
       </p>
     </div>

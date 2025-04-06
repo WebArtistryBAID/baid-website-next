@@ -44,7 +44,7 @@
           'transition-all-500': props.animate && !dive,
           'transition-all-25': dive
         }"
-        class="font-sans text-3 m-b-0 m-t-1"
+        class="!font-sans text-3 m-b-0 m-t-1"
       >
         Beijing Academy International Department
       </p>

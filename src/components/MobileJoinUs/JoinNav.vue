@@ -20,11 +20,11 @@
     </h2>
     <div class="grid m-y-2 grid-cols-2 gap-6">
       <span
-        class="decoration-none text-blue font-sans"
+        class="decoration-none text-blue !font-sans"
         @click="$emit('student')"
       >学生申请></span>
       <span
-        class="decoration-none text-blue font-sans"
+        class="decoration-none text-blue !font-sans"
         @click="$emit('faculty')"
       >师资招聘></span>
     </div>
