@@ -4,7 +4,7 @@
     class="decoration-none op-80 hover:op-100 active:op-70 transition-opacity"
   >
     <div class="flex items-center w-min">
-      <i class="m-r-2 flex items-center">
+      <i class="mr-2 flex items-center">
         <svg
           height="30"
           viewBox="0 0 32.99999997656249 32.99999997656255"

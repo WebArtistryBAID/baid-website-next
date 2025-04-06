@@ -54,7 +54,7 @@
         </g>
       </svg>
     </div>
-    <div class="m-l-30 m-r-20 flex-1">
+    <div class="m-l-30 mr-20 flex-1">
       <h2 class="tracking-wide">
         <pre v-html="pageData.principal_message" />
       </h2>
@@ -65,7 +65,7 @@
     <img
       :src="pageData.principal_avatar"
       alt="Avatar"
-      class="object-contain md:w-20% md:m-r-30 md:m-t-0 m-t-10 w-1/2 min-w-50 h-80 flex-2"
+      class="object-contain md:w-20% md:mr-30 md:m-t-0 m-t-10 w-1/2 min-w-50 h-80 flex-2"
     >
     <div class="absolute right-20px bottom-0">
       <svg

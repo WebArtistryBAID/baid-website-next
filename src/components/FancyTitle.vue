@@ -7,8 +7,8 @@
       <span
         v-for="word in top"
         :key="word"
-        :class="{ 'important:m-r-0': right }"
-        class="m-r-5"
+        :class="{ 'important:mr-0': right }"
+        class="mr-5"
       >
         <span>{{ word.left }}</span>
         <span
@@ -29,8 +29,8 @@
         <span
           v-for="word in btm"
           :key="word"
-          :class="{ 'important:m-r-15': right }"
-          class="m-r-5"
+          :class="{ 'important:mr-15': right }"
+          class="mr-5"
         >
           <span>{{ word.left }}</span>
           <span

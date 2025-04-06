@@ -1,10 +1,19 @@
 <template>
   <div>
     <section id="firstSection">
-      <FirstSection />
+      <HeroSection />
     </section>
     <section id="secondSection">
       <SecondSection />
+    </section>
+    <section id="highlightsSection">
+      <HighlightsSection />
+    </section>
+    <section
+      v-if="news.length"
+      id="news"
+    >
+      <HomeNews :news-list="news" />
     </section>
     <section id="educationPhilosophy">
       <EducationPhilosophy />
@@ -19,12 +28,6 @@
     <!-- <section id="admissionResults"> -->
     <!--   <AdmissionResults /> -->
     <!-- </section> -->
-    <section
-      v-if="news.length"
-      id="news"
-    >
-      <HomeNews :news-list="news" />
-    </section>
   </div>
 </template>
 
@@ -32,7 +35,7 @@
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { computed, provide, ref, watchEffect } from 'vue'
-import FirstSection from '@/components/DesktopHomePage/FirstSection.vue'
+import HeroSection from '@/components/DesktopHomePage/HeroSection.vue'
 import SecondSection from '@/components/DesktopHomePage/SecondSection.vue'
 import EducationPhilosophy from '@/components/DesktopHomePage/EducationPhilosophy.vue'
 import QuoteMessage from '@/components/QuoteMessage.vue'
@@ -42,6 +45,7 @@ import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'
 import dataEN from '@data/en-US/Home.json'
+import HighlightsSection from '@/components/DesktopHomePage/HighlightsSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

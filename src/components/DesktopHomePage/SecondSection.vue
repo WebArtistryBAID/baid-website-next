@@ -1,27 +1,18 @@
 <template>
-  <div class="">
-    <div class="section">
-      <div class="flex">
-        <div class="flex-1 mr-4">
-          <h2 class="text-[var(--standard-blue)] text-9 m-t-0">
-            {{ pageData.introduction_title }}
-          </h2>
-          <pre v-html="pageData.introduction" />
-          <div class="flex justify-end m-t-5">
-            <ReadMore to="/about#overview" />
-          </div>
-        </div>
-        <div class="ml-4 flex-1 flex justify-center items-center">
-          <video
-            class="w-480px h-270px"
-            controls
-          >
-            <source
-              :src="vidOverview"
-              type="video/mp4"
-            >
-            Your browser does not support the video tag.
-          </video>
+  <div class="section">
+    <div class="flex">
+      <div class="w-1/3">
+        <p class="text-4xl font-bold">
+          This is BAID
+        </p>
+      </div>
+      <div class="w-2/3">
+        <p class="!font-serif text-4xl">
+          At BAID, you are empowered to explore your passions, build meaningful connections, and uncover new pathways to
+          your full potential — every single day.
+        </p>
+        <div class="flex justify-end m-t-5">
+          <ReadMore to="/about#overview" />
         </div>
       </div>
     </div>
@@ -30,7 +21,6 @@
 
 <script lang="ts" setup>
 import ReadMore from '../ReadMore.vue'
-import vidOverview from '@/assets/videos/sample_video.mp4'
 import { inject } from 'vue'
 
 const pageData = inject('data')

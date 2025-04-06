@@ -1,46 +1,44 @@
 <template>
   <div
-    class="flex list-none p-0 relative h-full m-0 links"
+    class="flex p-0 relative h-full m-0 links"
     @mouseleave="showBlock = false"
   >
-    <li
+    <div
       v-for="(route, index) in routesComputed"
       :key="route.name"
-      class="h-full font-500 text-16px margin-left-right-10px"
+      class="h-full text-lg"
       @mouseover="onHover(index, route.name)"
     >
       <router-link
         :to="route.path"
-        active-class="important-opacity-100"
-        class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity text-inherit hover:opacity-100 active:opacity-60"
+        active-class="opacity-100"
+        class="inline-block w-30 h-full decoration-none opacity-50 transition-colors text-inherit hover:opacity-100 active:opacity-60"
         style="line-height: 70px"
       >
-        {{ $t(`views.${route.name}`) }}
+        <div class="flex items-center justify-center w-full h-full">
+          {{ $t(`views.${route.name}`) }}
+        </div>
       </router-link>
-    </li>
+    </div>
+
     <!-- Block -->
     <div
       :class="{ 'opacity-10': showBlock }"
       :style="{ left: blockLeft }"
-      class="absolute w-30 h-17 bg-black opacity-0 z-10 pointer-events-none transition-opacity"
+      class="absolute w-30 h-full bg-black opacity-0 z-10 pointer-events-none transition-opacity"
     />
-    <!-- Line -->
-    <div
-      :class="{ 'opacity-0': !lineLeft || !showLine }"
-      :style="{ left: lineLeft, 'background-color': lineColor }"
-      class="absolute w-15 h-1 z-10 bottom--0.5px translate-x-1/2 transition-opacity"
-    />
+
     <!-- SubMenu -->
     <div
-      :class="{ '!opacity-100': showBlock }"
+      :class="{ 'opacity-100': showBlock }"
       :style="{ left: blockLeft }"
-      class="absolute top-17 w-60 bg-white opacity-0 z-10 transition-opacity shadow-lg"
+      class="absolute top-[4.5rem] w-60 bg-white opacity-0 z-10 transition-opacity shadow-lg"
     >
       <a
         v-for="(subRoute, index) in subRoutes[hover]"
         :key="index"
         :href="subRoute.path"
-        class="h-13 w-full text-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
+        class="h-14 w-full text-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
       >
         {{ $t(subRoute.name) }}
       </a>
@@ -52,18 +50,17 @@
 import { computed, ref } from 'vue'
 import { routes } from '@/router'
 import { animate } from 'popmotion'
-import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 const subRoutes = computed(() => ({
   HomePage: [
     {
       path: '/' + locale.value + '#educationPhilosophy',
-      name: 'HomePage.EducationPhilosophy.Title'
+      name: 'home-page.EducationPhilosophy.Title'
     },
     {
       path: '/' + locale.value + '#news',
-      name: 'HomePage.News.Title'
+      name: 'home-page.News.Title'
     }
   ],
   AboutUs: [
@@ -138,14 +135,14 @@ const routesComputed = computed(() => {
 })
 
 const showBlock = ref(false)
-let blockLeftAnimation
+let blockLeftAnimation: any
 const blockLeft = ref()
 
 // const showSubmenu = ref(false)
 // let submenuLeftAnimation
 const hover = ref()
 
-function onHover(index, name) {
+function onHover(index: number, name: string) {
   // OnHover: Block animation, Submenu animation
   if (!showBlock.value) {
     showBlock.value = true
@@ -169,31 +166,5 @@ function onHover(index, name) {
   hover.value = name
 }
 
-const router = useRouter()
-const lineLeft = ref()
-const showLine = ref(false)
-
-router.beforeResolve((to, from) => {
-  if (to.name === from.name) {
-    return
-  }
-  showLine.value = false
-  const index = routesComputed.value.findIndex((item) => item.name === to.name)
-  setTimeout(() => {
-    lineLeft.value = 7.5 * index + 'rem'
-  }, 300) // Wait for the line fadeout animation to finish
-})
-
-router.afterEach((to) => {
-  const index = routesComputed.value.findIndex((item) => item.name === to.name)
-  if (index !== -1) {
-    setTimeout(() => {
-      showLine.value = true
-    }, 300)
-  }
-})
-
 const { locale } = useI18n({ useScope: 'global' })
-
-const lineColor = '#103C74'
 </script>

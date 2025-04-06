@@ -1,22 +1,22 @@
 <template>
   <div
     :style="{ background: props.bg, color: props.light ? 'white' : 'black' }"
-    class="h-130 hover:shadow-md relative"
+    class="h-[33rem] relative hover:shadow-md"
   >
     <img
       :src="props.news.cover"
-      alt="Cover image"
+      alt="Cover image for news"
       class="h-64 object-cover w-full"
     >
-    <div class="px-6 py-3">
-      <h2 class="mb-2 line-clamp-1">
+    <div class="p-6">
+      <h3 class="line-clamp-2 mb-1 !text-xl">
         {{ props.news.title }}
-      </h2>
-      <p class="op-80 line-clamp-3">
-        {{ props.news.intro }}
+      </h3>
+      <p class="opacity-80 text-sm !mb-3">
+        {{ props.news.date }}
       </p>
-      <p class="op-50">
-        {{ $t('NewsPage.Publish') }} {{ props.news.date }}
+      <p class="op-80 line-clamp-3 !font-serif">
+        {{ props.news.intro }}
       </p>
     </div>
 

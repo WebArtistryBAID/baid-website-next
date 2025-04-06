@@ -3,7 +3,7 @@
     <!-- BG -->
     <HomeBackground />
     <MobileHead :img="firstImg">
-      {{ $t('views.HomePage') }}
+      {{ $t('views.home-page') }}
     </MobileHead>
     <section class="section">
       <MobileTitle>{{ data.introduction_title }}</MobileTitle>
@@ -29,7 +29,7 @@ import HomeBackground from '@/components/MobileHomePage/HomeBackground.vue'
 import MobileCard from '@/components/MobileCard.vue'
 import MobileHead from '@/components/MobileHead.vue'
 
-import firstImg from '@/assets/images/HomePage/Autumn.jpg'
+import firstImg from '@/assets/images/home-page/Autumn.jpg'
 import VideoCard from '@/components/VideoCard.vue'
 import MobileTitle from '@/components/MobileTitle.vue'
 import { computed, provide, ref, watchEffect } from 'vue'

@@ -1,11 +1,16 @@
 <template>
-  <div class="section">
-    <div class="flex items-center justify-between">
-      <NotFancyTitle
-        cn="新闻"
-        color="blue"
-        en="News"
-      />
+  <div class="mt-24 border-b border-black">
+    <div
+      class="mx-auto flex items-center"
+      style="max-width: 77rem"
+    >
+      <h2
+        class="!text-7xl font-bold font-sans mr-auto"
+        style="margin-bottom: -9px"
+      >
+        BAID Stories
+      </h2>
+
       <router-link
         :to="'/' + $i18n.locale + '/news'"
         class="flex items-center gap-1 text-black decoration-none op-80 hover:op-100 transition"
@@ -24,21 +29,23 @@
         </svg>
       </router-link>
     </div>
+  </div>
 
+  <div class="section !mb-24">
     <div
       v-if="props.newsList.length >= 3"
       class="grid grid-cols-3 gap-8"
     >
-      <NewsCard
+      <HomeNews
         :light="true"
         :news="props.newsList[0]"
         bg="var(--standard-blue)"
       />
-      <NewsCard
+      <HomeNews
         :news="props.newsList[1]"
         bg="#eee"
       />
-      <NewsCard
+      <HomeNews
         :light="true"
         :news="props.newsList[2]"
         bg="var(--standard-red)"
@@ -48,8 +55,7 @@
 </template>
 
 <script lang="ts" setup>
-import NotFancyTitle from '../NotFancyTitle.vue'
-import NewsCard from './NewsCard.vue'
+import HomeNews from './HomeNewsCard.vue'
 
 const props = defineProps([ 'newsList' ])
 </script>
