@@ -1,7 +1,7 @@
 <template>
   <header
     :class="{
-      'fixed top-0 bg-white shadow-lg': fixed,
+      'fixed top-0 bg-white/50 backdrop-filter backdrop-blur-lg': fixed,
       'absolute top-0 bg-transparent': !fixed && !fixedShow,
       'absolute -top-16 bg-transparent': !fixed && fixedShow
     }"
@@ -65,6 +65,11 @@ const fixedShow = ref(false)
 const route = useRoute()
 
 const handleScroll = () => {
+  if (route.meta.headerAnimate === false) {
+    fixed.value = true
+    fixedShow.value = true
+    return
+  }
   fixedShow.value = window.scrollY > 24 * 16
   fixed.value = window.scrollY > window.innerHeight
 }

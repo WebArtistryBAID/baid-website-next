@@ -128,6 +128,10 @@
     --font-serif: "EB Garamond", "Source Hans Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+button {
+    @apply cursor-pointer;
+}
+
 .section {
     max-width: 77rem;
     margin: 0 auto;

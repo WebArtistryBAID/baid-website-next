@@ -1,7 +1,7 @@
 <template>
   <MobileTitleSplash
-    :bottom="$t('AboutUs.Splash.Bottom')"
-    :top="$t('AboutUs.Splash.Top')"
+    :bottom="$t('about.Splash.Bottom')"
+    :top="$t('about.Splash.Top')"
     color="blue"
   >
     <MobileHead :img="imgHeader1" />
@@ -21,7 +21,7 @@ import DataSection from '@/components/MobileAboutUs/DataSection.vue'
 import AccreditationSection from '@/components/MobileAboutUs/AccreditationSection.vue'
 import MobileTitleSplash from '@/components/MobileTitleSplash.vue'
 import MobileHead from '@/components/MobileHead.vue'
-import imgHeader1 from '@/assets/images/AboutUs/Header_1.jpg'
+import imgHeader1 from '@/assets/images/about/Header_1.jpg'
 
 import dataZH from '@data/zh-CN/AboutUs.json'
 import dataEN from '@data/en-US/AboutUs.json'

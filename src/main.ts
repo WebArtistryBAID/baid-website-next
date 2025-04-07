@@ -3,7 +3,6 @@ import App from './App.vue'
 import i18n from './i18n'
 import router from './router'
 import { MotionPlugin } from '@vueuse/motion'
-import './index.css'
 
 const app = createApp(App)
 app.config.globalProperties.$clientType =

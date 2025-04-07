@@ -27,22 +27,6 @@
       :style="{ left: blockLeft }"
       class="absolute w-30 h-full bg-black opacity-0 z-10 pointer-events-none transition-opacity"
     />
-
-    <!-- SubMenu -->
-    <div
-      :class="{ 'opacity-100': showBlock }"
-      :style="{ left: blockLeft }"
-      class="absolute top-[4.5rem] w-60 bg-white opacity-0 z-10 transition-opacity shadow-lg"
-    >
-      <a
-        v-for="(subRoute, index) in subRoutes[hover]"
-        :key="index"
-        :href="subRoute.path"
-        class="h-14 w-full text-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
-      >
-        {{ $t(subRoute.name) }}
-      </a>
-    </div>
   </div>
 </template>
 
@@ -51,75 +35,6 @@ import { computed, ref } from 'vue'
 import { routes } from '@/router'
 import { animate } from 'popmotion'
 import { useI18n } from 'vue-i18n'
-
-const subRoutes = computed(() => ({
-  HomePage: [
-    {
-      path: '/' + locale.value + '#educationPhilosophy',
-      name: 'home-page.EducationPhilosophy.Title'
-    },
-    {
-      path: '/' + locale.value + '#news',
-      name: 'home-page.News.Title'
-    }
-  ],
-  AboutUs: [
-    {
-      path: '/' + locale.value + '/about#overview',
-      name: 'AboutUs.Overview.Title'
-    },
-    {
-      path: '/' + locale.value + '/about#alumni',
-      name: 'AboutUs.Alumni.Title'
-    },
-    {
-      path: '/' + locale.value + '/about#accreditation',
-      name: 'AboutUs.Accreditation.Title'
-    },
-    {
-      path: '/' + locale.value + '/about#data',
-      name: 'AboutUs.Data.Title'
-    }
-  ],
-  EducationTeaching: [
-    {
-      path: '/' + locale.value + '/education#curriculum',
-      name: 'EducationTeaching.Curriculums.Title'
-    },
-    {
-      path: '/' + locale.value + '/education#learningMethods',
-      name: 'EducationTeaching.LearningMethods.Title'
-    },
-    {
-      path: '/' + locale.value + '/education#studentGuidance',
-      name: 'EducationTeaching.StudentGuidance.Title'
-    },
-    {
-      path: '/' + locale.value + '/education#wonderfulMoments',
-      name: 'EducationTeaching.WonderfulMoments.Title'
-    }
-  ],
-  StudentLife: [
-    {
-      path: '/' + locale.value + '/studentLife#activities',
-      name: 'StudentLife.Activities.Title'
-    },
-    {
-      path: '/' + locale.value + '/studentLife#clubs',
-      name: 'StudentLife.Clubs.Title'
-    }
-  ],
-  JoinUs: [
-    {
-      path: '/' + locale.value + '/join#apply',
-      name: 'JoinUs.Student.Title'
-    },
-    {
-      path: '/' + locale.value + '/join#faculty',
-      name: 'JoinUs.Faculty.Title'
-    }
-  ]
-}))
 
 const routesComputed = computed(() => {
   return routes

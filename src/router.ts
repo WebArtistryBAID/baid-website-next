@@ -13,11 +13,7 @@ export const routes = [
     name: 'HomePage',
     component: () => import(`./views/${clientType}/HomePage.vue`),
     meta: {
-      header: {
-        transparent: true, // Tell the navigation component to make the header's bg transparent
-        color: '#fff' // Set the header's text color
-        // logoType: 'normal' // Set the header's logo type
-      }
+      headerAnimate: true
     }
   },
   {
@@ -25,6 +21,7 @@ export const routes = [
     name: 'AboutUs',
     component: () => import(`./views/${clientType}/AboutUs.vue`),
     meta: {
+      headerAnimate: false,
       // No thing to do with header
       noSplash: true
     }
@@ -42,7 +39,7 @@ export const routes = [
     }
   },
   {
-    path: prefix + '/studentLife',
+    path: prefix + '/life',
     name: 'StudentLife',
     component: () => import(`./views/${clientType}/StudentLife.vue`),
     meta: {

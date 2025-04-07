@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <MobileTitle>{{ $t('AboutUs.Accreditation.Title') }}</MobileTitle>
+    <MobileTitle>{{ $t('about.Accreditation.Title') }}</MobileTitle>
     <pre v-html="pageData.accreditation" />
     <MobileCard
       :autoplay="true"
@@ -24,34 +24,34 @@
 import { inject } from 'vue'
 import MobileCard from '../MobileCard.vue'
 import MobileTitle from '../MobileTitle.vue'
-import imgACT from '@/assets/images/AboutUs/ACT.svg'
-import imgAP from '@/assets/images/AboutUs/AP.svg'
-import imgCIS from '@/assets/images/AboutUs/CIS.png'
-import imgApple from '@/assets/images/AboutUs/Apple.svg'
-import imgCam from '@/assets/images/AboutUs/Cambridge.png'
+import imgACT from '@/assets/images/about/act.svg'
+import imgAP from '@/assets/images/about/ap.svg'
+import imgCIS from '@/assets/images/about/CIS.png'
+import imgApple from '@/assets/images/about/apple.svg'
+import imgCam from '@/assets/images/about/cambridge.png'
 
 const pageData = inject('data')
 
 const accs = [
   {
     image: imgAP,
-    name: 'AboutUs.Accreditation.AP'
+    name: 'about.Accreditation.AP'
   },
   {
     image: imgACT,
-    name: 'AboutUs.Accreditation.ACT'
+    name: 'about.Accreditation.ACT'
   },
   {
     image: imgCIS,
-    name: 'AboutUs.Accreditation.CIS'
+    name: 'about.Accreditation.CIS'
   },
   {
     image: imgCam,
-    name: 'AboutUs.Accreditation.Cambridge'
+    name: 'about.Accreditation.Cambridge'
   },
   {
     image: imgApple,
-    name: 'AboutUs.Accreditation.Apple'
+    name: 'about.Accreditation.Apple'
   }
 ]
 </script>

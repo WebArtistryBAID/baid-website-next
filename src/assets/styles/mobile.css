@@ -6,6 +6,10 @@
     --swiper-theme-color: #83050e !important;
 }
 
+button {
+    @apply cursor-pointer;
+}
+
 .section {
     padding: 10px 20px;
     margin: 0 auto;

@@ -1,15 +1,14 @@
 <template>
   <div>
-    <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 !font-sans text-white">
-        {{ $t('views.AboutUs') }}
-      </h1>
-    </CarouselHorizontal>
+    <section id="mission">
+      <MissionSection />
+    </section>
+    <HeroSection />
     <section id="overview">
       <OverviewSection />
     </section>
-    <section id="alumni">
-      <AlumniSection />
+    <section id="data">
+      <DataSection />
     </section>
     <section
       id="accreditation"
@@ -17,17 +16,11 @@
     >
       <AccreditationSection />
     </section>
-    <section id="data">
-      <div class="section important:p-b-0">
-        <NotFancyTitle
-          :cn="$t('AboutUs.Data.Title')"
-          color="blue"
-          en="Data"
-        />
-      </div>
-      <div class="h-90 flex items-center">
-        <DataSection />
-      </div>
+    <section id="alumni">
+      <AlumniSection />
+    </section>
+    <section id="motto">
+      <MottoSection />
     </section>
   </div>
 </template>
@@ -38,15 +31,15 @@ import AlumniSection from '@/components/DesktopAboutUs/AlumniSection.vue'
 import AccreditationSection from '@/components/DesktopAboutUs/AccreditationSection.vue'
 import DataSection from '@/components/DesktopAboutUs/DataSection.vue'
 
-import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
-import NotFancyTitle from '@/components/NotFancyTitle.vue'
-
 // Data
 import dataZH from '@data/zh-CN/AboutUs.json'
 import dataEN from '@data/en-US/AboutUs.json'
 
 import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'
+import MissionSection from '@/components/DesktopAboutUs/MissionSection.vue'
+import HeroSection from '@/components/DesktopAboutUs/HeroSection.vue'
+import MottoSection from '@/components/DesktopAboutUs/MottoSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

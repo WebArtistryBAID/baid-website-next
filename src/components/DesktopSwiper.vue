@@ -1,7 +1,10 @@
 <template>
   <div class="flex items-center justify-center swiper-container">
     <!-- arrow left -->
-    <div @click="prev">
+    <button
+      aria-label="Previous"
+      @click="prev"
+    >
       <svg
         class="block"
         height="48"
@@ -13,7 +16,7 @@
           d="m32.75 44-20-20 20-20 2.8 2.85L18.4 24l17.15 17.15Z"
         />
       </svg>
-    </div>
+    </button>
     <Swiper
       ref="swiper"
       :autoplay="{
@@ -29,7 +32,10 @@
       <slot />
     </Swiper>
     <!-- arrow right -->
-    <div @click="next">
+    <button
+      aria-label="Next"
+      @click="next"
+    >
       <svg
         class="block"
         height="48"
@@ -41,13 +47,12 @@
           d="m15.2 43.9-2.8-2.85L29.55 23.9 12.4 6.75l2.8-2.85 20 20Z"
         />
       </svg>
-    </div>
+    </button>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
-import { A11y, Autoplay, Navigation } from 'swiper'
+import { ref } from 'vue'
 import { Swiper } from 'swiper/vue'
 
 import 'swiper/css'
@@ -62,14 +67,6 @@ const props = defineProps({
   autoplay: {
     type: Boolean,
     default: false
-  }
-})
-
-const modules = computed(() => {
-  if (props.autoplay) {
-    return [ Autoplay, A11y, Navigation ]
-  } else {
-    return [ A11y, Navigation ]
   }
 })
 

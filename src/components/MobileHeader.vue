@@ -162,7 +162,7 @@ function onScroll() {
 router.afterEach(onScroll)
 
 router.beforeEach((e) => {
-  if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
+  if (e.name === 'about' || e.name === 'EducationTeaching') {
     setTimeout(() => {
       ready.value = false
     }, 300)
@@ -171,7 +171,7 @@ router.beforeEach((e) => {
 
 router.afterEach((e) => {
   router.isReady().then(() => {
-    if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
+    if (e.name === 'about' || e.name === 'EducationTeaching') {
       setTimeout(() => {
         ready.value = true
       }, 1000)
