@@ -3,16 +3,16 @@
     class="!text-[9rem] font-bold !font-sans px-24"
     style="margin-bottom: -3.2rem"
   >
-    About BAID
+    Education
   </h1>
 
   <img
     :src="campus"
-    alt="BAID's campus under the blue sky"
+    alt="BAID students working on a group project"
     class="w-full"
   >
 </template>
 
 <script lang="ts" setup>
-import campus from '@/assets/images/about/campus.webp'
+import campus from '@/assets/images/education/education.webp'
 </script>

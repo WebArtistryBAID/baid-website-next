@@ -1,14 +1,5 @@
 <template>
   <div class="section">
-    <div class="flex justify-end">
-      <NotFancyTitle
-        cn="学习方式"
-        color="red"
-        en="Learning Methods"
-        right
-      />
-    </div>
-
     <div
       class="grid gap-1"
       style="grid-template-columns: 3fr 1fr"
@@ -16,14 +7,22 @@
       <div class="relative">
         <img
           :src="pageData.learning_methods[current].image"
-          class="w-full h-full object-cover"
+          :class="{ 'opacity-60': transition }"
+          alt=""
+          class="w-full h-full object-cover transition-opacity duration-300"
         >
         <div
-          :class="{ 'op-0': transition }"
-          class="absolute bottom-0 pa-10 pt-20 text-white special-bg transition-opacity-300"
+          :class="{ 'opacity-0': transition }"
+          class="absolute bottom-0 p-10 pt-20 text-white special-bg transition-opacity duration-300"
         >
-          <h2>{{ pageData.learning_methods[current].title }}</h2>
-          <p v-html="pageData.learning_methods[current].content" />
+          <h2 class="text-4xl font-bold mb-2">
+            {{ pageData.learning_methods[current].title }}
+          </h2>
+          <p
+            class="text-xl font-serif"
+            v-html="pageData.learning_methods[current].content"
+          />
+          TODO These texts are too long
         </div>
       </div>
       <div class="grid gap-1">
@@ -38,8 +37,9 @@
                 current !== index && !transition
             }"
             :src="method.image"
-            alt="Bg"
-            class="w-full h-full object-cover block opacity-60 transition-all"
+            :alt="`Learning Experience: ${method.title}`"
+            class="w-full h-full object-cover block opacity-60 transition-all cursor-pointer"
+            role="button"
             @click="change(index)"
           >
         </div>
@@ -49,8 +49,6 @@
 </template>
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-
-import NotFancyTitle from '../NotFancyTitle.vue'
 
 const pageData = inject('data')
 
@@ -68,6 +66,7 @@ function change(index) {
   }, 300)
 }
 </script>
+
 <style scoped>
 .special-bg {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));

@@ -1,46 +1,79 @@
 <template>
   <footer
-    :style="{ 'background-image': 'url(' + imgFooter + ')' }"
-    class="w-full bg-black h-70 mt-45px !font-sans"
+    class="w-full mt-24 !font-sans py-16 !text-white"
+    style="background-color: var(--standard-blue)"
   >
-    <div class="cover w-full h-full">
-      <div class="flex text-white w-full h-full justify-center items-center">
-        <div class="w-50% mx-24 flex items-center justify-end">
-          <div>
-            <a
-              class="text-white !decoration-none"
-              href="https://beian.miit.gov.cn"
-              target="_blank"
-            >
-              京ICP备 - 1324564856
-            </a>
-            <p>@2024 BJZX All rights reserved.</p>
+    <div
+      class="mx-auto mb-5"
+      style="max-width: 77rem"
+    >
+      <p class="uppercase tracking-[0.3em] font-sans text-lg">
+        BEIJING ACADEMY
+      </p>
+
+      <div class="flex w-full mb-8">
+        <div class="w-1/4 p-8 border-r border-white/10">
+          <p class="font-sans text-xl font-bold !mb-3">
+            About Us
+          </p>
+          <div class="flex flex-col gap-2">
+            <router-link :to="`/${locale}/about#overview`">
+              <p>Overview</p>
+            </router-link>
+            <router-link :to="`/${locale}/about#data`">
+              <p>BAID in Numbers</p>
+            </router-link>
+            <router-link :to="`/${locale}/about#accreditation`">
+              <p>Accreditation</p>
+            </router-link>
+            <router-link :to="`/${locale}/about#alumni`">
+              <p>Alumni</p>
+            </router-link>
           </div>
         </div>
-        <div class="w-50% mx-24 flex items-center">
-          <img
-            :src="logoFullWhite"
-            alt="logo"
-            class="w-sm inline object-cover"
-          >
-          <span class="m-x-2 text-8 font-bold">国际部</span>
+        <div class="w-1/4 p-8 border-r border-white/10">
+          <p class="font-sans text-xl font-bold !mb-3">
+            Education
+          </p>
+          <div class="flex flex-col gap-2">
+            <router-link :to="`/${locale}/education#curriculum`">
+              <p>The BAID Curriculum</p>
+            </router-link>
+            <router-link :to="`/${locale}/education#courses`">
+              <p>Courses</p>
+            </router-link>
+            <router-link :to="`/${locale}/education#highlights`">
+              <p>Learning, Reimagined</p>
+            </router-link>
+          </div>
+        </div>
+        <div class="w-1/4 p-8 border-r border-white/10">
+          <p class="font-sans text-xl font-bold mb-3">
+            Student Life
+          </p>
+        </div>
+        <div class="w-1/4 p-8">
+          <p class="font-sans text-xl font-bold mb-3">
+            Join Us
+          </p>
         </div>
       </div>
+
+      <div class="mb-5">
+        <p>+86 159 1052 4064 (Phone / WeChat)</p>
+        <p>baid (at) bjacademy.com.cn</p>
+      </div>
+
+      <p>Copyright (c) Beijing Academy International Division, all rights reserved.</p>
+      <p>
+        <a href="https://www.beijingacademy.com.cn">Learn more about Beijing Academy's Chinese education offerings.</a>
+      </p>
+      <p><a href="https://beian.miit.gov.cn">京ICP备12345678号</a></p>
     </div>
   </footer>
 </template>
 <script lang="ts" setup>
-import logoFullWhite from '../assets/images/logoFullWhite.png'
-import imgFooter from '../assets/images/Footer-blue.jpg'
-</script>
-<style>
-footer {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+import { useI18n } from 'vue-i18n'
 
-.cover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-</style>
+const { locale } = useI18n({ useScope: 'global' })
+</script>

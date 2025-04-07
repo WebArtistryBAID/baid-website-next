@@ -1,30 +1,33 @@
 <template>
   <div>
-    <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 !font-sans text-white">
-        {{ $t('views.EducationTeaching') }}
-      </h1>
-    </CarouselHorizontal>
+    <HeadSection />
+    <HeroSection />
     <section id="curriculums">
       <CurriculumsIntroduction />
     </section>
-    <section id="learningMethods">
+    <section id="courses">
+      <CoursesSection />
+    </section>
+    <section id="stats">
+      <DataSection />
+    </section>
+    <section id="highlights">
+      <HighlightsSection />
+    </section>
+    <section id="learning-methods">
       <LearningMethods />
     </section>
-    <section id="studentGuidance">
-      <StudentGuidance />
-    </section>
-    <section id="wonderfulMoments">
-      <WonderfulMoments />
-    </section>
+    <!-- Maybe we should add a section about the very good AP scores we have? -->
   </div>
 </template>
 <script lang="ts" setup>
-import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
+import HeroSection from '@/components/DesktopEducationTeaching/HeroSection.vue'
+import HeadSection from '@/components/DesktopEducationTeaching/HeadSection.vue'
 import CurriculumsIntroduction from '@/components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
+import CoursesSection from '@/components/DesktopEducationTeaching/CoursesSection.vue'
+import HighlightsSection from '@/components/DesktopEducationTeaching/HighlightsSection.vue'
 import LearningMethods from '@/components/DesktopEducationTeaching/LearningMethods.vue'
-import StudentGuidance from '@/components/DesktopEducationTeaching/StudentGuidance.vue'
-import WonderfulMoments from '@/components/DesktopEducationTeaching/WonderfulMoments.vue'
+import DataSection from '@/components/DesktopEducationTeaching/DataSection.vue'
 
 // Data
 import dataZH from '@data/zh-CN/Education.json'

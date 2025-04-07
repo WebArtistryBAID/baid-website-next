@@ -1,8 +1,28 @@
 <template>
   <div
-    class="relative flex section important:py-20 md:flex-row flex-col items-center"
+    class="relative flex mx-auto py-24 px-36 my-24 items-center"
+    style="max-width: 77rem"
   >
-    <div class="absolute left-20px top-0">
+    <div class="w-1/2">
+      <p
+        class="tracking-wide !text-3xl !font-serif !mb-3"
+        v-html="pageData.principal_message"
+      />
+      <p class="w-full text-right font-sans text-xl">
+        —— {{ pageData.principal_name }}
+      </p>
+    </div>
+    <div class="w-1/2 flex justify-center items-center">
+      <img
+        :src="pageData.principal_avatar"
+        alt="Avatar"
+        class="object-contain w-64"
+      >
+    </div>
+
+
+    <!-- The quotes -->
+    <div class="absolute left-4 top-0">
       <svg
         fill="none"
         height="53"
@@ -54,20 +74,7 @@
         </g>
       </svg>
     </div>
-    <div class="m-l-30 mr-20 flex-1">
-      <h2 class="tracking-wide">
-        <pre v-html="pageData.principal_message" />
-      </h2>
-      <p class="w-full text-right font-title text-5">
-        —— {{ pageData.principal_name }}
-      </p>
-    </div>
-    <img
-      :src="pageData.principal_avatar"
-      alt="Avatar"
-      class="object-contain md:w-20% md:mr-30 md:m-t-0 m-t-10 w-1/2 min-w-50 h-80 flex-2"
-    >
-    <div class="absolute right-20px bottom-0">
+    <div class="absolute right-4 bottom-0">
       <svg
         fill="none"
         height="53"

@@ -1,23 +1,24 @@
 <template>
   <div
-    :class="{ 'w-33%': thisActive, 'w-25%': !thisActive }"
+    :class="{ 'w-1/3': thisActive, 'w-1/4': !thisActive }"
     :style="{ backgroundImage: 'url(' + image + ')' }"
-    class="h-120 text-white bg-cover relative transition-all transition-duration-.3s"
+    class="h-[30rem] text-white bg-cover relative transition-all duration-300"
     @mouseleave="$emit('deactivate')"
     @mousemove="$emit('activate')"
   >
     <div
       :class="{ '!bg-op-40': thisActive }"
-      class="w-full h-full bg-#103c74 bg-op-80 transition transition-duration-.5s relative"
+      class="w-full h-full bg-[#103c74]/80 transition-all duration-500 relative"
     >
       <pre
-        :class="{ 'op-0': !delay, 'op-100': delay }"
-        class="pcontent leading-normal text-right"
+        :class="{ 'opacity-0': !delay, 'opacity-100': delay }"
+        class="pcontent leading-normal text-right !font-sans !text-3xl"
         v-html="props.content"
       />
       <h2
         :class="{ center: !thisActive, right: thisActive }"
-        class="text-8 !m-0 tracking-wide text-center write-vertical-left"
+        class="text-8 !m-0 tracking-wide text-center"
+        style="writing-mode: vertical-lr"
       >
         {{ props.title }}
       </h2>
@@ -55,15 +56,10 @@ watch(thisActive, (a) => {
 <style scoped>
 pre {
   position: absolute;
-
   left: 30px;
-
   top: 50%;
-
   text-align: left;
-
   transform: translateY(-50%);
-
   width: 250px;
   transition: all 0.5s;
 }
@@ -72,7 +68,6 @@ h2 {
   position: absolute;
   top: 50%;
   transform: translate(50%, -50%);
-
   transition: all 0.5s;
 }
 
@@ -81,7 +76,6 @@ h2::before {
   position: absolute;
   width: 4px;
   height: 70%;
-
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.5s;
@@ -105,11 +99,5 @@ h2::before {
 .right::before {
   opacity: 1;
   height: 70%;
-}
-</style>
-
-<style>
-.pcontent * {
-  font-size: 1.5rem !important;
 }
 </style>

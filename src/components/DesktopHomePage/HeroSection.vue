@@ -5,7 +5,7 @@
   >
     <h1
       class="font-bold pb-24 text-white !font-sans"
-      style="font-size: 12rem"
+      style="font-size: 12rem; line-height: 1.1"
     >
       Beijing<br>
       Academy

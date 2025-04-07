@@ -21,9 +21,7 @@ export const routes = [
     name: 'AboutUs',
     component: () => import(`./views/${clientType}/AboutUs.vue`),
     meta: {
-      headerAnimate: false,
-      // No thing to do with header
-      noSplash: true
+        headerAnimate: false
     }
   },
   {
@@ -31,11 +29,7 @@ export const routes = [
     name: 'EducationTeaching',
     component: () => import(`./views/${clientType}/EducationTeaching.vue`),
     meta: {
-      // No thing to do with header
-      noSplash: true,
-      header: {
-        alwaysFill: true
-      }
+        headerAnimate: false
     }
   },
   {

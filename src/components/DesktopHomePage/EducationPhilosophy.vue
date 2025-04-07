@@ -1,12 +1,19 @@
 <template>
-  <div class="bg-[var(--standard-blue)] mb-15">
-    <div class="section">
-      <NotFancyTitle
-        cn="办学理念"
-        color="white"
-        en="Education Philosophy"
-      />
-
+  <div
+    class="mx-auto"
+    style="max-width: 77rem"
+  >
+    <h2
+      class="!text-5xl font-bold !font-sans mb-3"
+    >
+      Education Philosophy
+    </h2>
+  </div>
+  <div class="bg-[var(--standard-blue)] mb-16">
+    <div
+      class="mx-auto"
+      style="max-width: 77rem"
+    >
       <div class="flex m-t-10 m-auto justify-items-center">
         <PhilosophyBlock
           v-for="(key, index) in blocks"
@@ -26,7 +33,6 @@
 
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-import NotFancyTitle from '../NotFancyTitle.vue'
 import PhilosophyBlock from './PhilosophyBlock.vue'
 
 const pageData = inject('data')

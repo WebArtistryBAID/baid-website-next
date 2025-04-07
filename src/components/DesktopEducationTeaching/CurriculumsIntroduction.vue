@@ -3,27 +3,25 @@
     id="curriculum"
     class="section"
   >
-    <NotFancyTitle
-      cn="课程体系"
-      color="blue"
-      en="Curriculums"
-    />
+    <h2 class="text-4xl font-bold mb-3">
+      The BAID Curriculum
+    </h2>
     <div class="flex gap-16 h-100">
-      <div class="w-40% flex flex-col justify-around">
+      <div class="w-2/5 flex flex-col justify-around">
         <div
           v-for="(c, i) in pageData.curriculums"
           :key="i"
-          :class="{ '!op-100 active': current == i }"
-          class="op-70 container w-50"
+          :class="{ '!opacity-100 active': current == i }"
+          class="opacity-70 container w-50"
           @mouseover="current = i"
         >
-          <h2 class="m0 w-max">
+          <h2 class="m-0 text-2xl w-max">
             {{ c.name }}
           </h2>
 
           <div
-            :class="{ '!op-100': current == i }"
-            class="absolute top-10 left-0 op-0"
+            :class="{ '!opacity-100': current == i }"
+            class="absolute top-10 left-0 opacity-0"
           >
             <ReadMore to="/education" />
           </div>
@@ -34,22 +32,10 @@
         <div
           v-for="(c, i) in pageData.curriculums"
           :key="i"
-          :class="{ '!op-100': current == i, 'flex-col-reverse': i % 2 == 0 }"
-          class="w-full flex flex-col justify-center gap-5 absolute top-0 op-0 h-full"
+          :class="{ '!opacity-100': current == i, 'flex-col-reverse': i % 2 == 0 }"
+          class="w-full flex flex-col justify-center gap-5 absolute top-0 opacity-0 h-full"
         >
-          <!-- <div -->
-          <!--   class="flex w-full gap-5" -->
-          <!--   :class="{ 'flex-row-reverse': i % 2 == 0 }" -->
-          <!-- > -->
-          <!--   <img -->
-          <!--     src="https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=500" -->
-          <!--     class="flex-1 w-full h-50" -->
-          <!--   /> -->
-          <!--   <img -->
-          <!--     src="https://images.unsplash.com/photo-1688362378188-264c2d01ae9d?w=500" -->
-          <!--     class="flex-1 w-full h-50" -->
-          <!--   /> -->
-          <!-- </div> -->
+          TODO This part needs an update.
           <pre v-html="c.content" />
         </div>
       </div>
@@ -58,7 +44,6 @@
 </template>
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-import NotFancyTitle from '../NotFancyTitle.vue'
 import ReadMore from '@/components/ReadMore.vue'
 
 const pageData = inject('data')
