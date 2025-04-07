@@ -1,6 +1,6 @@
 <template>
   <div class="section !my-24">
-    <h2 class="font-bold font-sans !text-4xl mb-8">
+    <h2 class="font-bold font-sans !text-2xl mb-8">
       The BAID Value
     </h2>
     <!-- 让人成为人，让自己成为自己，让世界因我更美好。 -->
