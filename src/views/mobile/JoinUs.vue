@@ -10,15 +10,15 @@
         class="section"
         @faculty="
           ;(isNav = false),
-            (title = 'JoinUs.Faculty.Title'),
+            (title = 'admissions.Faculty.Title'),
             (content = data.faculty),
-            (join = 'JoinUs.Faculty.Join')
+            (join = 'admissions.Faculty.Join')
         "
         @student="
           ;(isNav = false),
-            (title = 'JoinUs.Student.Title'),
+            (title = 'admissions.Student.Title'),
             (content = data.student),
-            (join = 'JoinUs.Student.Join')
+            (join = 'admissions.Student.Join')
         "
       />
       <JoinInfo

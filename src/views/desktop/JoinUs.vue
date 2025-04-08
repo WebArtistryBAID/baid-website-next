@@ -1,24 +1,30 @@
 <template>
   <div>
-    <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 !font-sans text-white">
-        {{ $t('views.JoinUs') }}
-      </h1>
-    </CarouselHorizontal>
-    <div class="max-w-5xl mx-auto">
-      <section id="apply">
-        <JoinStudentSection />
-      </section>
-      <section id="faculty">
-        <JoinFacultySection />
-      </section>
+    <HeadSection />
+    <HeroSection />
+    <SecondSection />
+    <DataSection />
+    <HighlightsSection />
+    <div id="overview">
+      <OverviewSection />
+    </div>
+    <div id="application">
+      <ApplicationSection />
+    </div>
+    <div id="contact">
+      <ContactSection />
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
-import JoinStudentSection from '@/components/DesktopJoinUs/JoinStudentSection.vue'
-import JoinFacultySection from '@/components/DesktopJoinUs/JoinFacultySection.vue'
+import HeadSection from '@/components/DesktopJoinUs/HeadSection.vue'
+import HeroSection from '@/components/DesktopJoinUs/HeroSection.vue'
+import SecondSection from '@/components/DesktopJoinUs/SecondSection.vue'
+import HighlightsSection from '@/components/DesktopJoinUs/HighlightsSection.vue'
+import DataSection from '@/components/DesktopJoinUs/DataSection.vue'
+import OverviewSection from '@/components/DesktopJoinUs/OverviewSection.vue'
+import ApplicationSection from '@/components/DesktopJoinUs/ApplicationSection.vue'
+import ContactSection from '@/components/DesktopJoinUs/ContactSection.vue'
 
 import dataZH from '@data/zh-CN/JoinUs.json'
 import dataEN from '@data/en-US/JoinUs.json'

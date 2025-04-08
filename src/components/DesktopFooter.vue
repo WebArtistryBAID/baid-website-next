@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="w-full mt-24 !font-sans py-16 !text-white"
+    class="w-full !font-sans py-16 !text-white"
     style="background-color: var(--standard-blue)"
   >
     <div
