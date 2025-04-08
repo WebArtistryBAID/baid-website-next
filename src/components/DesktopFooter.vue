@@ -51,6 +51,14 @@
           <p class="font-sans text-xl font-bold mb-3">
             Student Life
           </p>
+          <div class="flex flex-col gap-2">
+            <router-link :to="`/${locale}/life#activities`">
+              <p>Activities</p>
+            </router-link>
+            <router-link :to="`/${locale}/life#clubs`">
+              <p>Clubs</p>
+            </router-link>
+          </div>
         </div>
         <div class="w-1/4 p-8">
           <p class="font-sans text-xl font-bold mb-3">
