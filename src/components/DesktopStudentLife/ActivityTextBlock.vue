@@ -6,14 +6,11 @@
     }"
     class="w-full h-80 p-8"
   >
-    <h3 class="text-2xl font-bold">
+    <h3 class="text-xl mb-3 font-bold">
       {{ props.name }}
     </h3>
-    <hr
-      :class="['mb-4', props.light ? 'border-white/30' : 'border-black/30']"
-    >
     <div
-      class="no-size text-sm"
+      class="no-size text-xs"
       v-html="props.description"
     />
   </div>

@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts" setup>
-import camping from '@/assets/images/StudentLife/Activities/Camping.jpg'
-import archery from '@/assets/images/StudentLife/Activities/ZWTZY.jpg'
+import camping from '@/assets/images/life/Activities/Camping.jpg'
+import archery from '@/assets/images/life/Activities/ZWTZY.jpg'
 import SplashBlock from '@/components/MobileStudentLife/SplashBlock.vue'
 
 import dataZH from '@data/zh-CN/StudentLife.json'

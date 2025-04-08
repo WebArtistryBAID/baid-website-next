@@ -4,6 +4,7 @@
       <DesktopSwiper
         :autoplay="true"
         :slides="1"
+        effect="coverflow"
         arrow-color="white"
       >
         <swiper-slide

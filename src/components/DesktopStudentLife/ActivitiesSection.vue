@@ -1,12 +1,9 @@
 <template>
   <div class="section">
     <div class="flex justify-end">
-      <NotFancyTitle
-        :cn="$t('StudentLife.Activities.Title')"
-        color="red"
-        en="Activities"
-        right
-      />
+      <h2 class="text-4xl font-bold mb-5">
+        Activities
+      </h2>
     </div>
     <div class="xl:grid-cols-4 grid-cols-2 gap-0 grid shadow-xl">
       <ActivityBlock
@@ -56,7 +53,6 @@
 
 <script lang="ts" setup>
 import ActivityBlock from '@/components/DesktopStudentLife/ActivityBlock.vue'
-import NotFancyTitle from '@/components/NotFancyTitle.vue'
 import { inject } from 'vue'
 
 const pageData = inject('data')

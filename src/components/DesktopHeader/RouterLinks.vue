@@ -45,7 +45,7 @@ const routesComputed = computed(() => {
       return { ...route, path }
     })
     .filter(
-      (route) => route.name !== 'NotFound' && route.name !== 'ArticlePage'
+        (route) => route.name !== 'NotFound' && route.name !== 'ArticlePage' && route.name !== 'HomePage'
     )
 })
 

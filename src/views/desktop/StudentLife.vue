@@ -1,10 +1,11 @@
 <template>
   <div>
-    <CarouselHorizontal :images="data.carousel_images || []">
-      <h1 class="text-18 !font-sans text-white">
-        {{ $t('views.StudentLife') }}
-      </h1>
-    </CarouselHorizontal>
+    <HeroSection />
+    <SecondSection />
+    <section id="highlights">
+      <HighlightsSection />
+    </section>
+    <MottoSection />
     <section id="activities">
       <ActivitiesSection />
     </section>
@@ -15,7 +16,10 @@
 </template>
 
 <script lang="ts" setup>
-import CarouselHorizontal from '@/components/CarouselHorizontal.vue'
+import HeroSection from '@/components/DesktopStudentLife/HeroSection.vue'
+import SecondSection from '@/components/DesktopStudentLife/SecondSection.vue'
+import HighlightsSection from '@/components/DesktopStudentLife/HighlightsSection.vue'
+import MottoSection from '@/components/DesktopStudentLife/MottoSection.vue'
 import ClubsSection from '@/components/DesktopStudentLife/ClubsSection.vue'
 import ActivitiesSection from '@/components/DesktopStudentLife/ActivitiesSection.vue'
 

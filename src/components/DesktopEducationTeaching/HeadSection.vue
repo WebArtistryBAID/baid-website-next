@@ -10,7 +10,7 @@
         <p class="!font-serif text-4xl">
           Taking advanced courses, diving into research, exploring Chinese culture,
           or even traveling across the nation and the world... At BAID, learning takes place
-          where you could never have imagined.
+          where you could have never imagined.
         </p>
       </div>
     </div>

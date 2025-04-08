@@ -1,68 +1,46 @@
 <template>
-  <div
-    id="container"
-    class="my-10 py-5 flex flex-col justify-center items-center bg-gray-200"
-  >
-    <h1 class="text-10 font-300 font-title text-center">
-      {{ $t('StudentLife.Clubs.Title') }}
-    </h1>
-    <div class="flex justify-center items-center w-274">
+  <div class="py-24 border-b border-gray-200">
+    <div class="section">
+      <h2 class="mb-5 text-4xl font-bold">
+        Clubs
+      </h2>
+
       <DesktopSwiper
-        autoplay="true"
-        slides="4"
+        arrow-color="var(--standard-blue)"
       >
         <swiper-slide
           v-for="club in pageData.clubs"
           :key="club"
-          class="flex justify-center py-3"
-          @click="
-            () => {
-              clubName = club.name
-              clubDescription = club.content
-              clubImgs = club.images
-              showInfo = true
-            }
-          "
+          class="flex justify-center items-center text-black"
         >
-          <div
-            :style="{ 'background-color': club.bg_color, color: club.color }"
-            class="h-220px aspect-1 items-center justify-center flex flex-col transition-300 hover:shadow-xl"
-          >
-            <div class="text-8 font-title m-1">
-              {{ club.name }}
+          <div class="max-w-4/5 bg-white mx-auto rounded-lg border border-gray-200 flex gap-5">
+            <div class="w-1/2 py-16 px-8 h-96 overflow-y-auto">
+              <h3 class="!text-2xl font-bold mb-5">
+                {{ club.name }}
+              </h3>
+              <p
+                class="text-sm"
+                v-html="club.content"
+              />
             </div>
-            <div class="m-1">
+            <div class="w-1/2">
               <img
-                :src="club.icon"
-                class="w-80px aspect-1 object-cover block"
+                :alt="club.name"
+                :src="club.images[0]"
+                class="object-cover w-full h-full rounded-lg"
               >
             </div>
           </div>
         </swiper-slide>
       </DesktopSwiper>
-      <Transition name="fade">
-        <ClubInfo
-          v-if="showInfo"
-          :description="clubDescription"
-          :images="clubImgs"
-          :name="clubName"
-          @close="showInfo = false"
-        />
-      </Transition>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import ClubInfo from './ClubInfo.vue'
 import DesktopSwiper from '../DesktopSwiper.vue'
-import { inject, ref } from 'vue'
+import { inject } from 'vue'
 import { SwiperSlide } from 'swiper/vue'
 
 const pageData = inject('data')
-
-const showInfo = ref(false)
-const clubName = ref(null)
-const clubDescription = ref(null)
-const clubImgs = ref(null)
 </script>

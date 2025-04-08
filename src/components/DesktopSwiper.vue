@@ -17,20 +17,20 @@
         />
       </svg>
     </button>
-    <Swiper
-      ref="swiper"
+    <swiper
       :autoplay="{
         delay: 2500,
         disableOnInteraction: false
       }"
+      :effect="effect"
       :loop="true"
       :modules="modules"
-      :slides-per-view="props.slides"
       :space-between="10"
+      :slides-per-view="1"
       @swiper="getRef"
     >
       <slot />
-    </Swiper>
+    </swiper>
     <!-- arrow right -->
     <button
       aria-label="Next"
@@ -53,13 +53,22 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { A11y, EffectCoverflow, EffectFlip } from 'swiper/modules'
 import { Swiper } from 'swiper/vue'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/a11y'
+import 'swiper/css/effect-flip'
+import 'swiper/css/effect-coverflow'
+
+const modules = [ A11y, EffectFlip, EffectCoverflow ]
 
 const props = defineProps({
-  slides: Number,
+  slides: {
+    type: Number,
+    default: 1
+  },
   arrowColor: {
     type: String,
     default: 'var(--standard-red)'
@@ -67,20 +76,24 @@ const props = defineProps({
   autoplay: {
     type: Boolean,
     default: false
+  },
+  effect: {
+    type: String,
+    default: 'slide'
   }
 })
 
-const swiper = ref(null)
+const swiperR = ref(null)
 
-function getRef(swiperInstance) {
-  swiper.value = swiperInstance
+function getRef(swiperInstance: any) {
+  swiperR.value = swiperInstance
 }
 
 function prev() {
-  swiper.value.slidePrev()
+  swiperR.value.slidePrev()
 }
 
 function next() {
-  swiper.value.slideNext()
+  swiperR.value.slideNext()
 }
 </script>

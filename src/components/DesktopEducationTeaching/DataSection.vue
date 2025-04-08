@@ -20,7 +20,7 @@
             90%+
           </p>
           <p class="text-lg font-sans">
-            students take AP courses in their first year
+            students taking AP courses in their first year
           </p>
         </div>
         <div>

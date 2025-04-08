@@ -37,9 +37,7 @@ export const routes = [
     name: 'StudentLife',
     component: () => import(`./views/${clientType}/StudentLife.vue`),
     meta: {
-      header: {
-        alwaysFill: true
-      }
+        headerAnimate: true
     }
   },
   {
