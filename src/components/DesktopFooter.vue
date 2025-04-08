@@ -61,15 +61,26 @@
           </div>
         </div>
         <div class="w-1/4 p-8">
-          <p class="font-sans text-xl font-bold mb-3">
+          <p class="font-sans text-xl font-bold !mb-3">
             Join Us
           </p>
+          <div class="flex flex-col gap-2">
+            <router-link :to="`/${locale}/join#overview`">
+              <p>Program Overview</p>
+            </router-link>
+            <router-link :to="`/${locale}/join#application`">
+              <p>Application Process</p>
+            </router-link>
+            <router-link :to="`/${locale}/join#contact`">
+              <p>Contact Us</p>
+            </router-link>
+          </div>
         </div>
       </div>
 
       <div class="mb-5">
         <p>+86 159 1052 4064 (Phone / WeChat)</p>
-        <p>baid (at) bjacademy.com.cn</p>
+        <p>baid<span class="at" />bjacademy.com.cn</p>
       </div>
 
       <p>Copyright (c) Beijing Academy International Division, all rights reserved.</p>
@@ -80,8 +91,15 @@
     </div>
   </footer>
 </template>
+
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n({ useScope: 'global' })
 </script>
+
+<style scoped>
+.at:after {
+  content: '@';
+}
+</style>

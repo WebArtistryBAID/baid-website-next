@@ -12,7 +12,7 @@
           your full potential — every single day.
         </p>
         <div class="flex justify-end m-t-5">
-          <ReadMore to="/about#overview" />
+          <ReadMore to="/about" />
         </div>
       </div>
     </div>

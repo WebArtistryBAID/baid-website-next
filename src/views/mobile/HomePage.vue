@@ -13,10 +13,6 @@
           v-html="data.introduction"
         />
       </MobileCard>
-      <VideoCard
-        :cover="firstImg"
-        class="m-b-0"
-      />
     </section>
     <EducationPhilosophy />
     <PrincipalMessage />
@@ -30,7 +26,6 @@ import MobileCard from '@/components/MobileCard.vue'
 import MobileHead from '@/components/MobileHead.vue'
 
 import firstImg from '@/assets/images/home-page/Autumn.jpg'
-import VideoCard from '@/components/VideoCard.vue'
 import MobileTitle from '@/components/MobileTitle.vue'
 import { computed, provide, ref, watchEffect } from 'vue'
 import NewsSection from '@/components/MobileHomePage/NewsSection.vue'

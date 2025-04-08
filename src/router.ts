@@ -53,9 +53,7 @@ export const routes = [
         name: 'NewsPage',
         component: () => import(`./views/${clientType}/NewsPage.vue`),
         meta: {
-            header: {
-                alwaysFill: true
-            }
+            headerAnimate: false
         }
     },
     {

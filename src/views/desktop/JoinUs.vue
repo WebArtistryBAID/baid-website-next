@@ -8,6 +8,7 @@
     <div id="overview">
       <OverviewSection />
     </div>
+    <DeadlineSection />
     <div id="application">
       <ApplicationSection />
     </div>
@@ -23,6 +24,7 @@ import SecondSection from '@/components/DesktopJoinUs/SecondSection.vue'
 import HighlightsSection from '@/components/DesktopJoinUs/HighlightsSection.vue'
 import DataSection from '@/components/DesktopJoinUs/DataSection.vue'
 import OverviewSection from '@/components/DesktopJoinUs/OverviewSection.vue'
+import DeadlineSection from '@/components/DesktopJoinUs/DeadlineSection.vue'
 import ApplicationSection from '@/components/DesktopJoinUs/ApplicationSection.vue'
 import ContactSection from '@/components/DesktopJoinUs/ContactSection.vue'
 

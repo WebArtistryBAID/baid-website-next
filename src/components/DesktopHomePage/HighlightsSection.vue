@@ -20,7 +20,7 @@
           world.
         </p>
         <div class="mt-2">
-          <ReadMore to="/join#apply" />
+          <ReadMore to="/join" />
         </div>
       </div>
       <div class="w-1/3 border-r border-gray-200 p-12">
@@ -40,7 +40,7 @@
           BAID prepares students for success in college and beyond.
         </p>
         <div class="mt-2">
-          <ReadMore to="/education#curriculum" />
+          <ReadMore to="/education" />
         </div>
       </div>
       <div class="w-1/3 p-12">
