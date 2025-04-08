@@ -59,7 +59,10 @@ export const routes = [
     {
         path: prefix + '/news/:year/:month/:day/:title',
         name: 'ArticlePage',
-        component: () => import(`./views/${clientType}/ArticlePage.vue`)
+        component: () => import(`./views/${clientType}/ArticlePage.vue`),
+        meta: {
+            headerAnimate: false
+        }
     },
     {
         path: '/:pathMatch(.*)*',
@@ -70,5 +73,17 @@ export const routes = [
 
 export default createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        }
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth'
+            }
+        }
+        return { top: 0 }
+    }
 })

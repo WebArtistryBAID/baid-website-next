@@ -4,13 +4,13 @@
       News
     </h1>
 
-    <a
+    <router-link
       v-for="(item, index) in news"
       :key="item.id"
       :class="{
         'flex-row-reverse': index % 2
       }"
-      :href="item.href"
+      :to="item.href"
       class="w-full flex items-center my-10"
     >
       <img
@@ -36,7 +36,7 @@
           {{ item.intro }}
         </p>
       </div>
-    </a>
+    </router-link>
   </section>
 </template>
 

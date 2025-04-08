@@ -62,7 +62,7 @@
         </div>
         <div class="w-1/4 p-8">
           <p class="font-sans text-xl font-bold !mb-3">
-            Join Us
+            Admissions
           </p>
           <div class="flex flex-col gap-2">
             <router-link :to="`/${locale}/join#overview`">

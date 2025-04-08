@@ -56,7 +56,7 @@
 <script lang="ts" setup>
 import SchoolLogo from '@/components/DesktopHeader/SchoolLogo.vue'
 import RouterLinks from '@/components/DesktopHeader/RouterLinks.vue'
-import { ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 const fixed = ref(false)
@@ -74,5 +74,11 @@ const handleScroll = () => {
   fixed.value = window.scrollY > window.innerHeight
 }
 
+onMounted(() => {
+  handleScroll()
+})
+watch(() => route.fullPath, () => {
+  handleScroll()
+})
 window.addEventListener('scroll', handleScroll)
 </script>
