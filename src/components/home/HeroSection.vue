@@ -1,17 +1,14 @@
 <template>
   <div
-    :style="{ backgroundImage: `url(${usedBg})`, backgroundSize: 'cover' }"
-    class="h-screen w-screen flex flex-col justify-center py-24 px-48 relative"
+    :style="{ backgroundImage: `url(${usedBg})` }"
+    class="h-screen w-screen flex flex-col bg-cover bg-center justify-center relative px-4 py-12 md:px-48 md:py-24"
   >
-    <h1
-      class="font-bold pb-24 text-white !font-sans"
-      style="font-size: 12rem; line-height: 1.1"
-    >
+    <h1 class="font-bold pb-24 text-white !font-sans text-7xl md:text-[12rem] md:leading-[1.1]">
       Beijing<br>
       Academy
     </h1>
 
-    <p class="absolute bottom-8 !font-serif text-white text-3xl">
+    <p class="absolute bottom-8 !font-serif text-white text-xl md:text-3xl">
       Better me, better world. That's what BAID students strive for, every single day.
     </p>
   </div>

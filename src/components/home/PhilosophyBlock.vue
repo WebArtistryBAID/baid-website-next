@@ -6,13 +6,10 @@
     @mouseleave="$emit('deactivate')"
     @mousemove="$emit('activate')"
   >
-    <div
-      :class="{ '!bg-op-40': thisActive }"
-      class="w-full h-full bg-[#103c74]/80 transition-all duration-500 relative"
-    >
+    <div class="w-full h-full bg-[#103c74]/80 transition-all duration-500 relative">
       <pre
         :class="{ 'opacity-0': !delay, 'opacity-100': delay }"
-        class="pcontent leading-normal text-right !font-sans !text-3xl"
+        class="leading-normal text-right !font-sans !text-3xl"
         v-html="props.content"
       />
       <h2

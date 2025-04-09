@@ -1,11 +1,11 @@
 <template>
   <div class="mt-24 border-b border-black">
     <div
-      class="mx-auto flex items-center"
+      class="mx-auto flex items-center px-5 md:px-0"
       style="max-width: 77rem"
     >
       <h2
-        class="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold !font-sans mr-auto -mb-1.5 xl:-mb-2"
+        class="text-4xl lg:text-5xl xl:text-7xl font-bold !font-sans mr-auto xl:-mb-2"
       >
         BAID Stories
       </h2>
@@ -33,7 +33,7 @@
   <div class="section !mb-24">
     <div
       v-if="props.newsList.length >= 3"
-      class="grid grid-cols-3 gap-8"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
     >
       <HomeNews
         :light="true"

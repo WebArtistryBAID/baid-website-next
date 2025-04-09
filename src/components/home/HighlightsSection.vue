@@ -1,10 +1,10 @@
 <template>
   <div class="border-t border-gray-200 my-0 mx-auto">
     <div
-      class="flex mx-auto"
+      class="flex flex-col md:flex-row mx-auto"
       style="max-width: 77rem"
     >
-      <div class="w-1/3 border-r border-gray-200 p-12">
+      <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
             :src="applying"
@@ -23,7 +23,7 @@
           <ReadMore to="/admissions" />
         </div>
       </div>
-      <div class="w-1/3 border-r border-gray-200 p-12">
+      <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
             :src="academic"
@@ -43,7 +43,7 @@
           <ReadMore to="/academics" />
         </div>
       </div>
-      <div class="w-1/3 p-12">
+      <div class="w-full md:w-1/3 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
             :src="life"

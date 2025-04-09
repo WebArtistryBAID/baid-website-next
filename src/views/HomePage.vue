@@ -13,13 +13,13 @@
       v-if="news.length"
       id="news"
     >
-      <HomeNews :news-list="news" />
+      <HomeNewsSection :news-list="news" />
     </section>
     <section id="educationPhilosophy">
-      <EducationPhilosophy />
+      <PhiloSection />
     </section>
     <section id="quote">
-      <QuoteMessage
+      <QuoteSection
         :avatar="avatar"
         author="WHO"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
@@ -37,9 +37,9 @@ import { useI18n } from 'vue-i18n'
 import { computed, provide, ref, watchEffect } from 'vue'
 import HeroSection from '@/components/home/HeroSection.vue'
 import SecondSection from '@/components/home/SecondSection.vue'
-import EducationPhilosophy from '@/components/home/EducationPhilosophy.vue'
-import QuoteMessage from '@/components/QuoteMessage.vue'
-import HomeNews from '@/components/home/HomeNews.vue'
+import PhiloSection from '@/components/home/PhiloSection.vue'
+import QuoteSection from '@/components/home/QuoteSection.vue'
+import HomeNewsSection from '@/components/home/HomeNewsSection.vue'
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'

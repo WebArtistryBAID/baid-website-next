@@ -11,14 +11,14 @@
         Beijing Academy
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-        <div class="p-4 md:border-r md:border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 mb-8">
+        <div class="md:p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/about`">
             <p class="font-sans text-xl font-bold !mb-3">
               About Us
             </p>
           </router-link>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/about#overview`">
               <p>Overview</p>
             </router-link>
@@ -33,13 +33,13 @@
             </router-link>
           </div>
         </div>
-        <div class="p-4 md:border-r md:border-white/10">
+        <div class="md:p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/academics`">
             <p class="font-sans text-xl font-bold !mb-3">
               Academics
             </p>
           </router-link>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/academics#curriculum`">
               <p>The BAID Curriculum</p>
             </router-link>
@@ -51,13 +51,13 @@
             </router-link>
           </div>
         </div>
-        <div class="p-4 md:border-r md:border-white/10">
+        <div class="md:p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/life`">
             <p class="font-sans text-xl font-bold !mb-3">
               Student Life
             </p>
           </router-link>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/life#activities`">
               <p>Activities</p>
             </router-link>
@@ -66,13 +66,13 @@
             </router-link>
           </div>
         </div>
-        <div class="p-4">
+        <div class="md:p-4">
           <router-link :to="`/${locale}/admissions`">
             <p class="font-sans text-xl font-bold !mb-3">
               Admissions
             </p>
           </router-link>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/admissions#overview`">
               <p>Program Overview</p>
             </router-link>

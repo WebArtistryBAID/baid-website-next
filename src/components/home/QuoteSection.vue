@@ -1,9 +1,9 @@
 <template>
   <div
-    class="relative flex mx-auto py-24 px-36 my-24 items-center"
+    class="relative flex flex-col-reverse gap-5 md:flex-row mx-auto py-24 px-4 md:px-36 my-12 md:my-24 items-center"
     style="max-width: 77rem"
   >
-    <div class="w-1/2">
+    <div class="w-full md:w-1/2">
       <p
         class="tracking-wide !text-3xl !font-serif !mb-3"
         v-html="pageData.principal_message"
@@ -12,14 +12,13 @@
         —— {{ pageData.principal_name }}
       </p>
     </div>
-    <div class="w-1/2 flex justify-center items-center">
+    <div class="w-full md:w-1/2 flex justify-center items-center">
       <img
         :src="pageData.principal_avatar"
         alt="Avatar"
         class="object-contain w-64"
       >
     </div>
-
 
     <!-- The quotes -->
     <div class="absolute left-4 top-0">
