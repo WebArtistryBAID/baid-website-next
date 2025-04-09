@@ -2,7 +2,7 @@
   <div class="pt-48 bg-red-800">
     <div class="px-6 sm:px-10 md:px-16 lg:px-24">
       <h1
-        class="text-[3rem] md:text-[4rem] lg:text-[6rem] xl:text-[9rem] font-bold !font-sans mb-[-1rem] md:mb-[-1.3rem] lg:mb-[-2rem] xl:mb-[-3.2rem]"
+        class="text-white text-[3rem] md:text-[4rem] lg:text-[6rem] xl:text-[9rem] font-bold !font-sans mb-[-1rem] md:mb-[-1.3rem] lg:mb-[-2rem] xl:mb-[-3.2rem]"
       >
         Student Life
       </h1>

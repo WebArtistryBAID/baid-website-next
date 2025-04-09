@@ -5,16 +5,15 @@
         Clubs
       </h2>
 
-      <SwiperWrapper
-        arrow-color="var(--standard-blue)"
-      >
+      <SwiperWrapper arrow-color="var(--standard-blue)">
         <swiper-slide
           v-for="club in pageData.clubs"
           :key="club"
           class="flex justify-center items-center text-black"
         >
-          <div class="max-w-4/5 bg-white mx-auto rounded-lg border border-gray-200 flex gap-5">
-            <div class="w-1/2 py-16 px-8 h-96 overflow-y-auto">
+          <div class="md:max-w-4/5 bg-white mx-auto rounded-lg border border-gray-200 flex flex-col sm:flex-row gap-5">
+            <!-- Text content: full width on mobile, half on larger screens -->
+            <div class="w-full sm:w-1/2 py-16 px-8 overflow-y-auto sm:h-96">
               <h3 class="!text-2xl font-bold mb-5">
                 {{ club.name }}
               </h3>
@@ -23,7 +22,8 @@
                 v-html="club.content"
               />
             </div>
-            <div class="w-1/2">
+            <!-- Image container: full width on mobile, half on larger screens -->
+            <div class="w-full sm:w-1/2">
               <img
                 :alt="club.name"
                 :src="club.images[0]"
