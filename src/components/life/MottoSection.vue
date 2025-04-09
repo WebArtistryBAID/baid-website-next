@@ -4,7 +4,7 @@
     style="max-width: 77rem"
   >
     <div class="w-full">
-      <p class="tracking-wide !text-3xl !font-serif !mb-3">
+      <p class="tracking-wide text-3xl md:text-5xl !font-serif !mb-3">
         Life at BAID feels like a shared journey — everyone's growing, exploring, and
         supporting each other every step of the way.
       </p>
