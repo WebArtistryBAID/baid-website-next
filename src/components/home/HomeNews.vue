@@ -5,7 +5,7 @@
       style="max-width: 77rem"
     >
       <h2
-        class="!text-7xl font-bold !font-sans mr-auto -mb-2"
+        class="text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold !font-sans mr-auto -mb-1.5 xl:-mb-2"
       >
         BAID Stories
       </h2>

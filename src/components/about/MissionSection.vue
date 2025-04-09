@@ -1,13 +1,13 @@
 <template>
   <div class="section !mt-24">
-    <div class="flex">
-      <div class="w-1/3">
-        <p class="text-4xl font-bold">
+    <div class="flex flex-col md:flex-row">
+      <div class="w-full md:w-1/3 mb-6 md:mb-0">
+        <p class="text-3xl md:text-4xl font-bold">
           Our Mission
         </p>
       </div>
-      <div class="w-2/3">
-        <p class="!font-serif text-4xl">
+      <div class="w-full md:w-2/3">
+        <p class="!font-serif text-2xl md:text-3xl lg:text-4xl">
           Cultivate well-rounded, forward-thinking leaders of the future
           with a modern education rooted in Chinese values and global perspectives.
         </p>

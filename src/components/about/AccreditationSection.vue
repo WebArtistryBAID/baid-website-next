@@ -1,6 +1,6 @@
 <template>
-  <div class="section !py-16 gap-16 text-white flex items-center">
-    <div class="w-1/2">
+  <div class="section !py-12 md:!py-16 gap-8 md:gap-16 text-white flex flex-col md:flex-row items-center">
+    <div class="w-full md:w-1/2">
       <SwiperWrapper
         :autoplay="true"
         :slides="1"
@@ -12,26 +12,26 @@
           :key="acc"
         >
           <div
-            class="rounded-lg mx-8 h-72 my-12 bg-white flex flex-col justify-center items-center"
+            class="rounded-lg mx-4 md:mx-8 h-56 md:h-72 my-8 md:my-12 bg-white flex flex-col justify-center items-center"
           >
             <img
               :alt="$t(acc.name)"
               :src="acc.image"
-              class="h-24 mb-5"
+              class="h-16 md:h-24 mb-3 md:mb-5"
             >
-            <p class="!font-sans text-black">
+            <p class="!font-sans text-black text-sm md:text-base">
               {{ $t(acc.name) }}
             </p>
           </div>
         </swiper-slide>
       </SwiperWrapper>
     </div>
-    <div class="w-1/2">
-      <h2 class="text-4xl font-bold mb-3">
+    <div class="w-full md:w-1/2">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 md:mb-3">
         Accreditation
       </h2>
       <p
-        class="opacity-80"
+        class="opacity-80 text-sm md:text-base"
         v-html="pageData.accreditation"
       />
     </div>

@@ -1,10 +1,11 @@
 <template>
-  <h1
-    class="!text-[9rem] font-bold !font-sans px-24"
-    style="margin-bottom: -3.2rem"
-  >
-    Academics
-  </h1>
+  <div class="px-6 sm:px-10 md:px-16 lg:px-24">
+    <h1
+      class="text-[3rem] md:text-[4rem] lg:text-[6rem] xl:text-[9rem] font-bold !font-sans mb-[-1rem] md:mb-[-1.3rem] lg:mb-[-2rem] xl:mb-[-3.2rem]"
+    >
+      Academics
+    </h1>
+  </div>
 
   <img
     :src="campus"

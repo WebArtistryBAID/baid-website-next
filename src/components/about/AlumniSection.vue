@@ -1,24 +1,24 @@
 <template>
   <div class="section !mt-24">
-    <h2 class="!text-5xl font-bold mb-5">
+    <h2 class="!text-3xl md:!text-5xl font-bold mb-5">
       Our Alumni
     </h2>
-    <div class="flex items-center gap-5">
-      <div class="w-1/3 flex pl-8 items-center">
-        <div class="alumni-big-pic-box">
+    <div class="flex flex-col md:flex-row items-center gap-8 md:mb-5">
+      <div class="w-full md:w-1/3 flex pl-8 items-center">
+        <div class="alumni-big-pic-box h-72 md:h-auto">
           <img
             :class="{ 'opacity-0': transition }"
             :src="pageData.alumni[current].image"
             alt="Picture of alumnus"
-            class="w-full object-cover aspect-3/4 transition-all duration-300 block alumni-big-pic"
+            class="w-full h-full object-cover aspect-3/4 transition-all duration-300 block alumni-big-pic"
           >
         </div>
       </div>
-      <div class="w-2/3">
-        <div class="p-20">
+      <div class="w-full md:w-2/3">
+        <div class="p-8 md:p-20">
           <div
             :class="{ 'opacity-0': transition }"
-            class="transition-all duration-300 h-80 justify-center flex flex-col"
+            class="transition-all duration-300 md:h-80 justify-center flex flex-col"
           >
             <p
               class="!font-serif text-3xl mb-3"
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div class="flex items-center justify-end">
+        <div class="flex items-center justify-center md:justify-end">
           <div
             v-for="(alumnus, index) in pageData.alumni"
             :key="alumnus"

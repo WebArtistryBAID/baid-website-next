@@ -1,18 +1,18 @@
 <template>
   <footer
-    class="w-full !font-sans py-16 !text-white"
+    class="w-full !font-sans py-16 px-5 !text-white"
     style="background-color: var(--standard-blue)"
   >
     <div
       class="mx-auto mb-5"
       style="max-width: 77rem"
     >
-      <p class="uppercase tracking-[0.3em] font-sans text-lg">
+      <p class="uppercase tracking-[0.3em] !mb-5 font-sans text-lg">
         Beijing Academy
       </p>
 
-      <div class="flex w-full mb-8">
-        <div class="w-1/4 p-8 border-r border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+        <div class="p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/about`">
             <p class="font-sans text-xl font-bold !mb-3">
               About Us
@@ -33,7 +33,7 @@
             </router-link>
           </div>
         </div>
-        <div class="w-1/4 p-8 border-r border-white/10">
+        <div class="p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/academics`">
             <p class="font-sans text-xl font-bold !mb-3">
               Academics
@@ -51,7 +51,7 @@
             </router-link>
           </div>
         </div>
-        <div class="w-1/4 p-8 border-r border-white/10">
+        <div class="p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/life`">
             <p class="font-sans text-xl font-bold !mb-3">
               Student Life
@@ -66,7 +66,7 @@
             </router-link>
           </div>
         </div>
-        <div class="w-1/4 p-8">
+        <div class="p-4">
           <router-link :to="`/${locale}/admissions`">
             <p class="font-sans text-xl font-bold !mb-3">
               Admissions

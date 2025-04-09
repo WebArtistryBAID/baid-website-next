@@ -3,7 +3,9 @@
     <h2 class="text-4xl font-sans font-bold mb-5">
       Overview
     </h2>
-    <div class="w-full grid gap-8 grid-cols-3 !font-serif !text-2xl">
+    <div
+      class="w-full grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !font-serif !text-2xl md:!text-xl lg:!text-2xl"
+    >
       <div>
         Beijing Academy was established in September 2013. We are a 12-year public school approved by the Beijing
         Municipal Government and funded by the Chaoyang District Government. Our school is built to become a modern

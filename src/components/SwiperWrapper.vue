@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center swiper-container">
+  <div class="flex items-center justify-center">
     <!-- arrow left -->
     <button
       aria-label="Previous"

@@ -133,29 +133,7 @@ button {
 }
 
 .section {
-    max-width: 77rem;
-    margin: 0 auto;
-    padding: 45px 20px;
-}
-
-.swiper-container {
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    min-height: 0;
-    min-width: 0;
-}
-
-h1 {
-    @apply font-bold;
-}
-
-h2 {
-    @apply font-bold;
-}
-
-h3 {
-    @apply font-bold;
+    @apply mx-auto md:max-w-[77rem] max-w-screen px-5 py-12;
 }
 
 p,
