@@ -1,17 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const clientType =
-    navigator.userAgent.toLowerCase().indexOf('mobile') > -1
-        ? 'mobile'
-        : 'desktop'
-
 const prefix = '/:lang(zh-CN|en-US)'
 
 export const routes = [
     {
         path: prefix,
         name: 'HomePage',
-        component: () => import(`./views/${clientType}/HomePage.vue`),
+        component: () => import('./views/HomePage.vue'),
         meta: {
             headerAnimate: true
         }
@@ -19,7 +14,7 @@ export const routes = [
     {
         path: prefix + '/about',
         name: 'AboutUs',
-        component: () => import(`./views/${clientType}/AboutUs.vue`),
+        component: () => import('./views/AboutUs.vue'),
         meta: {
             headerAnimate: false
         }
@@ -27,7 +22,7 @@ export const routes = [
     {
         path: prefix + '/education',
         name: 'EducationTeaching',
-        component: () => import(`./views/${clientType}/EducationTeaching.vue`),
+        component: () => import('./views/EducationTeaching.vue'),
         meta: {
             headerAnimate: false
         }
@@ -35,7 +30,7 @@ export const routes = [
     {
         path: prefix + '/life',
         name: 'StudentLife',
-        component: () => import(`./views/${clientType}/StudentLife.vue`),
+        component: () => import('./views/StudentLife.vue'),
         meta: {
             headerAnimate: true
         }
@@ -43,7 +38,7 @@ export const routes = [
     {
         path: prefix + '/join',
         name: 'JoinUs',
-        component: () => import(`./views/${clientType}/JoinUs.vue`),
+        component: () => import('./views/JoinUs.vue'),
         meta: {
             headerAnimate: false
         }
@@ -51,7 +46,7 @@ export const routes = [
     {
         path: prefix + '/news',
         name: 'NewsPage',
-        component: () => import(`./views/${clientType}/NewsPage.vue`),
+        component: () => import('./views/NewsPage.vue'),
         meta: {
             headerAnimate: false
         }
@@ -59,7 +54,7 @@ export const routes = [
     {
         path: prefix + '/news/:year/:month/:day/:title',
         name: 'ArticlePage',
-        component: () => import(`./views/${clientType}/ArticlePage.vue`),
+        component: () => import('./views/ArticlePage.vue'),
         meta: {
             headerAnimate: false
         }
@@ -67,7 +62,10 @@ export const routes = [
     {
         path: '/:pathMatch(.*)*',
         name: 'NotFound',
-        component: () => import(`./views/${clientType}/NotFound.vue`)
+        component: () => import('./views/NotFound.vue'),
+        meta: {
+            headerAnimate: false
+        }
     }
 ]
 

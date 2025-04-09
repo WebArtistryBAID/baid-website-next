@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <component :is="$clientType === 'desktop' ? DesktopLayout : MobileLayout">
+    <component :is="DesktopLayout">
       <router-view v-slot="{ Component }">
         <transition
           mode="out-in"
@@ -15,7 +15,6 @@
 
 <script lang="ts" setup>
 import DesktopLayout from './layouts/DesktopLayout.vue'
-import MobileLayout from './layouts/MobileLayout.vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 
