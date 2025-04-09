@@ -5,7 +5,7 @@
         Clubs
       </h2>
 
-      <DesktopSwiper
+      <SwiperWrapper
         arrow-color="var(--standard-blue)"
       >
         <swiper-slide
@@ -32,13 +32,13 @@
             </div>
           </div>
         </swiper-slide>
-      </DesktopSwiper>
+      </SwiperWrapper>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import DesktopSwiper from '../DesktopSwiper.vue'
+import SwiperWrapper from '../SwiperWrapper.vue'
 import { inject } from 'vue'
 import { SwiperSlide } from 'swiper/vue'
 

@@ -8,14 +8,16 @@
       style="max-width: 77rem"
     >
       <p class="uppercase tracking-[0.3em] font-sans text-lg">
-        BEIJING ACADEMY
+        Beijing Academy
       </p>
 
       <div class="flex w-full mb-8">
         <div class="w-1/4 p-8 border-r border-white/10">
-          <p class="font-sans text-xl font-bold !mb-3">
-            About Us
-          </p>
+          <router-link :to="`/${locale}/about`">
+            <p class="font-sans text-xl font-bold !mb-3">
+              About Us
+            </p>
+          </router-link>
           <div class="flex flex-col gap-2">
             <router-link :to="`/${locale}/about#overview`">
               <p>Overview</p>
@@ -32,9 +34,11 @@
           </div>
         </div>
         <div class="w-1/4 p-8 border-r border-white/10">
-          <p class="font-sans text-xl font-bold !mb-3">
-            Academics
-          </p>
+          <router-link :to="`/${locale}/academics`">
+            <p class="font-sans text-xl font-bold !mb-3">
+              Academics
+            </p>
+          </router-link>
           <div class="flex flex-col gap-2">
             <router-link :to="`/${locale}/academics#curriculum`">
               <p>The BAID Curriculum</p>
@@ -48,9 +52,11 @@
           </div>
         </div>
         <div class="w-1/4 p-8 border-r border-white/10">
-          <p class="font-sans text-xl font-bold !mb-3">
-            Student Life
-          </p>
+          <router-link :to="`/${locale}/life`">
+            <p class="font-sans text-xl font-bold !mb-3">
+              Student Life
+            </p>
+          </router-link>
           <div class="flex flex-col gap-2">
             <router-link :to="`/${locale}/life#activities`">
               <p>Activities</p>
@@ -61,9 +67,11 @@
           </div>
         </div>
         <div class="w-1/4 p-8">
-          <p class="font-sans text-xl font-bold !mb-3">
-            Admissions
-          </p>
+          <router-link :to="`/${locale}/admissions`">
+            <p class="font-sans text-xl font-bold !mb-3">
+              Admissions
+            </p>
+          </router-link>
           <div class="flex flex-col gap-2">
             <router-link :to="`/${locale}/admissions#overview`">
               <p>Program Overview</p>
@@ -85,7 +93,8 @@
 
       <p>Copyright (c) Beijing Academy International Division, all rights reserved.</p>
       <p>
-        <a href="https://www.beijingacademy.com.cn">Learn more about Beijing Academy's Chinese education offerings.</a>
+        <a href="https://www.beijingacademy.com.cn">Tap here to learn more about Beijing Academy's Chinese education
+          offerings.</a>
       </p>
       <p><a href="https://beian.miit.gov.cn">京ICP备12345678号</a></p>
     </div>

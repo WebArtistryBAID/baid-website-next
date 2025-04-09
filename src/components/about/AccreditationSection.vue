@@ -1,7 +1,7 @@
 <template>
   <div class="section !py-16 gap-16 text-white flex items-center">
     <div class="w-1/2">
-      <DesktopSwiper
+      <SwiperWrapper
         :autoplay="true"
         :slides="1"
         effect="coverflow"
@@ -24,7 +24,7 @@
             </p>
           </div>
         </swiper-slide>
-      </DesktopSwiper>
+      </SwiperWrapper>
     </div>
     <div class="w-1/2">
       <h2 class="text-4xl font-bold mb-3">
@@ -45,7 +45,7 @@ import imgCIS from '@/assets/images/about/cis.webp'
 import imgApple from '@/assets/images/about/apple.svg'
 import imgCam from '@/assets/images/about/cambridge.webp'
 
-import DesktopSwiper from '@/components/DesktopSwiper.vue'
+import SwiperWrapper from '@/components/SwiperWrapper.vue'
 import { SwiperSlide } from 'swiper/vue'
 
 import { inject } from 'vue'
