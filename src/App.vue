@@ -24,12 +24,10 @@ const router = useRouter()
 router.beforeEach((to) => {
   const lang = to.params.lang || navigator.language
   locale.value = lang as string
-
-  // Set title
-  console.log(to, lang)
-  document.title = t('views.' + (to.name as string))
+  document.title = t('views.' + (to.name as string)) + ' | ' + t('brand')
 
   if (to.path === '/') {
+    document.title = 'Beijing Academy International Division'
     return { path: '/' + lang + '/' }
   }
 })

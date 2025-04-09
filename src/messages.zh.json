@@ -1,10 +1,11 @@
 {
+  "brand": "北京中学国际部",
   "views": {
     "HomePage": "首页",
     "AboutUs": "关于我们",
     "EducationTeaching": "教育教学",
     "StudentLife": "学生生活",
-    "JoinUs": "加入我们",
+    "JoinUs": "招生",
     "NewsPage": "新闻",
     "NotFound": ""
   },
