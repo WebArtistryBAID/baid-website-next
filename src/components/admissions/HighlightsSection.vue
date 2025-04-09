@@ -4,8 +4,8 @@
       class="mx-auto"
       style="max-width: 77rem"
     >
-      <div class="flex mb-8">
-        <div class="w-1/3 border-r border-gray-200 p-12">
+      <div class="flex flex-col md:flex-row mb-8">
+        <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
           <div class="flex justify-center items-center w-full h-64">
             <img
               :src="a"
@@ -20,7 +20,7 @@
             Learn more about your eligibility to join BAID through the standard pathway*.
           </p>
         </div>
-        <div class="w-1/3 border-r border-gray-200 p-12">
+        <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
           <div class="flex justify-center items-center w-full h-64">
             <img
               :src="b"
@@ -35,7 +35,7 @@
             Four simple steps to apply to BAID through the standard pathway.
           </p>
         </div>
-        <div class="w-1/3 p-12">
+        <div class="w-full md:w-1/3 p-6 md:p-12">
           <div class="flex justify-center items-center w-full h-64">
             <img
               :src="c"
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <p class="text-sm max-w-xl">
+      <p class="text-sm max-w-xl px-5 md:px-0">
         *The following information is for students joining Grade 10 for high school with Zhongkao (中考) ("standard
         pathway").
         Please contact us if you are interested in alternative programs.

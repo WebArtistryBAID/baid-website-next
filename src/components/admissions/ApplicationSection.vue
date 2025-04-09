@@ -1,16 +1,16 @@
 <template>
   <div class="section !mt-24">
-    <h2 class="text-4xl font-bold !mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold !mb-8">
       Start Applying
     </h2>
 
-    <div class="grid grid-cols-2 gap-x-5 gap-y-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-8">
       <a
         class="flex items-center gap-8"
         href="https://ncstatic.clewm.net/rsrc/2025/0218/14/5303fc7f027f5f5bbe901721f68eb344.docx"
       >
         <div
-          class="bg-[var(--standard-blue)] rounded-full w-16 h-16 flex justify-center items-center text-white text-2xl"
+          class="bg-[var(--standard-blue)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
           1
         </div>
@@ -26,7 +26,7 @@
       </a>
       <div class="flex items-center gap-8">
         <div
-          class="bg-[var(--standard-red)] rounded-full w-16 h-16 flex justify-center items-center text-white text-2xl"
+          class="bg-[var(--standard-red)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
           2
         </div>
@@ -41,7 +41,7 @@
       </div>
       <div class="flex items-center gap-8">
         <div
-          class="bg-[var(--standard-red)] rounded-full w-16 h-16 flex justify-center items-center text-white text-2xl"
+          class="bg-[var(--standard-red)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
           3
         </div>
@@ -56,7 +56,7 @@
       </div>
       <div class="flex items-center gap-8">
         <div
-          class="bg-[var(--standard-blue)] rounded-full w-16 h-16 flex justify-center items-center text-white text-2xl"
+          class="bg-[var(--standard-blue)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
           4
         </div>

@@ -3,17 +3,17 @@
     class="mx-auto mt-24"
     style="max-width: 77rem"
   >
-    <h2 class="text-7xl font-bold">
+    <h2 class="text-4xl lg:text-5xl xl:text-7xl font-bold px-5 md:px-0">
       Learning, Reimagined
     </h2>
   </div>
 
   <div class="border-t border-gray-200 my-0 mx-auto">
     <div
-      class="flex mx-auto"
+      class="flex flex-col md:flex-row mx-auto"
       style="max-width: 77rem"
     >
-      <div class="w-1/3 border-r border-gray-200 p-12">
+      <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
             :src="counseling"
@@ -29,7 +29,7 @@
           starting from the first week of high school.
         </p>
       </div>
-      <div class="w-1/3 border-r border-gray-200 p-12">
+      <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
             :src="havingFun"
@@ -45,7 +45,7 @@
           cultural heritage sites, or immersing yourself in new countries through global programs.
         </p>
       </div>
-      <div class="w-1/3 p-12">
+      <div class="w-full md:w-1/3 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
             :src="globalVision"

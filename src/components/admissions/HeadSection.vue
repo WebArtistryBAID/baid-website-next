@@ -1,13 +1,13 @@
 <template>
   <div class="section !mt-24">
-    <div class="flex">
-      <div class="w-1/3">
-        <p class="text-4xl font-bold">
+    <div class="flex flex-col md:flex-row gap-5">
+      <div class="w-full md:w-1/3">
+        <p class="text-3xl md:text-4xl font-bold">
           Applying to BAID
         </p>
       </div>
-      <div class="w-2/3">
-        <p class="!font-serif text-4xl">
+      <div class="w-full md:w-2/3">
+        <p class="!font-serif text-2xl md:text-3xl lg:text-4xl">
           Writing your story, showing your passions, imagining your future —
           applying to BAID is the beginning of a journey where
           who you are truly matters.

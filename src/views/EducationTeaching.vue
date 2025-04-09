@@ -3,7 +3,7 @@
     <HeadSection />
     <HeroSection />
     <section id="curriculums">
-      <CurriculumsIntroduction />
+      <CurriculumSection />
     </section>
     <section id="courses">
       <CoursesSection />
@@ -15,7 +15,7 @@
       <HighlightsSection />
     </section>
     <section id="learning-methods">
-      <LearningMethods />
+      <SpecialtiesSection />
     </section>
     <!-- Maybe we should add a section about the very good AP scores we have? -->
   </div>
@@ -23,10 +23,10 @@
 <script lang="ts" setup>
 import HeroSection from '@/components/academics/HeroSection.vue'
 import HeadSection from '@/components/academics/HeadSection.vue'
-import CurriculumsIntroduction from '@/components/academics/CurriculumsIntroduction.vue'
+import CurriculumSection from '@/components/academics/CurriculumSection.vue'
 import CoursesSection from '@/components/academics/CoursesSection.vue'
 import HighlightsSection from '@/components/academics/HighlightsSection.vue'
-import LearningMethods from '@/components/academics/LearningMethods.vue'
+import SpecialtiesSection from '@/components/academics/SpecialtiesSection.vue'
 import DataSection from '@/components/academics/DataSection.vue'
 
 // Data

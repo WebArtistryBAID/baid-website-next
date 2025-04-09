@@ -1,10 +1,10 @@
 <template>
   <div class="section !my-16">
-    <h2 class="text-4xl font-bold text-right mb-5">
+    <h2 class="text-4xl font-bold md:text-right mb-5">
       Our Courses
     </h2>
 
-    <div class="grid grid-cols-8 gap-3 mb-5">
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3 mb-5">
       <button
         :class="{
           'bg-[var(--standard-blue)] text-white': selected === 0
@@ -79,11 +79,11 @@
       </button>
     </div>
 
-    <div class="grid grid-cols-6 gap-5 mb-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-5 mb-5">
       <div
         v-for="course in courses[selected]"
         :key="course"
-        class="col-span-2"
+        class="col-span-1 md:col-span-2"
       >
         <p class="text-2xl border-l-4 border-[var(--standard-blue)] pl-3">
           {{ course }}
