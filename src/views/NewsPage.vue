@@ -7,18 +7,16 @@
     <router-link
       v-for="(item, index) in news"
       :key="item.id"
-      :class="{
-        'flex-row-reverse': index % 2
-      }"
       :to="item.href"
-      class="w-full flex items-center my-10"
+      :class="{ 'md:flex-row-reverse': index % 2 }"
+      class="w-full flex flex-col md:flex-row items-center my-10"
     >
       <img
         :src="item.cover"
         alt=""
-        class="w-1/3 aspect-video h-full object-cover"
+        class="w-full md:w-1/3 aspect-video object-cover"
       >
-      <div class="p-10 w-2/3">
+      <div class="md:px-10 py-10 w-full md:w-2/3">
         <h2
           :class="{
             'border-[var(--standard-blue)]': index % 2,
