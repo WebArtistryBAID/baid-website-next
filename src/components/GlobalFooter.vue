@@ -33,16 +33,16 @@
         </div>
         <div class="w-1/4 p-8 border-r border-white/10">
           <p class="font-sans text-xl font-bold !mb-3">
-            Education
+            Academics
           </p>
           <div class="flex flex-col gap-2">
-            <router-link :to="`/${locale}/education#curriculum`">
+            <router-link :to="`/${locale}/academics#curriculum`">
               <p>The BAID Curriculum</p>
             </router-link>
-            <router-link :to="`/${locale}/education#courses`">
+            <router-link :to="`/${locale}/academics#courses`">
               <p>Courses</p>
             </router-link>
-            <router-link :to="`/${locale}/education#highlights`">
+            <router-link :to="`/${locale}/academics#highlights`">
               <p>Learning, Reimagined</p>
             </router-link>
           </div>
@@ -65,13 +65,13 @@
             Admissions
           </p>
           <div class="flex flex-col gap-2">
-            <router-link :to="`/${locale}/join#overview`">
+            <router-link :to="`/${locale}/admissions#overview`">
               <p>Program Overview</p>
             </router-link>
-            <router-link :to="`/${locale}/join#application`">
+            <router-link :to="`/${locale}/admissions#application`">
               <p>Application Process</p>
             </router-link>
-            <router-link :to="`/${locale}/join#contact`">
+            <router-link :to="`/${locale}/admissions#contact`">
               <p>Contact Us</p>
             </router-link>
           </div>

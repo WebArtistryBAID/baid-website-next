@@ -21,13 +21,13 @@
   </div>
 </template>
 <script lang="ts" setup>
-import HeroSection from '@/components/DesktopEducationTeaching/HeroSection.vue'
-import HeadSection from '@/components/DesktopEducationTeaching/HeadSection.vue'
-import CurriculumsIntroduction from '@/components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
-import CoursesSection from '@/components/DesktopEducationTeaching/CoursesSection.vue'
-import HighlightsSection from '@/components/DesktopEducationTeaching/HighlightsSection.vue'
-import LearningMethods from '@/components/DesktopEducationTeaching/LearningMethods.vue'
-import DataSection from '@/components/DesktopEducationTeaching/DataSection.vue'
+import HeroSection from '@/components/academics/HeroSection.vue'
+import HeadSection from '@/components/academics/HeadSection.vue'
+import CurriculumsIntroduction from '@/components/academics/CurriculumsIntroduction.vue'
+import CoursesSection from '@/components/academics/CoursesSection.vue'
+import HighlightsSection from '@/components/academics/HighlightsSection.vue'
+import LearningMethods from '@/components/academics/LearningMethods.vue'
+import DataSection from '@/components/academics/DataSection.vue'
 
 // Data
 import dataZH from '@data/zh-CN/Education.json'

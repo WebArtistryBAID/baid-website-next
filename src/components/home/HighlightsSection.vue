@@ -20,7 +20,7 @@
           world.
         </p>
         <div class="mt-2">
-          <ReadMore to="/join" />
+          <ReadMore to="/admissions" />
         </div>
       </div>
       <div class="w-1/3 border-r border-gray-200 p-12">
@@ -40,7 +40,7 @@
           BAID prepares students for success in college and beyond.
         </p>
         <div class="mt-2">
-          <ReadMore to="/education" />
+          <ReadMore to="/academics" />
         </div>
       </div>
       <div class="w-1/3 p-12">
@@ -67,9 +67,9 @@
 </template>
 
 <script lang="ts" setup>
-import academic from '@/assets/images/home-page/highlights/academic.webp'
-import applying from '@/assets/images/home-page/highlights/applying.webp'
-import life from '@/assets/images/home-page/highlights/life.webp'
+import academic from '@/assets/images/home/highlights/academic.webp'
+import applying from '@/assets/images/home/highlights/applying.webp'
+import life from '@/assets/images/home/highlights/life.webp'
 import { inject } from 'vue'
 import ReadMore from '@/components/ReadMore.vue'
 

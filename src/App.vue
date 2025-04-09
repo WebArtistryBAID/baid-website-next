@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <component :is="DesktopLayout">
+    <component :is="GlobalLayout">
       <router-view v-slot="{ Component }">
         <transition
           mode="out-in"
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import DesktopLayout from './layouts/DesktopLayout.vue'
+import GlobalLayout from './layouts/GlobalLayout.vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 

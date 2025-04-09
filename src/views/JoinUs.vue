@@ -18,15 +18,15 @@
   </div>
 </template>
 <script lang="ts" setup>
-import HeadSection from '@/components/DesktopJoinUs/HeadSection.vue'
-import HeroSection from '@/components/DesktopJoinUs/HeroSection.vue'
-import SecondSection from '@/components/DesktopJoinUs/SecondSection.vue'
-import HighlightsSection from '@/components/DesktopJoinUs/HighlightsSection.vue'
-import DataSection from '@/components/DesktopJoinUs/DataSection.vue'
-import OverviewSection from '@/components/DesktopJoinUs/OverviewSection.vue'
-import DeadlineSection from '@/components/DesktopJoinUs/DeadlineSection.vue'
-import ApplicationSection from '@/components/DesktopJoinUs/ApplicationSection.vue'
-import ContactSection from '@/components/DesktopJoinUs/ContactSection.vue'
+import HeadSection from '@/components/admissions/HeadSection.vue'
+import HeroSection from '@/components/admissions/HeroSection.vue'
+import SecondSection from '@/components/admissions/SecondSection.vue'
+import HighlightsSection from '@/components/admissions/HighlightsSection.vue'
+import DataSection from '@/components/admissions/DataSection.vue'
+import OverviewSection from '@/components/admissions/OverviewSection.vue'
+import DeadlineSection from '@/components/admissions/DeadlineSection.vue'
+import ApplicationSection from '@/components/admissions/ApplicationSection.vue'
+import ContactSection from '@/components/admissions/ContactSection.vue'
 
 import dataZH from '@data/zh-CN/JoinUs.json'
 import dataEN from '@data/en-US/JoinUs.json'

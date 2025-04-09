@@ -35,16 +35,16 @@
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { computed, provide, ref, watchEffect } from 'vue'
-import HeroSection from '@/components/DesktopHomePage/HeroSection.vue'
-import SecondSection from '@/components/DesktopHomePage/SecondSection.vue'
-import EducationPhilosophy from '@/components/DesktopHomePage/EducationPhilosophy.vue'
+import HeroSection from '@/components/home/HeroSection.vue'
+import SecondSection from '@/components/home/SecondSection.vue'
+import EducationPhilosophy from '@/components/home/EducationPhilosophy.vue'
 import QuoteMessage from '@/components/QuoteMessage.vue'
-import HomeNews from '@/components/DesktopHomePage/HomeNews.vue'
+import HomeNews from '@/components/home/HomeNews.vue'
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'
 import dataEN from '@data/en-US/Home.json'
-import HighlightsSection from '@/components/DesktopHomePage/HighlightsSection.vue'
+import HighlightsSection from '@/components/home/HighlightsSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

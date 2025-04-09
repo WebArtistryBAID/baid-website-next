@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-import ActivityBlock from '@/components/DesktopStudentLife/ActivityBlock.vue'
+import ActivityBlock from '@/components/life/ActivityBlock.vue'
 import { inject } from 'vue'
 
 const pageData = inject('data')

@@ -3,7 +3,7 @@
     class="!text-[9rem] font-bold !font-sans px-24"
     style="margin-bottom: -3.2rem"
   >
-    Education
+    Academics
   </h1>
 
   <img
@@ -14,5 +14,5 @@
 </template>
 
 <script lang="ts" setup>
-import campus from '@/assets/images/education/education.webp'
+import campus from '@/assets/images/academics/education.webp'
 </script>

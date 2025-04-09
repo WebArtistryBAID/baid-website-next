@@ -1,15 +1,15 @@
 <template>
   <!-- 最小缩放到750px -->
   <div class="min-w-[var(--shrink-limit)] overflow-x-hidden">
-    <DesktopHeader />
+    <GlobalHeader />
     <main>
       <slot />
     </main>
-    <DesktopFooter />
+    <GlobalFooter />
   </div>
 </template>
 
 <script lang="ts" setup>
-import DesktopHeader from '../components/DesktopHeader.vue'
-import DesktopFooter from '../components/DesktopFooter.vue'
+import GlobalHeader from '../components/GlobalHeader.vue'
+import GlobalFooter from '../components/GlobalFooter.vue'
 </script>

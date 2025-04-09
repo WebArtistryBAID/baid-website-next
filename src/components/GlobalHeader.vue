@@ -54,8 +54,8 @@
 </template>
 
 <script lang="ts" setup>
-import SchoolLogo from '@/components/DesktopHeader/SchoolLogo.vue'
-import RouterLinks from '@/components/DesktopHeader/RouterLinks.vue'
+import SchoolLogo from '@/components/header/SchoolLogo.vue'
+import RouterLinks from '@/components/header/RouterLinks.vue'
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 

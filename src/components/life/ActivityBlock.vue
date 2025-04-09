@@ -19,7 +19,7 @@
   />
 </template>
 <script lang="ts" setup>
-import ActivityTextBlock from '@/components/DesktopStudentLife/ActivityTextBlock.vue'
+import ActivityTextBlock from '@/components/life/ActivityTextBlock.vue'
 
 const props = defineProps({
   activity: {

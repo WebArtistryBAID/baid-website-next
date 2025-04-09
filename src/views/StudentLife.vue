@@ -16,12 +16,12 @@
 </template>
 
 <script lang="ts" setup>
-import HeroSection from '@/components/DesktopStudentLife/HeroSection.vue'
-import SecondSection from '@/components/DesktopStudentLife/SecondSection.vue'
-import HighlightsSection from '@/components/DesktopStudentLife/HighlightsSection.vue'
-import MottoSection from '@/components/DesktopStudentLife/MottoSection.vue'
-import ClubsSection from '@/components/DesktopStudentLife/ClubsSection.vue'
-import ActivitiesSection from '@/components/DesktopStudentLife/ActivitiesSection.vue'
+import HeroSection from '@/components/life/HeroSection.vue'
+import SecondSection from '@/components/life/SecondSection.vue'
+import HighlightsSection from '@/components/life/HighlightsSection.vue'
+import MottoSection from '@/components/life/MottoSection.vue'
+import ClubsSection from '@/components/life/ClubsSection.vue'
+import ActivitiesSection from '@/components/life/ActivitiesSection.vue'
 
 // Data
 import dataZH from '@data/zh-CN/StudentLife.json'

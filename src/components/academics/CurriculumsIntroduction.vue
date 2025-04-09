@@ -23,7 +23,7 @@
             :class="{ '!opacity-100': current == i }"
             class="absolute top-10 left-0 opacity-0"
           >
-            <ReadMore to="/education" />
+            <ReadMore to="/academics" />
           </div>
         </div>
       </div>

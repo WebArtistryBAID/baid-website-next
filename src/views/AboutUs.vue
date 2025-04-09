@@ -26,10 +26,10 @@
 </template>
 
 <script lang="ts" setup>
-import OverviewSection from '@/components/DesktopAboutUs/OverviewSection.vue'
-import AlumniSection from '@/components/DesktopAboutUs/AlumniSection.vue'
-import AccreditationSection from '@/components/DesktopAboutUs/AccreditationSection.vue'
-import DataSection from '@/components/DesktopAboutUs/DataSection.vue'
+import OverviewSection from '@/components/about/OverviewSection.vue'
+import AlumniSection from '@/components/about/AlumniSection.vue'
+import AccreditationSection from '@/components/about/AccreditationSection.vue'
+import DataSection from '@/components/about/DataSection.vue'
 
 // Data
 import dataZH from '@data/zh-CN/AboutUs.json'
@@ -37,9 +37,9 @@ import dataEN from '@data/en-US/AboutUs.json'
 
 import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'
-import MissionSection from '@/components/DesktopAboutUs/MissionSection.vue'
-import HeroSection from '@/components/DesktopAboutUs/HeroSection.vue'
-import MottoSection from '@/components/DesktopAboutUs/MottoSection.vue'
+import MissionSection from '@/components/about/MissionSection.vue'
+import HeroSection from '@/components/about/HeroSection.vue'
+import MottoSection from '@/components/about/MottoSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

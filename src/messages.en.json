@@ -1,13 +1,14 @@
 {
   "brand": "Beijing Academy International Division",
+  "readMore": "Read More",
   "views": {
-    "HomePage": "Home",
-    "AboutUs": "About Us",
-    "EducationTeaching": "Education",
-    "StudentLife": "Life",
-    "JoinUs": "Admissions",
-    "NewsPage": "News",
-    "NotFound": "Not Found"
+    "home": "Home",
+    "about": "About Us",
+    "academics": "Academics",
+    "life": "Life",
+    "admissions": "Admissions",
+    "news": "News",
+    "not-found": "Not Found"
   },
   "HomePage": {
     "ReadMore": "Read More",

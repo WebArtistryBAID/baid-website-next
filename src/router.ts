@@ -5,7 +5,7 @@ const prefix = '/:lang(zh-CN|en-US)'
 export const routes = [
     {
         path: prefix,
-        name: 'HomePage',
+        name: 'home',
         component: () => import('./views/HomePage.vue'),
         meta: {
             headerAnimate: true
@@ -13,15 +13,15 @@ export const routes = [
     },
     {
         path: prefix + '/about',
-        name: 'AboutUs',
+        name: 'about',
         component: () => import('./views/AboutUs.vue'),
         meta: {
             headerAnimate: false
         }
     },
     {
-        path: prefix + '/education',
-        name: 'EducationTeaching',
+        path: prefix + '/academics',
+        name: 'academics',
         component: () => import('./views/EducationTeaching.vue'),
         meta: {
             headerAnimate: false
@@ -29,15 +29,15 @@ export const routes = [
     },
     {
         path: prefix + '/life',
-        name: 'StudentLife',
+        name: 'life',
         component: () => import('./views/StudentLife.vue'),
         meta: {
             headerAnimate: true
         }
     },
     {
-        path: prefix + '/join',
-        name: 'JoinUs',
+        path: prefix + '/admissions',
+        name: 'admissions',
         component: () => import('./views/JoinUs.vue'),
         meta: {
             headerAnimate: false
@@ -45,7 +45,7 @@ export const routes = [
     },
     {
         path: prefix + '/news',
-        name: 'NewsPage',
+        name: 'news',
         component: () => import('./views/NewsPage.vue'),
         meta: {
             headerAnimate: false
@@ -53,7 +53,7 @@ export const routes = [
     },
     {
         path: prefix + '/news/:year/:month/:day/:title',
-        name: 'ArticlePage',
+        name: 'article',
         component: () => import('./views/ArticlePage.vue'),
         meta: {
             headerAnimate: false
@@ -61,7 +61,7 @@ export const routes = [
     },
     {
         path: '/:pathMatch(.*)*',
-        name: 'NotFound',
+        name: 'not-found',
         component: () => import('./views/NotFound.vue'),
         meta: {
             headerAnimate: false

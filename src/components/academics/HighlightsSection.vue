@@ -66,9 +66,9 @@
 </template>
 
 <script lang="ts" setup>
-import counseling from '@/assets/images/education/counseling-right.webp'
-import havingFun from '@/assets/images/education/having-fun.webp'
-import globalVision from '@/assets/images/education/global-vision.webp'
+import counseling from '@/assets/images/academics/counseling-right.webp'
+import havingFun from '@/assets/images/academics/having-fun.webp'
+import globalVision from '@/assets/images/academics/global-vision.webp'
 import { inject } from 'vue'
 
 const pageData = inject('data')
