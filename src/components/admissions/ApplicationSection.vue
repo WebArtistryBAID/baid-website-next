@@ -41,7 +41,7 @@
       </div>
       <div class="flex items-center gap-8">
         <div
-          class="bg-[var(--standard-red)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
+          class="bg-[var(--standard-blue)] md:bg-[var(--standard-red)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
           3
         </div>
@@ -56,7 +56,7 @@
       </div>
       <div class="flex items-center gap-8">
         <div
-          class="bg-[var(--standard-blue)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
+          class="bg-[var(--standard-red)] md:bg-[var(--standard-blue)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
           4
         </div>

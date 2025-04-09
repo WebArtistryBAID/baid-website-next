@@ -5,8 +5,7 @@
         Activities
       </h2>
     </div>
-    <!-- Grid: 1 column on mobile, 2 columns on sm, 4 columns on xl -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-0 shadow-xl">
+    <div class="sm:grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-xl">
       <ActivityBlock
         :activity="pageData.activities[0]"
         :light="true"

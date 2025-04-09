@@ -1,6 +1,6 @@
 <template>
   <!-- Desktop/Tablet View: original layout -->
-  <div class="hidden sm:block">
+  <div class="hidden sm:grid grid-cols-2">
     <ActivityTextBlock
       v-if="props.textAlign === 'left'"
       :background="props.background"
