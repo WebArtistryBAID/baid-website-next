@@ -20,11 +20,8 @@ import bg1 from '@/assets/images/home/hero/home-bg-1.webp'
 import bg2 from '@/assets/images/home/hero/home-bg-2.webp'
 import bg3 from '@/assets/images/home/hero/home-bg-3.webp'
 import bg4 from '@/assets/images/home/hero/home-bg-4.webp'
-import bg5 from '@/assets/images/home/hero/home-bg-5.webp'
 
-const bg = [
-  bg1, bg2, bg3, bg4, bg5
-]
+const bg = [ bg1, bg2, bg3, bg4 ]
 console.log(bg)
 const usedBg = bg[Math.floor(Math.random() * bg.length)]
 
