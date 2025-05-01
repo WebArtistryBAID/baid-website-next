@@ -21,10 +21,6 @@ jobs:
         node-version: 'node'
         cache: 'npm'
 
-    - run: npm ci
-
-    - run: node ./scripts/pre.ts
-
     - run: npm run build --if-present
 
     - name: Zip dist folder
