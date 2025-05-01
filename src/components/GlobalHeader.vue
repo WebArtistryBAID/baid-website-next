@@ -5,36 +5,52 @@
       'absolute top-0 bg-transparent': !fixed && !fixedShow,
       'absolute -top-16 bg-transparent': !fixed && fixedShow
     }"
-    class="w-screen px-8 gap-3 flex z-50 transition-all duration-300"
+    class="w-screen px-4 sm:px-8 gap-3 flex z-50 transition-all duration-300"
   >
     <div class="mr-auto py-2">
       <SchoolLogo :color="fixedShow ? 'black' : 'white'" />
     </div>
 
     <div
-      :class="{
-        'text-black': fixedShow,
-        'text-white': !fixedShow
-      }"
-      class="lg:block hidden"
+      :class="{ 'text-black': fixedShow, 'text-white': !fixedShow }"
+      class="hidden lg:flex"
     >
       <RouterLinks />
     </div>
 
     <div
-      class="h-18 w-24 transition-colors duration-100 opacity-50 hover:opacity-100 active:opacity-80 flex items-center justify-center"
+      class="h-18 w-24 flex items-center justify-center gap-2"
     >
+      <button
+        class="lg:hidden transition-colors duration-100 opacity-50 hover:opacity-100 active:opacity-80 pt-1.5"
+        @click="mobileOpen = !mobileOpen"
+      >
+        <svg
+          :stroke="fixedShow ? '#000' : '#fff'"
+          aria-label="Menu"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 6h16M4 12h16M4 18h16"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </button>
+
       <router-link
-        :style="{
-          color: fixedShow ? 'black' : 'white'
-        }"
+        :style="{ color: fixedShow ? 'black' : 'white' }"
         :to="
           route.path.replace(
             $i18n.locale,
             $i18n.locale === 'zh-CN' ? 'en-US' : 'zh-CN'
           )
         "
-        class="decoration-none"
+        class="decoration-none transition-colors duration-100 opacity-50 hover:opacity-100 active:opacity-80"
       >
         <svg
           class="w-6 h-10"
@@ -50,17 +66,63 @@
         </svg>
       </router-link>
     </div>
+
+    <transition name="fade">
+      <div
+        v-if="mobileOpen"
+        aria-label="Mobile menu"
+        aria-modal="true"
+        class="fixed inset-0 bg-[var(--standard-blue)] h-screen overflow-y-auto z-50"
+        role="dialog"
+      >
+        <button
+          ref="closeButton"
+          aria-label="Close menu"
+          class="lg:hidden transition-colors text-white duration-100 opacity-50 hover:opacity-100 active:opacity-80 absolute top-4 right-4"
+          @click="mobileOpen = !mobileOpen"
+        >
+          <svg
+            aria-label="Close"
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </button>
+
+        <GlobalFooter />
+      </div>
+    </transition>
   </header>
 </template>
 
 <script lang="ts" setup>
 import SchoolLogo from '@/components/header/SchoolLogo.vue'
 import RouterLinks from '@/components/header/RouterLinks.vue'
-import { onMounted, ref, watch } from 'vue'
+import GlobalFooter from '@/components/GlobalFooter.vue'
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 const fixed = ref(false)
 const fixedShow = ref(false)
+const mobileOpen = ref(false)
 
 const route = useRoute()
 
@@ -74,11 +136,27 @@ const handleScroll = () => {
   fixed.value = window.scrollY > window.innerHeight
 }
 
+const closeButton = ref<HTMLElement | null>(null)
+watch(mobileOpen, async (open: boolean) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+  if (open) {
+    await nextTick()
+    closeButton.value?.focus()
+  }
+})
+const handleKeydown = (e: KeyboardEvent) => {
+  if (e.key === 'Escape' && mobileOpen.value) {
+    mobileOpen.value = false
+  }
+}
+
 onMounted(() => {
   handleScroll()
+  window.addEventListener('keydown', handleKeydown)
 })
 watch(() => route.fullPath, () => {
   handleScroll()
 })
+onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
 window.addEventListener('scroll', handleScroll)
 </script>

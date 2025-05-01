@@ -1,7 +1,7 @@
 <template>
   <div
     :style="{ backgroundImage: `url(${usedBg})` }"
-    class="h-screen w-screen flex flex-col bg-cover bg-center justify-center relative px-4 py-12 md:px-48 md:py-24"
+    class="h-screen w-screen flex flex-col bg-cover bg-center justify-center relative px-4 lg:px-16 xl:px-24"
   >
     <h1 class="font-bold pb-24 text-white !font-sans text-7xl md:text-[12rem] md:leading-[1.1]">
       Beijing<br>
