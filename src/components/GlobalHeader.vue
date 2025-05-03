@@ -19,7 +19,7 @@
       <div class="flex items-center justify-center text-lg ml-3">
         <a
           class="bg-[var(--standard-blue)] rounded-full p-2 text-white"
-          href="https://sso.beijing.academy"
+          href="https://link.beijing.academy"
           target="_blank"
         >
           {{ $t('views.login') }}
