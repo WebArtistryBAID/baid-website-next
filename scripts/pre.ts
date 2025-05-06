@@ -89,7 +89,7 @@ let i = 0
 for (let page of pageItems) {
   i++
   process.stdout.write(`\r:: Processing Pages... ${i}/${pageItems.length}`)
-  if (page.meta.type === 'base.Base' || page.meta.type === 'news.NewsIndex') {
+    if (page.meta.type === 'wagtailcore.Page' || page.meta.type === 'news.NewsIndex') {
     continue
   }
 
@@ -106,15 +106,15 @@ for (let page of pageItems) {
     documents[fullLang(page.meta.locale)].push(page)
 
     await fs.writeFile(
-      `./data/${fullLang(page.meta.locale)}/News-${page.meta.slug}.json`,
+        `./data/${fullLang(page.meta.locale)}/news-${page.id}.json`,
       JSON.stringify(page)
     )
+  } else {
+      await fs.writeFile(
+          `./data/${fullLang(page.meta.locale)}/${page.meta.slug}.json`,
+          JSON.stringify(page)
+      )
   }
-
-  await fs.writeFile(
-    `./data/${fullLang(page.meta.locale)}/${page.meta.type.split('.')[1]}.json`,
-    JSON.stringify(page)
-  )
 }
 
 log('\n:: Building Search Index...')
