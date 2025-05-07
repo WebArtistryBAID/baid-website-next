@@ -4,7 +4,7 @@
     class="section"
   >
     <h2 class="text-4xl font-bold !mb-5">
-      The BAID Curriculum
+      {{ pageData.curriculum_title }}
     </h2>
 
     <!-- Desktop / Tablet layout -->
@@ -12,7 +12,7 @@
       <!-- Left panel: list of curriculum items -->
       <div class="w-2/5 flex flex-col justify-around">
         <div
-          v-for="(c, i) in pageData.curriculums"
+          v-for="(c, i) in pageData.curricula"
           :key="i"
           :class="{ '!opacity-100 active': currentDesktop === i }"
           class="opacity-70 container w-50"
@@ -39,8 +39,7 @@
           :class="{ '!opacity-100': currentDesktop === i, 'flex-col-reverse': i % 2 == 0 }"
           class="w-full flex flex-col justify-center gap-5 absolute top-0 opacity-0 h-full"
         >
-          <pre v-html="c.content" />
-          <!-- Additional content or styling can be added here -->
+          <pre v-html="c.description" />
         </div>
       </div>
     </div>
@@ -48,7 +47,7 @@
     <!-- Mobile layout: accordion style -->
     <div class="md:hidden">
       <div
-        v-for="(c, i) in pageData.curriculums"
+        v-for="(c, i) in pageData.curricula"
         :key="i"
         class="mb-4 border-b pb-4"
       >
@@ -71,7 +70,7 @@
             v-if="currentMobile === i"
             class="mt-2"
           >
-            <pre v-html="c.content" />
+            <pre v-html="c.description" />
             <div class="mt-2">
               <ReadMore to="/academics" />
             </div>

@@ -15,6 +15,9 @@
     "news": "BAID Stories",
     "philo": "Education Philosophy"
   },
+  "academics": {
+    "restrictions": "Courses subject to prerequisites and grade-level restrictions; refer to student guide for details."
+  },
   "admissions": {
     "download": "Download",
     "phone": "Phone:",

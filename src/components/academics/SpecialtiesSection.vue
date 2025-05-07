@@ -6,7 +6,7 @@
       <div class="relative">
         <img
           :class="{ 'opacity-60': transition }"
-          :src="pageData.learning_methods[current].image"
+          :src="pageData.specialties[current].image"
           alt=""
           class="w-full h-64 object-cover transition-opacity duration-300"
         >
@@ -15,18 +15,18 @@
           class="absolute bottom-0 left-0 right-0 p-5 text-white special-bg transition-opacity duration-300"
         >
           <h2 class="text-2xl font-bold mb-2">
-            {{ pageData.learning_methods[current].title }}
+            {{ pageData.specialties[current].name }}
           </h2>
         </div>
       </div>
       <div class="flex gap-1 overflow-x-auto mt-4 pb-4">
         <div
-          v-for="(method, index) in pageData.learning_methods"
-          :key="method"
+          v-for="(method, index) in pageData.specialties"
+          :key="method.id"
           class="flex-shrink-0"
         >
           <img
-            :alt="`Learning Experience: ${method.title}`"
+            :alt="`Learning Experience: ${method.name}`"
             :class="{
               '!opacity-100': current === index,
               'hover:opacity-100 active:brightness-90': current !== index && !transition
@@ -46,29 +46,29 @@
     >
       <div class="relative">
         <img
-          :src="pageData.learning_methods[current].image"
+          :src="pageData.specialties[current].image"
           :class="{ 'opacity-60': transition }"
           alt=""
           class="w-full h-full object-cover transition-opacity duration-300"
         >
         <div
           :class="{ 'opacity-0': transition }"
-          class="absolute bottom-0 p-10 pt-20 text-white special-bg transition-opacity duration-300"
+          class="absolute bottom-0 p-10 pt-20 text-white from-[var(--standard-blue)] to-[var(--standard-blue)]/0
+          bg-gradient-to-t w-full transition-opacity duration-300"
         >
           <h2 class="text-4xl font-bold mb-2">
-            {{ pageData.learning_methods[current].title }}
+            {{ pageData.specialties[current].name }}
           </h2>
           <p
             class="text-xl font-serif"
-            v-html="pageData.learning_methods[current].content"
+            v-html="pageData.specialties[current].description"
           />
-          <!-- NOTE: These texts are too long -->
         </div>
       </div>
       <!-- Right: Thumbnails -->
       <div class="grid gap-1">
         <div
-          v-for="(method, index) in pageData.learning_methods"
+          v-for="(method, index) in pageData.specialties"
           :key="method"
         >
           <img
@@ -77,7 +77,7 @@
               'hover:opacity-100 active:brightness-90': current !== index && !transition
             }"
             :src="method.image"
-            :alt="`Learning Experience: ${method.title}`"
+            :alt="`Learning Experience: ${method.name}`"
             class="w-full h-full object-cover block opacity-60 transition-all cursor-pointer"
             role="button"
             @click="change(index)"
@@ -107,9 +107,3 @@ function change(index: number) {
   }, 300)
 }
 </script>
-
-<style scoped>
-.special-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-}
-</style>
