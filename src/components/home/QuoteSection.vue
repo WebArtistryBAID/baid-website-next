@@ -6,7 +6,7 @@
     <div class="w-full md:w-1/2">
       <p
         class="tracking-wide !text-3xl !font-serif !mb-3"
-        v-html="pageData.principal_message"
+        v-html="pageData.principal_quote"
       />
       <p class="w-full text-right font-sans text-xl">
         —— {{ pageData.principal_name }}

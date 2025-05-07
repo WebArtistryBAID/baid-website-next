@@ -8,18 +8,19 @@
       Academy
     </h1>
 
-    <p class="absolute bottom-8 !font-serif text-white text-xl md:text-3xl">
-      Better me, better world. That's what BAID students strive for, every single day.
-    </p>
+    <div
+      class="absolute bottom-8 !font-serif text-white text-xl md:text-3xl"
+      v-html="pageData.hero_subtitle"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { inject } from 'vue'
 import bg1 from '@/assets/images/home/hero/home-bg-1.webp'
 import bg2 from '@/assets/images/home/hero/home-bg-2.webp'
 import bg3 from '@/assets/images/home/hero/home-bg-3.webp'
 import bg4 from '@/assets/images/home/hero/home-bg-4.webp'
+import { inject } from 'vue'
 
 const bg = [ bg1, bg2, bg3, bg4 ]
 const usedBg = bg[Math.floor(Math.random() * bg.length)]

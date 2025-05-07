@@ -7,7 +7,7 @@
       <h2
         class="text-4xl lg:text-5xl xl:text-7xl font-bold !font-sans mr-auto xl:-mb-2"
       >
-        BAID Stories
+        {{ $t('home.news') }}
       </h2>
 
       <router-link

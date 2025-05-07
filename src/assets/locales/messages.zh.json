@@ -10,5 +10,9 @@
     "news": "新闻",
     "login": "LinkBAID",
     "not-found": "页面不存在"
+  },
+  "home": {
+    "news": "BAID 故事",
+    "philo": "教育理念"
   }
 }

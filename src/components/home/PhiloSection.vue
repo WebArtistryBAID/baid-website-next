@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto max-w-[77rem] px-5 md:px-0 mb-5 md:mb-0">
     <h2 class="text-3xl md:text-5xl font-bold !font-sans">
-      Education Philosophy
+      {{ $t('home.philo') }}
     </h2>
   </div>
   <div class="bg-[var(--standard-blue)] mb-16">
@@ -37,7 +37,7 @@ import PhilosophyBlock from './PhilosophyBlock.vue'
 import PhilosophyBlockMobile from '@/components/home/PhilosophyBlockMobile.vue'
 
 const pageData = inject('data')
-const blocks = [ 'motto', 'spirit', 'key_competency', 'cultivation' ]
+const blocks = [ 'motto', 'spirit', 'literacy', 'pathway' ]
 
 const active = ref(null)
 
