@@ -1,7 +1,7 @@
 <template>
   <div class="section !mt-24">
     <h2 class="!text-3xl md:!text-5xl font-bold mb-5">
-      Our Alumni
+      {{ pageData.alumni_title }}
     </h2>
     <div class="flex flex-col md:flex-row items-center gap-8 md:mb-5">
       <div class="w-full md:w-1/3 flex pl-8 items-center">

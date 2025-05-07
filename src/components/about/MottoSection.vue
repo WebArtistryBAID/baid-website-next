@@ -1,17 +1,14 @@
 <template>
   <div class="section !my-12 !md:my-24">
-    <h2 class="font-bold font-sans !text-xl !md:text-2xl mb-4 md:mb-8">
-      The BAID Value
+    <h2 class="text-3xl md:text-5xl font-bold !font-sans">
+      {{ pageData.quote_title }}
     </h2>
-    <!-- 让人成为人，让自己成为自己，让世界因我更美好。 -->
-    <div>
-      <p
+    <div class="!mt-16">
+      <div
         id="quotes"
         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif"
-      >
-        Let people be who they are, let me be who I am, and let the world be better because of me. Better me, better
-        world.
-      </p>
+        v-html="pageData.quote"
+      />
     </div>
   </div>
 </template>
