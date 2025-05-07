@@ -7,60 +7,56 @@
       <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
-            :src="activity"
+            :src="pageData.highlights[0].image"
             alt="English drama festival activity"
             class="max-w-4/5 mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">
-          Activities
+          {{ pageData.highlights[0].title }}
         </p>
-        <p class="text-lg !font-serif">
-          Find your voice and passions through vibrant opportunities like BAID Speaker, Whale Cafe,
-          diverse electives, and beloved traditions like BAID Got Talent and Sing BAID.
-        </p>
+        <div
+          class="text-lg !font-serif"
+          v-html="pageData.highlights[0].description"
+        />
       </div>
       <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
-            :src="club"
+            :src="pageData.highlights[1].image"
             alt="The SLSD club"
             class="max-w-4/5 mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">
-          Clubs
+          {{ pageData.highlights[1].title }}
         </p>
-        <p class="text-lg !font-serif">
-          Clubs are dynamic hubs of creativity and purpose — where you turn passions into projects, ideas into impact,
-          and
-          friendships into lasting communities.
-        </p>
+        <div
+          class="text-lg !font-serif"
+          v-html="pageData.highlights[1].description"
+        />
       </div>
       <div class="w-full md:w-1/3 p-6 md:p-12">
         <div class="flex justify-center items-center w-full h-64">
           <img
-            :src="athletics"
+            :src="pageData.highlights[2].image"
             alt="Athletics at BAID"
             class="max-w-4/5 mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">
-          Health & Fitness
+          {{ pageData.highlights[2].title }}
         </p>
-        <p class="text-lg !font-serif">
-          With options like basketball, football, archery, baseball, volleyball, tennis, and dance,
-          there's a way for everyone to move, grow, and thrive.
-        </p>
+        <div
+          class="text-lg !font-serif"
+          v-html="pageData.highlights[2].description"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import activity from '@/assets/images/life/activity.webp'
-import athletics from '@/assets/images/life/athletics.webp'
-import club from '@/assets/images/life/club.webp'
 import { inject } from 'vue'
 
 const pageData = inject('data')

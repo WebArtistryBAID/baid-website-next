@@ -4,7 +4,7 @@
     <ActivityTextBlock
       v-if="props.textAlign === 'left'"
       :background="props.background"
-      :description="props.activity.content"
+      :description="props.activity.description"
       :light="props.light"
       :name="props.activity.name"
     />
@@ -16,7 +16,7 @@
     <ActivityTextBlock
       v-if="props.textAlign === 'right'"
       :background="props.background"
-      :description="props.activity.content"
+      :description="props.activity.description"
       :light="props.light"
       :name="props.activity.name"
     />
@@ -31,7 +31,7 @@
     >
     <ActivityTextBlock
       :background="props.background"
-      :description="props.activity.content"
+      :description="props.activity.description"
       :light="props.light"
       :name="props.activity.name"
     />

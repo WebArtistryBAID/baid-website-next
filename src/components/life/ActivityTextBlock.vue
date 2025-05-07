@@ -10,7 +10,7 @@
       {{ props.name }}
     </h3>
     <div
-      class="no-size text-xs"
+      class="no-size text-sm"
       v-html="props.description"
     />
   </div>

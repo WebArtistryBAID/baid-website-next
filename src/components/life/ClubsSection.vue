@@ -2,7 +2,7 @@
   <div class="py-24 border-b border-gray-200">
     <div class="section">
       <h2 class="mb-5 text-4xl font-bold">
-        Clubs
+        {{ pageData.clubs_title }}
       </h2>
 
       <SwiperWrapper arrow-color="var(--standard-blue)">
@@ -19,14 +19,14 @@
               </h3>
               <p
                 class="text-sm"
-                v-html="club.content"
+                v-html="club.description"
               />
             </div>
             <!-- Image container: full width on mobile, half on larger screens -->
             <div class="w-full sm:w-1/2">
               <img
                 :alt="club.name"
-                :src="club.images[0]"
+                :src="club.image"
                 class="object-cover w-full h-full rounded-lg"
               >
             </div>

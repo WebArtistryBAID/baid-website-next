@@ -2,7 +2,7 @@
   <div class="section">
     <div class="flex justify-end">
       <h2 class="text-4xl font-bold mb-5">
-        Activities
+        {{ pageData.activities_title }}
       </h2>
     </div>
     <div class="sm:grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-xl">
