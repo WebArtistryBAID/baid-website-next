@@ -17,7 +17,10 @@
         </h1>
         <p />
       </article>
-      <article v-html="content?.body" />
+      <article
+        class="!mb-16"
+        v-html="content?.body"
+      />
     </section>
   </div>
 </template>
@@ -26,19 +29,23 @@
 import { useRoute } from 'vue-router'
 import { ref, watchEffect } from 'vue'
 import '@/assets/styles/article.css'
+import { useI18n } from 'vue-i18n'
 
 const route = useRoute()
 
 const content = ref<any>(null)
 const loading = ref(true)
 
+const { t } = useI18n({ useScope: 'global' })
+
 watchEffect(async () => {
   loading.value = true
   content.value = (
     await import(
-        `@data/${route.params.lang}/News-${route.params.title}.json`
+        `@data/${route.params.lang}/news-${route.params.title}.json`
       )
   ).default
+  document.title = content.value.title + ' | ' + t('brand')
 
   loading.value = false
 })
