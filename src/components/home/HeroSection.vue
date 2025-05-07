@@ -22,7 +22,6 @@ import bg3 from '@/assets/images/home/hero/home-bg-3.webp'
 import bg4 from '@/assets/images/home/hero/home-bg-4.webp'
 
 const bg = [ bg1, bg2, bg3, bg4 ]
-console.log(bg)
 const usedBg = bg[Math.floor(Math.random() * bg.length)]
 
 const pageData = inject('data')
