@@ -15,6 +15,12 @@
     "news": "BAID Stories",
     "philo": "Education Philosophy"
   },
+  "admissions": {
+    "download": "Download",
+    "phone": "Phone:",
+    "email": "Email:",
+    "comment": "This page is applicable only to students joining BAID through the 中考 (zhongkao)."
+  },
   "footer": {
     "contact": "(Phone/WeChat)",
     "copyright": "© 2025 Beijing Academy International Division. All rights reserved.",

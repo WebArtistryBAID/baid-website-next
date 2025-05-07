@@ -15,6 +15,12 @@
     "news": "BAID 故事",
     "philo": "教育理念"
   },
+  "admissions": {
+    "download": "下载",
+    "phone": "电话:",
+    "email": "邮箱:",
+    "comment": "本页信息只适用于通过中考加入 BAID 的学生。"
+  },
   "footer": {
     "contact": "(手机/微信)",
     "copyright": "© 2025 北京中学国际部",

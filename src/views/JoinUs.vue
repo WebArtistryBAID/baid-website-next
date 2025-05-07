@@ -28,8 +28,8 @@ import DeadlineSection from '@/components/admissions/DeadlineSection.vue'
 import ApplicationSection from '@/components/admissions/ApplicationSection.vue'
 import ContactSection from '@/components/admissions/ContactSection.vue'
 
-import dataZH from '@data/zh-CN/JoinUs.json'
-import dataEN from '@data/en-US/JoinUs.json'
+import dataZH from '@data/zh-CN/admissions.json'
+import dataEN from '@data/en-US/admissions.json'
 
 import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'

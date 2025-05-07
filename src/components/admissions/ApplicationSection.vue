@@ -1,7 +1,7 @@
 <template>
   <div class="section !mt-24">
     <h2 class="text-3xl md:text-4xl font-bold !mb-8">
-      Start Applying
+      {{ pageData.steps_title }}
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-8">
@@ -16,12 +16,16 @@
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-1">
-            Download Application Form
+            {{ pageData.steps[0].name }}
           </h3>
-          <p class="!text-lg">
-            <span class="py-1 px-2 font-sans rounded-full bg-[var(--standard-blue)] text-white">Tap here</span> to
-            download the application form.
-          </p>
+          <div
+            class="!text-lg"
+            v-html="pageData.steps[0].content"
+          />
+          <a
+            :href="pageData.application_form_link"
+            class="inline-block py-1 px-2 font-sans rounded-full bg-[var(--standard-blue)] text-white"
+          >{{ $t('admissions.download') }}</a>
         </div>
       </a>
       <div class="flex items-center gap-8">
@@ -32,11 +36,12 @@
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-1">
-            Fill and Submit Application
+            {{ pageData.steps[1].name }}
           </h3>
-          <p class="!text-lg">
-            Send your application via email to <span class="font-bold">baid<span class="at" />bjacademy.com.cn</span>.
-          </p>
+          <div
+            class="!text-lg"
+            v-html="pageData.steps[1].content"
+          />
         </div>
       </div>
       <div class="flex items-center gap-8">
@@ -47,11 +52,12 @@
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-1">
-            Next Steps
+            {{ pageData.steps[2].name }}
           </h3>
-          <p class="!text-lg">
-            Our admissions office will contact you regarding next steps.
-          </p>
+          <div
+            class="!text-lg"
+            v-html="pageData.steps[2].content"
+          />
         </div>
       </div>
       <div class="flex items-center gap-8">
@@ -62,11 +68,12 @@
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-1">
-            Decisions Released
+            {{ pageData.steps[3].name }}
           </h3>
-          <p class="!text-lg">
-            You will be notified if you have been accepted.
-          </p>
+          <div
+            class="!text-lg"
+            v-html="pageData.steps[3].content"
+          />
         </div>
       </div>
     </div>

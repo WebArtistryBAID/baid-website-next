@@ -32,8 +32,8 @@ import AccreditationSection from '@/components/about/AccreditationSection.vue'
 import DataSection from '@/components/about/DataSection.vue'
 
 // Data
-import dataZH from '@data/zh-CN/AboutUs.json'
-import dataEN from '@data/en-US/AboutUs.json'
+import dataZH from '@data/zh-CN/about.json'
+import dataEN from '@data/en-US/about.json'
 
 import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'

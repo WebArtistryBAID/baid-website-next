@@ -30,8 +30,8 @@ import SpecialtiesSection from '@/components/academics/SpecialtiesSection.vue'
 import DataSection from '@/components/academics/DataSection.vue'
 
 // Data
-import dataZH from '@data/zh-CN/Education.json'
-import dataEN from '@data/en-US/Education.json'
+import dataZH from '@data/zh-CN/academics.json'
+import dataEN from '@data/en-US/academics.json'
 
 import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'

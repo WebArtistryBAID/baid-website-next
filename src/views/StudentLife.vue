@@ -24,8 +24,8 @@ import ClubsSection from '@/components/life/ClubsSection.vue'
 import ActivitiesSection from '@/components/life/ActivitiesSection.vue'
 
 // Data
-import dataZH from '@data/zh-CN/StudentLife.json'
-import dataEN from '@data/en-US/StudentLife.json'
+import dataZH from '@data/zh-CN/life.json'
+import dataEN from '@data/en-US/life.json'
 
 import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'

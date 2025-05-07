@@ -42,8 +42,8 @@ import QuoteSection from '@/components/home/QuoteSection.vue'
 import HomeNewsSection from '@/components/home/HomeNewsSection.vue'
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
-import dataZH from '@data/zh-CN/Home.json'
-import dataEN from '@data/en-US/Home.json'
+import dataZH from '@data/zh-CN/home.json'
+import dataEN from '@data/en-US/home.json'
 import HighlightsSection from '@/components/home/HighlightsSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })

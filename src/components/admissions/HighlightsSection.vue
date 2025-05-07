@@ -8,63 +8,61 @@
         <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
           <div class="flex justify-center items-center w-full h-64">
             <img
-              :src="a"
+              :src="pageData.highlights[0].image"
               alt="BAID students collaborating on a project"
               class="max-w-4/5 mb-5"
             >
           </div>
           <p class="text-3xl mb-1 font-bold !font-sans">
-            Program Overview
+            {{ pageData.highlights[0].title }}
           </p>
-          <p class="text-lg !font-serif">
-            Learn more about your eligibility to join BAID through the standard pathway*.
-          </p>
+          <div
+            class="text-lg !font-serif"
+            v-html="pageData.highlights[0].description"
+          />
         </div>
         <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
           <div class="flex justify-center items-center w-full h-64">
             <img
-              :src="b"
+              :src="pageData.highlights[1].image"
               alt="BAID students working in a lab"
               class="max-w-4/5 mb-5"
             >
           </div>
           <p class="text-3xl mb-1 font-bold !font-sans">
-            Application Process
+            {{ pageData.highlights[1].title }}
           </p>
-          <p class="text-lg !font-serif">
-            Four simple steps to apply to BAID through the standard pathway.
-          </p>
+          <div
+            class="text-lg !font-serif"
+            v-html="pageData.highlights[1].description"
+          />
         </div>
         <div class="w-full md:w-1/3 p-6 md:p-12">
           <div class="flex justify-center items-center w-full h-64">
             <img
-              :src="c"
+              :src="pageData.highlights[2].image"
               alt="BAID students dancing at a school event"
               class="max-w-4/5 mb-5"
             >
           </div>
           <p class="text-3xl mb-1 font-bold !font-sans">
-            Contact Us
+            {{ pageData.highlights[2].title }}
           </p>
-          <p class="text-lg !font-serif">
-            We are here to help you every step of the way.
-          </p>
+          <div
+            class="text-lg !font-serif"
+            v-html="pageData.highlights[2].description"
+          />
         </div>
       </div>
 
       <p class="text-sm max-w-xl px-5 md:px-0">
-        *The following information is for students joining Grade 10 for high school with Zhongkao (中考) ("standard
-        pathway").
-        Please contact us if you are interested in alternative programs.
+        {{ $t('admissions.comment') }}
       </p>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import a from '@/assets/images/admissions/a.webp'
-import b from '@/assets/images/admissions/b.webp'
-import c from '@/assets/images/admissions/c.webp'
 import { inject } from 'vue'
 
 const pageData = inject('data')
