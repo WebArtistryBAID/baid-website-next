@@ -14,5 +14,22 @@
   "home": {
     "news": "BAID Stories",
     "philo": "Education Philosophy"
+  },
+  "footer": {
+    "contact": "(Phone/WeChat)",
+    "copyright": "© 2025 Beijing Academy International Division. All rights reserved.",
+    "chn": "Tap here to learn more about Beijing Academy's Chinese education offerings.",
+    "about_overview": "Overview",
+    "about_data": "BAID in Numbers",
+    "about_accreditation": "Accreditation",
+    "about_alumni": "Alumni",
+    "academics_curriculum": "Curriculum",
+    "academics_courses": "Courses",
+    "academics_highlights": "Better Way to Learn",
+    "life_activities": "Activities",
+    "life_clubs": "Clubs",
+    "admissions_overview": "Program Overview",
+    "admissions_application": "Application Process",
+    "admissions_contact": "Contact Us"
   }
 }

@@ -15,86 +15,87 @@
         <div class="md:p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/about`">
             <p class="font-sans text-xl font-bold !mb-3">
-              About Us
+              {{ $t('views.about') }}
             </p>
           </router-link>
           <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/about#overview`">
-              <p>Overview</p>
+              <p>{{ $t('footer.about_overview') }}</p>
             </router-link>
             <router-link :to="`/${locale}/about#data`">
-              <p>BAID in Numbers</p>
+              <p>{{ $t('footer.about_data') }}</p>
             </router-link>
             <router-link :to="`/${locale}/about#accreditation`">
-              <p>Accreditation</p>
+              <p>{{ $t('footer.about_accreditation') }}</p>
             </router-link>
             <router-link :to="`/${locale}/about#alumni`">
-              <p>Alumni</p>
+              <p>{{ $t('footer.about_alumni') }}</p>
             </router-link>
           </div>
         </div>
         <div class="md:p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/academics`">
             <p class="font-sans text-xl font-bold !mb-3">
-              Academics
+              {{ $t('views.academics') }}
             </p>
           </router-link>
           <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/academics#curriculum`">
-              <p>The BAID Curriculum</p>
+              <p>{{ $t('footer.academics_curriculum') }}</p>
             </router-link>
             <router-link :to="`/${locale}/academics#courses`">
-              <p>Courses</p>
+              <p>{{ $t('footer.academics_courses') }}</p>
             </router-link>
             <router-link :to="`/${locale}/academics#highlights`">
-              <p>Learning, Reimagined</p>
+              <p>{{ $t('footer.academics_highlights') }}</p>
             </router-link>
           </div>
         </div>
         <div class="md:p-4 md:border-r md:border-white/10">
           <router-link :to="`/${locale}/life`">
             <p class="font-sans text-xl font-bold !mb-3">
-              Student Life
+              {{ $t('views.life') }}
             </p>
           </router-link>
           <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/life#activities`">
-              <p>Activities</p>
+              <p>{{ $t('footer.life_activities') }}</p>
             </router-link>
             <router-link :to="`/${locale}/life#clubs`">
-              <p>Clubs</p>
+              <p>{{ $t('footer.life_clubs') }}</p>
             </router-link>
           </div>
         </div>
         <div class="md:p-4">
           <router-link :to="`/${locale}/admissions`">
             <p class="font-sans text-xl font-bold !mb-3">
-              Admissions
+              {{ $t('views.admissions') }}
             </p>
           </router-link>
           <div class="flex flex-col md:gap-2">
             <router-link :to="`/${locale}/admissions#overview`">
-              <p>Program Overview</p>
+              <p>{{ $t('footer.admissions_overview') }}</p>
             </router-link>
             <router-link :to="`/${locale}/admissions#application`">
-              <p>Application Process</p>
+              <p>{{ $t('footer.admissions_application') }}</p>
             </router-link>
             <router-link :to="`/${locale}/admissions#contact`">
-              <p>Contact Us</p>
+              <p>{{ $t('footer.admissions_contact') }}</p>
             </router-link>
           </div>
         </div>
       </div>
 
       <div class="mb-5">
-        <p>+86 159 1052 4064 (Phone / WeChat)</p>
+        <p>+86 159 1052 4064 {{ $t('footer.contact') }}</p>
         <p>baid<span class="at" />bjacademy.com.cn</p>
       </div>
 
-      <p>Copyright (c) Beijing Academy International Division, all rights reserved.</p>
+      <p>{{ $t('footer.copyright') }}</p>
       <p>
-        <a href="https://www.beijingacademy.com.cn">Tap here to learn more about Beijing Academy's Chinese education
-          offerings.</a>
+        <a href="https://www.beijingacademy.com.cn">
+          {{ $t('footer.chn') }}
+        </a>
       </p>
       <p><a href="https://beian.miit.gov.cn">京ICP备12345678号</a></p>
     </div>

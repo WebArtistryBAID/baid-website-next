@@ -14,5 +14,22 @@
   "home": {
     "news": "BAID 故事",
     "philo": "教育理念"
+  },
+  "footer": {
+    "contact": "(手机/微信)",
+    "copyright": "© 2025 北京中学国际部",
+    "chn": "点击这里了解北京中学教育集团的其他项目。",
+    "about_overview": "总览",
+    "about_data": "从数字看 BAID",
+    "about_accreditation": "认证",
+    "about_alumni": "校友",
+    "academics_curriculum": "课程体系",
+    "academics_courses": "课程",
+    "academics_highlights": "更好的学习方式",
+    "life_activities": "活动",
+    "life_clubs": "社团",
+    "admissions_overview": "项目总览",
+    "admissions_application": "申请流程",
+    "admissions_contact": "联系我们"
   }
 }
