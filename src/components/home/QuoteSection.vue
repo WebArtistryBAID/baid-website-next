@@ -9,7 +9,7 @@
         v-html="pageData.principal_quote"
       />
       <p class="w-full text-right font-sans text-xl">
-        —— {{ pageData.principal_name }}
+        — {{ pageData.principal_name }}
       </p>
     </div>
     <div class="w-full md:w-1/2 flex justify-center items-center">

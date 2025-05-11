@@ -1,86 +1,136 @@
 <template>
-  <div class="section !my-12 !md:my-24">
-    <h2 class="text-3xl md:text-5xl font-bold !font-sans">
-      {{ pageData.quote_title }}
-    </h2>
-    <div class="!mt-16">
-      <div
-        id="quotes"
-        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif"
+  <div
+    class="relative flex flex-col-reverse gap-5 md:flex-row mx-auto py-24 px-4 md:px-36 my-12 md:my-24 items-center"
+    style="max-width: 77rem"
+  >
+    <div class="w-full md:w-1/2">
+      <p
+        class="tracking-wide !text-3xl !font-serif !mb-3"
         v-html="pageData.quote"
       />
+      <p class="w-full text-right font-sans text-xl">
+        — {{ pageData.quote_title }}
+      </p>
+    </div>
+    <div class="w-full md:w-1/2 flex justify-center items-center">
+      <img
+        :src="avatar"
+        alt="Avatar"
+        class="object-contain w-64"
+      >
+    </div>
+
+    <!-- The quotes -->
+    <div class="absolute left-4 top-0">
+      <svg
+        fill="none"
+        height="53"
+        viewBox="0 0 56.55765920826161 53"
+        width="56.55765920826161"
+      >
+        <defs>
+          <rect
+            id="path_0"
+            height="53"
+            width="56.55765920826162"
+            x="0"
+            y="0"
+          />
+        </defs>
+        <g
+          opacity="1"
+          transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+        >
+          <mask
+            id="bg-mask-0"
+            fill="white"
+          >
+            <use xlink:href="#path_0" />
+          </mask>
+          <g mask="url(#bg-mask-0)">
+            <g
+              opacity="1"
+              transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+            >
+              <path
+                id="path 1"
+                d="M0,53L8.98,53C17.66,53 24.69,46.41 24.69,38.28L24.69,27.75L12.8,27.75C13.1,19.28 19.42,11.52 24.69,9.99L24.69,0C15.06,1.8 0,11.79 0,28.72L0,53Z "
+                fill-rule="evenodd"
+                opacity="1"
+                style="fill: #122a28"
+                transform="translate(31.867098865540292 0)  rotate(0 12.345280171360663 26.5)"
+              />
+              <path
+                id="path 2"
+                d="M0,53L8.83,53C17.51,53 24.54,46.41 24.54,38.28L24.54,27.75L12.8,27.75C13.1,19.28 19.42,11.52 24.69,9.99L24.69,0C15.06,1.8 0,11.79 0,28.72L0,53Z "
+                fill-rule="evenodd"
+                opacity="1"
+                style="fill: #122a28"
+                transform="translate(0 0)  rotate(0 12.345280171360665 26.5)"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="absolute right-4 bottom-0">
+      <svg
+        fill="none"
+        height="53"
+        viewBox="0 0 56.55765920826161 53"
+        width="56.55765920826161"
+      >
+        <defs>
+          <rect
+            id="path_0"
+            height="53"
+            width="56.55765920826162"
+            x="0"
+            y="0"
+          />
+        </defs>
+        <g
+          opacity="1"
+          transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+        >
+          <mask
+            id="bg-mask-0"
+            fill="white"
+          >
+            <use xlink:href="#path_0" />
+          </mask>
+          <g mask="url(#bg-mask-0)">
+            <g
+              opacity="1"
+              transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+            >
+              <path
+                id="path 1"
+                d="M24.69,0L15.71,0C7.03,0 0,6.59 0,14.72L0,25.25L11.89,25.25C11.59,33.72 5.27,41.48 0,43.01L0,53C9.64,51.2 24.69,41.21 24.69,24.28L24.69,0Z "
+                fill-rule="evenodd"
+                opacity="1"
+                style="fill: #122a28"
+                transform="translate(0 0)  rotate(0 12.345280171360665 26.5)"
+              />
+              <path
+                id="path 2"
+                d="M24.69,0L15.86,0C7.18,0 0.15,6.59 0.15,14.72L0.15,25.25L11.89,25.25C11.59,33.72 5.27,41.48 0,43.01L0,53C9.64,51.2 24.69,41.21 24.69,24.28L24.69,0Z "
+                fill-rule="evenodd"
+                opacity="1"
+                style="fill: #122a28"
+                transform="translate(31.867098865540356 0)  rotate(0 12.345280171360667 26.5)"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { inject } from 'vue'
+import avatar from '@/assets/images/about/someone.webp'
 
 const pageData = inject('data')
 </script>
-
-<style scoped>
-#quotes {
-  position: relative;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-@media (min-width: 640px) {
-  #quotes {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  #quotes {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
-
-#quotes:before {
-  position: absolute;
-  top: 0;
-  left: 0.5rem;
-  color: var(--standard-blue);
-  font-size: inherit;
-}
-
-#quotes:after {
-  position: absolute;
-  bottom: -1rem;
-  right: 1rem;
-  color: var(--standard-blue);
-  font-size: inherit;
-}
-
-@media (min-width: 640px) {
-  #quotes:before {
-    left: 1rem;
-  }
-
-  #quotes:after {
-    right: 2rem;
-  }
-}
-
-@media (min-width: 768px) {
-  #quotes:before {
-    left: 2rem;
-  }
-
-  #quotes:after {
-    right: 3rem;
-  }
-}
-
-#quotes:before {
-  content: "“";
-}
-
-#quotes:after {
-  content: "”";
-}
-</style>
