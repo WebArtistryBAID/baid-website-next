@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomePage from '@/views/HomePage.vue'
 
 const prefix = '/:lang(zh-CN|en-US)'
 
@@ -6,7 +7,7 @@ export const routes = [
     {
         path: prefix,
         name: 'home',
-        component: () => import('./views/HomePage.vue'),
+        component: HomePage,
         meta: {
             headerAnimate: true
         }
