@@ -17,7 +17,6 @@
     <section id="learning-methods">
       <SpecialtiesSection />
     </section>
-    <!-- Maybe we should add a section about the very good AP scores we have? -->
   </div>
 </template>
 <script lang="ts" setup>

@@ -1,24 +1,44 @@
 <template>
-  <div
+  <section
     id="curriculum"
     class="section"
+    aria-labelledby="curriculum-heading"
   >
-    <h2 class="text-4xl font-bold !mb-5">
+    <h2
+      id="curriculum-heading"
+      class="text-4xl font-bold !mb-5"
+    >
       {{ pageData.curriculum_title }}
     </h2>
 
     <!-- Desktop / Tablet layout -->
-    <div class="hidden md:flex gap-16 h-100">
+    <div
+      aria-roledescription="curriculum overview"
+      class="hidden md:flex gap-16 h-100"
+      role="region"
+    >
       <!-- Left panel: list of curriculum items -->
-      <div class="w-2/5 flex flex-col justify-around">
+      <div
+        aria-label="Curriculum items"
+        class="w-2/5 flex flex-col justify-around"
+        role="list"
+      >
         <div
           v-for="(c, i) in pageData.curricula"
           :key="i"
           :class="{ '!opacity-100 active': currentDesktop === i }"
           class="opacity-70 container w-50"
+          :aria-controls="`curriculum-panel-${i}`"
+          :aria-selected="currentDesktop === i"
+          role="button"
+          tabindex="0"
           @mouseover="currentDesktop = i"
+          @focus="currentDesktop = i"
         >
-          <h2 class="m-0 text-2xl w-max">
+          <h2
+            :id="`curriculum-tab-${i}`"
+            class="m-0 text-2xl w-max"
+          >
             {{ c.name }}
           </h2>
         </div>
@@ -28,11 +48,14 @@
       <div class="relative w-full">
         <div
           v-for="(c, i) in pageData.curriculums"
+          :id="`curriculum-panel-${i}`"
           :key="i"
           :class="{ '!opacity-100': currentDesktop === i, 'flex-col-reverse': i % 2 == 0 }"
           class="w-full flex flex-col justify-center gap-5 absolute top-0 opacity-0 h-full"
+          :aria-labelledby="`curriculum-tab-${i}`"
+          role="region"
         >
-          <pre v-html="c.description" />
+          <div v-html="c.description" />
         </div>
       </div>
     </div>
@@ -46,7 +69,12 @@
       >
         <!-- Tappable header -->
         <div
+          :id="`curriculum-mobile-tab-${i}`"
           class="flex justify-between items-center cursor-pointer"
+          :aria-controls="`curriculum-mobile-panel-${i}`"
+          :aria-expanded="currentMobile === i"
+          role="button"
+          tabindex="0"
           @click="toggleMobile(i)"
         >
           <h2 class="text-2xl font-semibold">
@@ -61,9 +89,12 @@
         <transition name="slide">
           <div
             v-if="currentMobile === i"
+            :id="`curriculum-mobile-panel-${i}`"
             class="mt-2"
+            :aria-labelledby="`curriculum-mobile-tab-${i}`"
+            role="region"
           >
-            <pre v-html="c.description" />
+            <div v-html="c.description" />
             <div class="mt-2">
               <ReadMore to="/academics" />
             </div>
@@ -71,7 +102,7 @@
         </transition>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

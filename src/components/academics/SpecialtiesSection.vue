@@ -1,5 +1,15 @@
 <template>
-  <div class="section">
+  <section
+    aria-label="Specialties section"
+    aria-labelledby="specialties-heading"
+    class="section"
+  >
+    <h2
+      id="specialties-heading"
+      class="sr-only"
+    >
+      Specialties
+    </h2>
     <!-- Mobile Layout -->
     <div class="md:hidden">
       <!-- Main image section -->
@@ -19,7 +29,12 @@
           </h2>
         </div>
       </div>
-      <div class="flex gap-1 overflow-x-auto mt-4 pb-4">
+      <div
+        aria-label="Specialties carousel"
+        aria-roledescription="carousel"
+        class="flex gap-1 overflow-x-auto mt-4 pb-4"
+        role="region"
+      >
         <div
           v-for="(method, index) in pageData.specialties"
           :key="method.id"
@@ -34,6 +49,9 @@
             :src="method.image"
             class="w-32 h-32 object-cover block opacity-60 transition-all cursor-pointer"
             role="button"
+            :aria-label="`Show specialty ${method.name}`"
+            :aria-pressed="current === index"
+            tabindex="0"
             @click="change(index)"
           >
         </div>
@@ -48,7 +66,8 @@
         <img
           :src="pageData.specialties[current].image"
           :class="{ 'opacity-60': transition }"
-          alt=""
+          :alt="`Specialty: ${pageData.specialties[current].name}`"
+          aria-live="polite"
           class="w-full h-full object-cover transition-opacity duration-300"
         >
         <div
@@ -66,7 +85,12 @@
         </div>
       </div>
       <!-- Right: Thumbnails -->
-      <div class="grid gap-1">
+      <div
+        aria-label="Specialties carousel"
+        aria-roledescription="carousel"
+        class="grid gap-1"
+        role="region"
+      >
         <div
           v-for="(method, index) in pageData.specialties"
           :key="method"
@@ -80,12 +104,15 @@
             :alt="`Learning Experience: ${method.name}`"
             class="w-full h-full object-cover block opacity-60 transition-all cursor-pointer"
             role="button"
+            :aria-label="`Show specialty ${method.name}`"
+            :aria-pressed="current === index"
+            tabindex="0"
             @click="change(index)"
           >
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

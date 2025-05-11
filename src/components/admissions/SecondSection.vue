@@ -1,10 +1,16 @@
 <template>
-  <div class="section">
+  <section
+    aria-labelledby="intro-heading"
+    class="section"
+  >
     <div class="flex flex-col md:flex-row gap-5">
       <div class="w-full md:w-1/3">
-        <p class="text-3xl md:text-4xl font-bold">
+        <h2
+          id="intro-heading"
+          class="text-3xl md:text-4xl font-bold"
+        >
           {{ pageData.intro_title }}
-        </p>
+        </h2>
       </div>
       <div class="w-full md:w-2/3">
         <div
@@ -13,7 +19,7 @@
         />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

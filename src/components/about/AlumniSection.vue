@@ -1,15 +1,26 @@
 <template>
-  <div class="section !mt-24">
-    <h2 class="!text-3xl md:!text-5xl font-bold mb-5">
+  <section
+    aria-labelledby="alumni-heading"
+    class="section !mt-24"
+  >
+    <h2
+      id="alumni-heading"
+      class="!text-3xl md:!text-5xl font-bold mb-5"
+    >
       {{ pageData.alumni_title }}
     </h2>
-    <div class="flex flex-col md:flex-row items-center gap-8 md:mb-5">
+    <div
+      aria-label="Alumni testimonials"
+      aria-roledescription="carousel"
+      class="flex flex-col md:flex-row items-center gap-8 md:mb-5"
+      role="region"
+    >
       <div class="w-full md:w-1/3 flex pl-8 items-center">
         <div class="alumni-big-pic-box h-72 md:h-auto">
           <img
             :class="{ 'opacity-0': transition }"
             :src="pageData.alumni[current].image"
-            alt="Picture of alumnus"
+            :alt="`Picture of ${pageData.alumni[current].name}`"
             class="w-full h-full object-cover aspect-3/4 transition-all duration-300 block alumni-big-pic"
           >
         </div>
@@ -35,7 +46,11 @@
             v-for="(alumnus, index) in pageData.alumni"
             :key="alumnus"
           >
-            <button @click="change(index)">
+            <button
+              :aria-label="`Show testimonial from ${alumnus.name}`"
+              :aria-pressed="current === index"
+              @click="change(index)"
+            >
               <img
                 :class="{
                   '!opacity-100': current === index,
@@ -43,7 +58,7 @@
                     current !== index && !transition
                 }"
                 :src="alumnus.image"
-                alt="pic1"
+                alt=""
                 class="h-36 object-cover aspect-3/4 opacity-60 transition-all"
               >
             </button>
@@ -51,7 +66,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

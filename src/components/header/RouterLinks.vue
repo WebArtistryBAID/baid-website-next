@@ -1,12 +1,18 @@
 <template>
-  <div
+  <nav
     class="flex p-0 relative h-full m-0 links"
+    aria-label="Main navigation"
+    role="navigation"
     @mouseleave="showBlock = false"
   >
     <div
       v-for="(route, index) in routesComputed"
       :key="route.name"
       class="h-full text-lg"
+      tabindex="0"
+      @blur="showBlock = false"
+      @click="onHover(index, route.name)"
+      @focus="onHover(index, route.name)"
       @mouseover="onHover(index, route.name)"
     >
       <router-link
@@ -27,7 +33,7 @@
       :style="{ left: blockLeft }"
       class="absolute w-30 h-full bg-black opacity-0 z-10 pointer-events-none transition-opacity"
     />
-  </div>
+  </nav>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,4 @@
 <template>
-  <!-- 最小缩放到750px -->
   <div class="overflow-x-hidden">
     <GlobalHeader />
     <main>

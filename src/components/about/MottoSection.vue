@@ -1,7 +1,8 @@
 <template>
-  <div
+  <section
     class="relative flex flex-col-reverse gap-5 md:flex-row mx-auto py-24 px-4 md:px-36 my-12 md:my-24 items-center"
     style="max-width: 77rem"
+    aria-label="Motto section"
   >
     <div class="w-full md:w-1/2">
       <p
@@ -15,7 +16,7 @@
     <div class="w-full md:w-1/2 flex justify-center items-center">
       <img
         :src="avatar"
-        alt="Avatar"
+        :alt="`Portrait of ${pageData.quote_title}`"
         class="object-contain w-64"
       >
     </div>
@@ -125,7 +126,7 @@
         </g>
       </svg>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

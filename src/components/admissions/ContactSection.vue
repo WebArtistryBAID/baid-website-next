@@ -1,10 +1,18 @@
 <template>
   <div
-    :style="{ backgroundImage: `url(${bg})` }"
+    :style="{ backgroundImage: `url(${pageData.contact_image})` }"
     class="bg-cover"
+    aria-labelledby="contact-heading"
+    role="region"
   >
-    <div class="section mt-12 md:!mt-24 py-12 md:!py-24">
-      <h2 class="text-4xl font-bold mb-5">
+    <section
+      aria-labelledby="contact-heading"
+      class="section mt-12 md:!mt-24 py-12 md:!py-24"
+    >
+      <h2
+        id="contact-heading"
+        class="text-4xl font-bold mb-5"
+      >
         {{ pageData.contact_title }}
       </h2>
       <p class="text-2xl font-serif !mb-3">
@@ -14,10 +22,16 @@
         <p class="font-bold">
           {{ $t('admissions.email') }}
         </p>
-        <ul class="list-inside list-disc mb-2">
+        <ul
+          aria-label="Contact emails"
+          class="list-inside list-disc mb-2"
+          role="list"
+        >
           <li
             v-for="email in pageData.contact_emails"
             :key="email.id"
+            role="listitem"
+            tabindex="0"
           >
             {{ email.email }}
           </li>
@@ -25,16 +39,22 @@
         <p class="font-bold">
           {{ $t('admissions.phone') }}
         </p>
-        <ul class="list-inside list-disc">
+        <ul
+          aria-label="Contact phone numbers"
+          class="list-inside list-disc"
+          role="list"
+        >
           <li
             v-for="phone in pageData.contact_phones"
             :key="phone.id"
+            role="listitem"
+            tabindex="0"
           >
             {{ phone.phone }}
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 

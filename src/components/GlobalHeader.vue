@@ -1,5 +1,6 @@
 <template>
   <header
+    role="banner"
     :class="{
       'fixed top-0 bg-white/50 backdrop-filter backdrop-blur-lg': fixed,
       'absolute top-0 bg-transparent': !fixed && !fixedShow,
@@ -11,9 +12,10 @@
       <SchoolLogo :color="fixedShow ? 'black' : 'white'" />
     </div>
 
-    <div
+    <nav
       :class="{ 'text-black': fixedShow, 'text-white': !fixedShow }"
       class="hidden lg:flex"
+      aria-label="Primary navigation"
     >
       <RouterLinks />
       <div class="flex items-center justify-center text-lg ml-3">
@@ -25,13 +27,16 @@
           {{ $t('views.login') }}
         </a>
       </div>
-    </div>
+    </nav>
 
     <div
       class="h-18 w-24 flex items-center justify-center gap-2"
     >
       <button
         class="lg:hidden transition-colors duration-100 opacity-50 hover:opacity-100 active:opacity-80 pt-1.5"
+        :aria-expanded="mobileOpen"
+        aria-controls="mobile-menu"
+        aria-haspopup="true"
         @click="mobileOpen = !mobileOpen"
       >
         <svg
@@ -79,6 +84,7 @@
     <transition name="fade">
       <div
         v-if="mobileOpen"
+        id="mobile-menu"
         aria-label="Mobile menu"
         aria-modal="true"
         class="fixed inset-0 bg-[var(--standard-blue)] h-screen overflow-y-auto z-50"

@@ -1,15 +1,29 @@
 <template>
-  <div class="py-24 border-b border-gray-200">
+  <section
+    aria-labelledby="clubs-heading"
+    class="py-24 border-b border-gray-200"
+  >
     <div class="section">
-      <h2 class="mb-5 text-4xl font-bold">
+      <h2
+        id="clubs-heading"
+        class="mb-5 text-4xl font-bold"
+      >
         {{ pageData.clubs_title }}
       </h2>
 
-      <SwiperWrapper arrow-color="var(--standard-blue)">
+      <SwiperWrapper
+        aria-label="Clubs carousel"
+        aria-live="polite"
+        aria-roledescription="carousel"
+        arrow-color="var(--standard-blue)"
+        role="region"
+      >
         <swiper-slide
-          v-for="club in pageData.clubs"
+          v-for="(club, index) in pageData.clubs"
           :key="club"
           class="flex justify-center items-center text-black"
+          :aria-label="`Slide ${index+1} of ${pageData.clubs.length}: ${club.name}`"
+          tabindex="0"
         >
           <div class="md:max-w-4/5 bg-white mx-auto rounded-lg border border-gray-200 flex flex-col sm:flex-row gap-5">
             <!-- Text content: full width on mobile, half on larger screens -->
@@ -34,7 +48,7 @@
         </swiper-slide>
       </SwiperWrapper>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

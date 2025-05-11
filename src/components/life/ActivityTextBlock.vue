@@ -1,19 +1,25 @@
 <template>
-  <div
+  <section
     :style="{
       background: props.background,
       color: props.light ? 'white' : 'black'
     }"
     class="w-full h-80 p-8"
+    aria-labelledby="activity-heading"
+    role="region"
   >
-    <h3 class="text-xl mb-3 font-bold">
+    <h3
+      id="activity-heading"
+      class="text-xl mb-3 font-bold"
+    >
       {{ props.name }}
     </h3>
     <div
       class="no-size text-sm"
+      tabindex="0"
       v-html="props.description"
     />
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

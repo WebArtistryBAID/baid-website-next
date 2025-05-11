@@ -1,21 +1,30 @@
 <template>
   <div
+    :aria-label="`Show philosophy: ${props.title}`"
+    :aria-pressed="thisActive"
+    role="button"
+    tabindex="0"
     :class="{ 'w-1/3': thisActive, 'w-1/4': !thisActive }"
     :style="{ backgroundImage: 'url(' + image + ')' }"
     class="h-[30rem] text-white bg-cover relative transition-all duration-300"
     @mouseleave="$emit('deactivate')"
     @mousemove="$emit('activate')"
+    @blur="$emit('deactivate')"
+    @focus="$emit('activate')"
   >
     <div class="w-full h-full bg-[#103c74]/80 transition-all duration-500 relative">
       <pre
         :class="{ 'opacity-0': !delay, 'opacity-100': delay }"
         class="leading-normal text-right !font-sans !text-3xl"
+        aria-atomic="true"
+        aria-live="polite"
         v-html="props.content"
       />
       <h2
         :class="{ center: !thisActive, right: thisActive }"
         class="text-8 !m-0 tracking-wide text-center"
         style="writing-mode: vertical-lr"
+        aria-hidden="true"
       >
         {{ props.title }}
       </h2>

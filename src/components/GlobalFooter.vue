@@ -1,8 +1,15 @@
 <template>
   <footer
+    aria-labelledby="footer-heading"
     class="w-full !font-sans py-16 px-5 !text-white"
     style="background-color: var(--standard-blue)"
   >
+    <h2
+      id="footer-heading"
+      class="sr-only"
+    >
+      Footer
+    </h2>
     <div
       class="mx-auto mb-5"
       style="max-width: 77rem"
@@ -11,85 +18,126 @@
         Beijing Academy
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 mb-8">
-        <div class="md:p-4 md:border-r md:border-white/10">
-          <router-link :to="`/${locale}/about`">
-            <p class="font-sans text-xl font-bold !mb-3">
-              {{ $t('views.about') }}
-            </p>
-          </router-link>
-          <div class="flex flex-col md:gap-2">
-            <router-link :to="`/${locale}/about#overview`">
-              <p>{{ $t('footer.about_overview') }}</p>
+      <nav
+        aria-label="Footer navigation"
+        role="navigation"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 mb-8">
+          <div class="md:p-4 md:border-r md:border-white/10">
+            <router-link :to="`/${locale}/about`">
+              <h3 class="text-lg font-bold mb-2">
+                {{ $t('views.about') }}
+              </h3>
             </router-link>
-            <router-link :to="`/${locale}/about#data`">
-              <p>{{ $t('footer.about_data') }}</p>
+            <ul
+              class="flex flex-col md:gap-2"
+              role="list"
+            >
+              <li role="listitem">
+                <router-link :to="`/${locale}/about#overview`">
+                  {{ $t('footer.about_overview') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/about#data`">
+                  {{ $t('footer.about_data') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/about#accreditation`">
+                  {{ $t('footer.about_accreditation') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/about#alumni`">
+                  {{ $t('footer.about_alumni') }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
+          <div class="md:p-4 md:border-r md:border-white/10">
+            <router-link :to="`/${locale}/academics`">
+              <h3 class="text-lg font-bold mb-2">
+                {{ $t('views.academics') }}
+              </h3>
             </router-link>
-            <router-link :to="`/${locale}/about#accreditation`">
-              <p>{{ $t('footer.about_accreditation') }}</p>
+            <ul
+              class="flex flex-col md:gap-2"
+              role="list"
+            >
+              <li role="listitem">
+                <router-link :to="`/${locale}/academics#curriculum`">
+                  {{ $t('footer.academics_curriculum') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/academics#courses`">
+                  {{ $t('footer.academics_courses') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/academics#highlights`">
+                  {{ $t('footer.academics_highlights') }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
+          <div class="md:p-4 md:border-r md:border-white/10">
+            <router-link :to="`/${locale}/life`">
+              <h3 class="text-lg font-bold mb-2">
+                {{ $t('views.life') }}
+              </h3>
             </router-link>
-            <router-link :to="`/${locale}/about#alumni`">
-              <p>{{ $t('footer.about_alumni') }}</p>
+            <ul
+              class="flex flex-col md:gap-2"
+              role="list"
+            >
+              <li role="listitem">
+                <router-link :to="`/${locale}/life#activities`">
+                  {{ $t('footer.life_activities') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/life#clubs`">
+                  {{ $t('footer.life_clubs') }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
+          <div class="md:p-4">
+            <router-link :to="`/${locale}/admissions`">
+              <h3 class="text-lg font-bold mb-2">
+                {{ $t('views.admissions') }}
+              </h3>
             </router-link>
+            <ul
+              class="flex flex-col md:gap-2"
+              role="list"
+            >
+              <li role="listitem">
+                <router-link :to="`/${locale}/admissions#overview`">
+                  {{ $t('footer.admissions_overview') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/admissions#application`">
+                  {{ $t('footer.admissions_application') }}
+                </router-link>
+              </li>
+              <li role="listitem">
+                <router-link :to="`/${locale}/admissions#contact`">
+                  {{ $t('footer.admissions_contact') }}
+                </router-link>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="md:p-4 md:border-r md:border-white/10">
-          <router-link :to="`/${locale}/academics`">
-            <p class="font-sans text-xl font-bold !mb-3">
-              {{ $t('views.academics') }}
-            </p>
-          </router-link>
-          <div class="flex flex-col md:gap-2">
-            <router-link :to="`/${locale}/academics#curriculum`">
-              <p>{{ $t('footer.academics_curriculum') }}</p>
-            </router-link>
-            <router-link :to="`/${locale}/academics#courses`">
-              <p>{{ $t('footer.academics_courses') }}</p>
-            </router-link>
-            <router-link :to="`/${locale}/academics#highlights`">
-              <p>{{ $t('footer.academics_highlights') }}</p>
-            </router-link>
-          </div>
-        </div>
-        <div class="md:p-4 md:border-r md:border-white/10">
-          <router-link :to="`/${locale}/life`">
-            <p class="font-sans text-xl font-bold !mb-3">
-              {{ $t('views.life') }}
-            </p>
-          </router-link>
-          <div class="flex flex-col md:gap-2">
-            <router-link :to="`/${locale}/life#activities`">
-              <p>{{ $t('footer.life_activities') }}</p>
-            </router-link>
-            <router-link :to="`/${locale}/life#clubs`">
-              <p>{{ $t('footer.life_clubs') }}</p>
-            </router-link>
-          </div>
-        </div>
-        <div class="md:p-4">
-          <router-link :to="`/${locale}/admissions`">
-            <p class="font-sans text-xl font-bold !mb-3">
-              {{ $t('views.admissions') }}
-            </p>
-          </router-link>
-          <div class="flex flex-col md:gap-2">
-            <router-link :to="`/${locale}/admissions#overview`">
-              <p>{{ $t('footer.admissions_overview') }}</p>
-            </router-link>
-            <router-link :to="`/${locale}/admissions#application`">
-              <p>{{ $t('footer.admissions_application') }}</p>
-            </router-link>
-            <router-link :to="`/${locale}/admissions#contact`">
-              <p>{{ $t('footer.admissions_contact') }}</p>
-            </router-link>
-          </div>
-        </div>
-      </div>
+      </nav>
 
-      <div class="mb-5">
+      <address class="mb-5">
         <p>+86 159 1052 4064 {{ $t('footer.contact') }}</p>
         <p>baid<span class="at" />bjacademy.com.cn</p>
-      </div>
+      </address>
 
       <p>{{ $t('footer.copyright') }}</p>
       <p>
@@ -97,7 +145,7 @@
           {{ $t('footer.chn') }}
         </a>
       </p>
-      <p><a href="https://beian.miit.gov.cn">京ICP备12345678号</a></p>
+      <!--<p><a href="https://beian.miit.gov.cn">京ICP备12345678号</a></p>-->
     </div>
   </footer>
 </template>

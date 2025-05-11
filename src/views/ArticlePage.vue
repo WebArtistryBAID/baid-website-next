@@ -1,28 +1,42 @@
 <template>
-  <div class="mt-24">
-    <section>
+  <main
+    class="mt-24"
+    role="main"
+  >
+    <section aria-labelledby="article-title-heading">
       <img
         :src="content?.cover"
-        alt="Cover of news article"
+        :alt="`Cover image for article: ${content?.title}`"
         class="w-full h-96 object-cover mb-5"
       >
-      <h1 class="text-4xl text-white !font-sans">
+      <h1
+        id="article-title-heading"
+        class="text-4xl text-white !font-sans"
+      >
         {{ content?.title }}
       </h1>
     </section>
-    <section class="section">
-      <article>
-        <h1 class="!font-sans">
+    <section
+      aria-labelledby="article-content-heading"
+      class="section"
+      role="region"
+    >
+      <article aria-labelledby="article-intro-heading">
+        <h2
+          id="article-intro-heading"
+          class="!font-sans"
+        >
           {{ content?.title }}
-        </h1>
-        <p />
+        </h2>
+        <p aria-hidden="true" />
       </article>
       <article
+        id="article-content-heading"
         class="!mb-16"
         v-html="content?.body"
       />
     </section>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>

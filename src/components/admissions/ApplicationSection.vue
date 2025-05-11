@@ -1,13 +1,25 @@
 <template>
-  <div class="section !mt-24">
-    <h2 class="text-3xl md:text-4xl font-bold !mb-8">
+  <section
+    aria-labelledby="application-steps-heading"
+    class="section !mt-24"
+  >
+    <h2
+      id="application-steps-heading"
+      class="text-3xl md:text-4xl font-bold !mb-8"
+    >
       {{ pageData.steps_title }}
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-8">
+    <div
+      aria-label="Application steps"
+      class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-8"
+      role="list"
+    >
       <a
         class="flex items-center gap-8"
         href="https://ncstatic.clewm.net/rsrc/2025/0218/14/5303fc7f027f5f5bbe901721f68eb344.docx"
+        role="listitem"
+        tabindex="0"
       >
         <div
           class="bg-[var(--standard-blue)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
@@ -28,7 +40,11 @@
           >{{ $t('admissions.download') }}</a>
         </div>
       </a>
-      <div class="flex items-center gap-8">
+      <div
+        class="flex items-center gap-8"
+        role="listitem"
+        tabindex="0"
+      >
         <div
           class="bg-[var(--standard-red)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
@@ -44,7 +60,11 @@
           />
         </div>
       </div>
-      <div class="flex items-center gap-8">
+      <div
+        class="flex items-center gap-8"
+        role="listitem"
+        tabindex="0"
+      >
         <div
           class="bg-[var(--standard-blue)] md:bg-[var(--standard-red)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
@@ -60,7 +80,11 @@
           />
         </div>
       </div>
-      <div class="flex items-center gap-8">
+      <div
+        class="flex items-center gap-8"
+        role="listitem"
+        tabindex="0"
+      >
         <div
           class="bg-[var(--standard-red)] md:bg-[var(--standard-blue)] rounded-full w-16 h-16 flex-shrink-0 flex justify-center items-center text-white text-2xl"
         >
@@ -77,7 +101,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

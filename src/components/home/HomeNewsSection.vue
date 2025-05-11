@@ -1,10 +1,14 @@
 <template>
-  <div class="mt-24 border-b border-black">
+  <section
+    aria-labelledby="news-heading"
+    class="mt-24 border-b border-black"
+  >
     <div
       class="mx-auto flex items-center px-5 md:px-0"
       style="max-width: 77rem"
     >
       <h2
+        id="news-heading"
         class="text-4xl lg:text-5xl xl:text-7xl font-bold !font-sans mr-auto xl:-mb-2"
       >
         {{ $t('home.news') }}
@@ -13,6 +17,7 @@
       <router-link
         :to="'/' + $i18n.locale + '/news'"
         class="flex items-center gap-1 text-black decoration-none op-80 hover:op-100 transition"
+        aria-label="Read more news"
       >
         <span class="!font-sans">{{ $t('readMore') }}</span>
         <svg
@@ -28,29 +33,37 @@
         </svg>
       </router-link>
     </div>
-  </div>
+  </section>
 
-  <div class="section !mb-24">
+  <section
+    aria-labelledby="news-heading"
+    class="section !mb-24"
+  >
     <div
       v-if="props.newsList.length >= 3"
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+      aria-label="Latest news"
+      role="list"
     >
       <HomeNews
+        role="listitem"
         :light="true"
         :news="props.newsList[0]"
         bg="var(--standard-blue)"
       />
       <HomeNews
+        role="listitem"
         :news="props.newsList[1]"
         bg="#eee"
       />
       <HomeNews
+        role="listitem"
         :light="true"
         :news="props.newsList[2]"
         bg="var(--standard-red)"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

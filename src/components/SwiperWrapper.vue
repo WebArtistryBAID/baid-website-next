@@ -1,6 +1,12 @@
 <template>
   <!-- Container for large screens: arrows left/right -->
-  <div class="hidden sm:flex items-center justify-center">
+  <div
+    aria-label="Image carousel"
+    aria-roledescription="carousel"
+    class="hidden sm:flex items-center justify-center"
+    role="region"
+    tabindex="0"
+  >
     <!-- Left arrow -->
     <button
       aria-label="Previous"
@@ -21,6 +27,7 @@
 
     <!-- Swiper instance -->
     <swiper
+      ref="swiperEl"
       :autoplay="{
         delay: 2500,
         disableOnInteraction: false
@@ -30,6 +37,7 @@
       :modules="modules"
       :slides-per-view="props.slides"
       :space-between="10"
+      aria-live="polite"
       @swiper="getRef"
     >
       <slot />
@@ -55,9 +63,16 @@
   </div>
 
   <!-- Container for small screens: swiper with bottom arrows -->
-  <div class="flex flex-col items-center sm:hidden">
+  <div
+    aria-label="Image carousel"
+    aria-roledescription="carousel"
+    class="flex flex-col items-center sm:hidden"
+    role="region"
+    tabindex="0"
+  >
     <!-- Swiper instance -->
     <swiper
+      ref="swiperEl"
       :autoplay="{
         delay: 2500,
         disableOnInteraction: false
@@ -68,6 +83,7 @@
       :space-between="10"
       :slides-per-view="props.slides"
       class="w-full"
+      aria-live="polite"
       @swiper="getRef"
     >
       <slot />
@@ -146,16 +162,17 @@ const props = defineProps({
 })
 
 const swiperR = ref(null)
+const swiperEl = ref(null)
 
-function getRef(swiperInstance: any) {
-  swiperR.value = swiperInstance
+function getRef(swiperComponent: any) {
+  swiperR.value = swiperComponent.swiper ?? swiperComponent
 }
 
 function prev() {
-  swiperR.value?.slidePrev()
+  swiperR.value.slidePrev()
 }
 
 function next() {
-  swiperR.value?.slideNext()
+  swiperR.value.slideNext()
 }
 </script>

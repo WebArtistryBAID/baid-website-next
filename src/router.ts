@@ -15,7 +15,7 @@ export const routes = [
     {
         path: prefix + '/about',
         name: 'about',
-        component: () => import('./views/AboutUs.vue'),
+        component: () => import('./views/AboutPage.vue'),
         meta: {
             headerAnimate: false
         }
@@ -23,7 +23,7 @@ export const routes = [
     {
         path: prefix + '/academics',
         name: 'academics',
-        component: () => import('./views/EducationTeaching.vue'),
+        component: () => import('./views/AcademicsPage.vue'),
         meta: {
             headerAnimate: false
         }
@@ -31,7 +31,7 @@ export const routes = [
     {
         path: prefix + '/life',
         name: 'life',
-        component: () => import('./views/StudentLife.vue'),
+        component: () => import('./views/LifePage.vue'),
         meta: {
             headerAnimate: true
         }
@@ -39,7 +39,7 @@ export const routes = [
     {
         path: prefix + '/admissions',
         name: 'admissions',
-        component: () => import('./views/JoinUs.vue'),
+        component: () => import('./views/AdmissionsPage.vue'),
         meta: {
             headerAnimate: false
         }
@@ -63,7 +63,7 @@ export const routes = [
     {
         path: '/:pathMatch(.*)*',
         name: 'not-found',
-        component: () => import('./views/NotFound.vue'),
+        component: () => import('./views/NotFoundPage.vue'),
         meta: {
             headerAnimate: false
         }

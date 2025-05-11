@@ -2,13 +2,20 @@
   <router-link
     :to="to"
     class="decoration-none op-80 hover:op-100 active:op-70 transition-opacity"
+    :aria-label="$t(props.text)"
+    role="link"
   >
     <div class="flex items-center w-min">
-      <i class="mr-2 flex items-center">
+      <i
+        aria-hidden="true"
+        class="mr-2 flex items-center"
+      >
         <svg
           height="30"
           viewBox="0 0 32.99999997656249 32.99999997656255"
           width="30"
+          aria-hidden="true"
+          focusable="false"
         >
           <path
             :style="{ fill: props.color }"

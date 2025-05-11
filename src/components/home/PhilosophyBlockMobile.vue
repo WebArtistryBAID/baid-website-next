@@ -1,13 +1,19 @@
 <template>
-  <div>
-    <p class="pl-3 border-l-4 border-[var(--standard-red)] font-sans text-sm !mb-3">
+  <section
+    aria-labelledby="philosophy-title"
+    role="region"
+  >
+    <h3
+      id="philosophy-title"
+      class="pl-3 border-l-4 border-[var(--standard-red)] font-sans text-sm !mb-3"
+    >
       {{ props.title }}
-    </p>
+    </h3>
     <p
       class="text-2xl"
       v-html="props.content"
     />
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
@@ -22,4 +28,3 @@ const props = defineProps({
   }
 })
 </script>
-

@@ -1,10 +1,11 @@
 <template>
-  <div
+  <section
     class="relative mx-auto py-24 px-4 md:px-36 my-12 md:my-24 items-center"
     style="max-width: 77rem"
+    aria-label="Motto section"
   >
     <div class="w-full">
-      <div
+      <p
         class="tracking-wide text-3xl md:text-5xl !font-serif !mb-3"
         v-html="pageData.quote"
       />
@@ -115,7 +116,7 @@
         </g>
       </svg>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

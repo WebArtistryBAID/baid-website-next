@@ -1,15 +1,26 @@
 <template>
-  <div class="section !py-12 md:!py-16 gap-8 md:gap-16 text-white flex flex-col md:flex-row items-center">
-    <div class="w-full md:w-1/2">
+  <section
+    aria-labelledby="accreditation-heading"
+    class="section !py-12 md:!py-16 gap-8 md:gap-16 text-white flex flex-col md:flex-row items-center"
+  >
+    <div
+      aria-label="Accreditations carousel"
+      aria-roledescription="carousel"
+      class="w-full md:w-1/2"
+      role="region"
+    >
       <SwiperWrapper
         :autoplay="true"
         :slides="1"
         effect="coverflow"
         arrow-color="white"
+        aria-live="polite"
       >
         <swiper-slide
-          v-for="acc in pageData.accreditations"
+          v-for="(acc, index) in pageData.accreditations"
           :key="acc.id"
+          :aria-label="`Slide ${index+1} of ${pageData.accreditations.length}: ${acc.name}`"
+          tabindex="0"
         >
           <div
             class="rounded-lg mx-4 md:mx-8 h-56 md:h-72 my-8 md:my-12 bg-white flex flex-col justify-center items-center"
@@ -27,7 +38,10 @@
       </SwiperWrapper>
     </div>
     <div class="w-full md:w-1/2">
-      <h2 class="text-3xl md:text-4xl font-bold mb-2 md:mb-3">
+      <h2
+        id="accreditation-heading"
+        class="text-3xl md:text-4xl font-bold mb-2 md:mb-3"
+      >
         {{ pageData.accreditation_title }}
       </h2>
       <p
@@ -35,7 +49,7 @@
         v-html="pageData.accreditation_text"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

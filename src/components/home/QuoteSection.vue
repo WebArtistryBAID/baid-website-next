@@ -1,11 +1,21 @@
 <template>
-  <div
+  <section
     class="relative flex flex-col-reverse gap-5 md:flex-row mx-auto py-24 px-4 md:px-36 my-12 md:my-24 items-center"
     style="max-width: 77rem"
+    aria-labelledby="principal-quote-heading"
   >
+    <h2
+      id="principal-quote-heading"
+      class="sr-only"
+    >
+      Principal’s Quote
+    </h2>
     <div class="w-full md:w-1/2">
       <p
         class="tracking-wide !text-3xl !font-serif !mb-3"
+        aria-label="Principal’s quote"
+        role="region"
+        tabindex="0"
         v-html="pageData.principal_quote"
       />
       <p class="w-full text-right font-sans text-xl">
@@ -15,7 +25,7 @@
     <div class="w-full md:w-1/2 flex justify-center items-center">
       <img
         :src="pageData.principal_avatar"
-        alt="Avatar"
+        :alt="`Portrait of ${pageData.principal_name}`"
         class="object-contain w-64"
       >
     </div>
@@ -125,7 +135,7 @@
         </g>
       </svg>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

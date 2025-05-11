@@ -1,9 +1,14 @@
 <template>
-  <div
+  <section
     :style="{ backgroundImage: `url(${usedBg})` }"
     class="h-screen w-screen flex flex-col bg-cover bg-center justify-center relative px-4 lg:px-16 xl:px-24"
+    aria-labelledby="hero-heading"
+    role="banner"
   >
-    <h1 class="font-bold pb-24 text-white !font-sans text-7xl md:text-[12rem] md:leading-[1.1]">
+    <h1
+      id="hero-heading"
+      class="font-bold pb-24 text-white !font-sans text-7xl md:text-[12rem] md:leading-[1.1]"
+    >
       Beijing<br>
       Academy
     </h1>
@@ -12,7 +17,7 @@
       class="absolute bottom-8 !font-serif text-white text-xl md:text-3xl"
       v-html="pageData.hero_subtitle"
     />
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

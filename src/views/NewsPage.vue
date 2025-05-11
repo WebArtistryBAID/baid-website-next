@@ -1,40 +1,53 @@
 <template>
-  <section class="section">
-    <h1 class="!text-7xl border-b border-black mt-24 font-bold !font-sans mr-auto -mb-2">
+  <section
+    aria-labelledby="news-heading"
+    class="section"
+  >
+    <h1
+      id="news-heading"
+      class="!text-7xl border-b border-black mt-24 font-bold !font-sans mr-auto -mb-2"
+    >
       News
     </h1>
-
-    <router-link
-      v-for="(item, index) in news"
-      :key="item.id"
-      :to="item.href"
-      :class="{ 'md:flex-row-reverse': index % 2 }"
-      class="w-full flex flex-col md:flex-row items-center my-10"
+    <div
+      aria-label="News articles"
+      role="list"
     >
-      <img
-        :src="item.cover"
-        alt=""
-        class="w-full md:w-1/3 aspect-video object-cover"
+      <router-link
+        v-for="(item, index) in news"
+        :key="item.id"
+        :class="{ 'md:flex-row-reverse': index % 2 }"
+        :to="item.href"
+        class="w-full flex flex-col md:flex-row items-center my-10"
+        role="listitem"
       >
-      <div class="md:px-10 py-10 w-full md:w-2/3">
-        <h2
-          :class="{
-            'border-[var(--standard-blue)]': index % 2,
-            'border-[var(--standard-red)]': index % 2 === 0
-          }"
-          class="text-3xl font-bold mb-5 border-l-4 pl-3"
+        <img
+          :alt="`Cover image for ${item.title}`"
+          :src="item.cover"
+          class="w-full md:w-1/3 aspect-video object-cover"
         >
-          {{ item.title }}
-        </h2>
-        <p class="opacity-80 text-sm !mb-3">
-          {{ item.date }}
-        </p>
+        <div class="md:px-10 py-10 w-full md:w-2/3">
+          <h2
+            :class="{
+              'border-[var(--standard-blue)]': index % 2,
+              'border-[var(--standard-red)]': index % 2 === 0
+            }"
+            class="text-3xl font-bold mb-5 border-l-4 pl-3"
+          >
+            {{ item.title }}
+          </h2>
+          <time
+            :datetime="item.date"
+            class="opacity-80 text-sm !mb-3"
+          >{{ item.date }}
+          </time>
 
-        <p class="opacity-80 text-xl font-serif line-clamp-3">
-          {{ item.intro }}
-        </p>
-      </div>
-    </router-link>
+          <p class="opacity-80 text-xl font-serif line-clamp-3">
+            {{ item.intro }}
+          </p>
+        </div>
+      </router-link>
+    </div>
   </section>
 </template>
 

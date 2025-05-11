@@ -1,11 +1,23 @@
 <template>
-  <div class="border-t border-gray-200 my-0 mx-auto">
+  <section
+    aria-label="Highlights section"
+    class="border-t border-gray-200 my-0 mx-auto"
+  >
     <div
       class="mx-auto"
       style="max-width: 77rem"
     >
-      <div class="flex flex-col md:flex-row mb-8">
-        <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
+      <div
+        aria-label="Highlights"
+        class="flex flex-col md:flex-row mb-8"
+        role="list"
+      >
+        <div
+          :aria-label="`${pageData.highlights[0].title}: ${pageData.highlights[0].description}`"
+          class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12"
+          role="listitem"
+          tabindex="0"
+        >
           <div class="flex justify-center items-center w-full h-64">
             <img
               :src="pageData.highlights[0].image"
@@ -21,7 +33,12 @@
             v-html="pageData.highlights[0].description"
           />
         </div>
-        <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
+        <div
+          :aria-label="`${pageData.highlights[1].title}: ${pageData.highlights[1].description}`"
+          class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12"
+          role="listitem"
+          tabindex="0"
+        >
           <div class="flex justify-center items-center w-full h-64">
             <img
               :src="pageData.highlights[1].image"
@@ -37,7 +54,12 @@
             v-html="pageData.highlights[1].description"
           />
         </div>
-        <div class="w-full md:w-1/3 p-6 md:p-12">
+        <div
+          :aria-label="`${pageData.highlights[2].title}: ${pageData.highlights[2].description}`"
+          class="w-full md:w-1/3 p-6 md:p-12"
+          role="listitem"
+          tabindex="0"
+        >
           <div class="flex justify-center items-center w-full h-64">
             <img
               :src="pageData.highlights[2].image"
@@ -59,7 +81,7 @@
         {{ $t('admissions.comment') }}
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
