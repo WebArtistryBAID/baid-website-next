@@ -42,7 +42,8 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.vue src"
   },
   "type": "module",
-  "devDependencies": {
+  "dependencies": {
+    "node-fetch": "^3.3.2",
     "@types/node": "^22.14.0",
     "@typescript-eslint/eslint-plugin": "^8.29.0",
     "@typescript-eslint/parser": "^8.29.0",
@@ -50,10 +51,7 @@
     "eslint": "^9.24.0",
     "eslint-plugin-vue": "^10.0.0",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.29.0"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2",
+    "typescript-eslint": "^8.29.0",
     "@intlify/unplugin-vue-i18n": "^6.0.5",
     "@node-rs/jieba": "^1.7.2",
     "@tailwindcss/vite": "^4.1.3",
