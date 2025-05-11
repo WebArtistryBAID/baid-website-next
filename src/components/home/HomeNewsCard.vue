@@ -23,6 +23,7 @@
     <ReadMore
       :color="props.light ? 'white' : 'black'"
       :to="props.news.href"
+      text="newsArticle"
       class="absolute bottom-8 right-8"
     />
   </div>

@@ -22,7 +22,7 @@
       <span
         :style="{ color: props.color }"
         class="w-max !font-sans tracking-wide"
-      >{{ $t('readMore') }}</span>
+      >{{ $t(props.text) }}</span>
     </div>
   </router-link>
 </template>
@@ -40,6 +40,11 @@ const props = defineProps({
     type: String,
     required: false,
     default: 'var(--standard-blue)'
+  },
+  text: {
+    type: String,
+    required: false,
+    default: 'readMore'
   }
 })
 const { locale } = useI18n({ useScope: 'global' })

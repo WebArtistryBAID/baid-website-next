@@ -12,7 +12,10 @@
           v-html="pageData.intro_text"
         />
         <div class="flex justify-end mt-5">
-          <ReadMore to="/about" />
+          <ReadMore
+            text="views.about"
+            to="/about"
+          />
         </div>
       </div>
     </div>

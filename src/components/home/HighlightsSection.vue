@@ -22,7 +22,10 @@
           v-html="pageData.highlights[0].description"
         />
         <div class="mt-2">
-          <ReadMore to="/admissions" />
+          <ReadMore
+            text="views.admissions"
+            to="/admissions"
+          />
         </div>
       </div>
       <div class="w-full md:w-1/3 md:border-r border-gray-200 p-6 md:p-12">
@@ -43,7 +46,10 @@
           v-html="pageData.highlights[1].description"
         />
         <div class="mt-2">
-          <ReadMore to="/academics" />
+          <ReadMore
+            text="views.academics"
+            to="/academics"
+          />
         </div>
       </div>
       <div class="w-full md:w-1/3 p-6 md:p-12">
@@ -64,7 +70,10 @@
           v-html="pageData.highlights[2].description"
         />
         <div class="mt-2">
-          <ReadMore to="/life" />
+          <ReadMore
+            text="views.life"
+            to="/life"
+          />
         </div>
       </div>
     </div>

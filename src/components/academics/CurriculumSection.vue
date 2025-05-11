@@ -21,13 +21,6 @@
           <h2 class="m-0 text-2xl w-max">
             {{ c.name }}
           </h2>
-
-          <div
-            :class="{ '!opacity-100': currentDesktop === i }"
-            class="absolute top-10 left-0 opacity-0"
-          >
-            <ReadMore to="/academics" />
-          </div>
         </div>
       </div>
 
