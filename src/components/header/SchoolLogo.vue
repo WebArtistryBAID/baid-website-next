@@ -5,7 +5,7 @@
       class="flex"
     >
       <img
-        :src="logoUrl"
+        :src="logo"
         alt="logo"
         class="w-16 h-16 mr-1"
       >
@@ -22,25 +22,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import logoNormal from '@/assets/images/logoNormal.png'
+import logo from '@/assets/images/logo.webp'
 
 const props = defineProps({
   color: {
     type: String,
     default: '#000'
-  },
-  logoType: {
-    type: String,
-    default: 'normal' // normal, ...
-  }
-})
-
-const logoUrl = computed(() => {
-  if (props.logoType === 'normal') {
-    return logoNormal
-  } else {
-    return ''
   }
 })
 </script>
