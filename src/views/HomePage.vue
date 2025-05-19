@@ -40,8 +40,7 @@ import SecondSection from '@/components/home/SecondSection.vue'
 import PhiloSection from '@/components/home/PhiloSection.vue'
 import QuoteSection from '@/components/home/QuoteSection.vue'
 import HomeNewsSection from '@/components/home/HomeNewsSection.vue'
-import dbZH from '@data/zh-CN/db.json'
-import dbEN from '@data/en-US/db.json'
+import db from '@data/news/db.json'
 import dataZH from '@data/zh-CN/home.json'
 import dataEN from '@data/en-US/home.json'
 import HighlightsSection from '@/components/home/HighlightsSection.vue'
@@ -53,16 +52,10 @@ const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
 
 const route = useRoute()
-
-const news = ref<never[]>([])
+const news = ref<any[]>([])
 
 watchEffect(() => {
-  let data: any
-  if (route.params.lang === 'zh-CN') {
-    data = Object.values(dbZH)
-  } else {
-    data = Object.values(dbEN)
-  }
+  const data = Object.values(db)
 
   // Sort by date
   data.sort((a: any, b: any) => {

@@ -53,7 +53,7 @@ export const routes = [
         }
     },
     {
-        path: prefix + '/news/:year/:month/:day/:title',
+        path: prefix + '/news/:id',
         name: 'article',
         component: () => import('./views/ArticlePage.vue'),
         meta: {

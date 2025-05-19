@@ -33,9 +33,11 @@ if (existsSync('./data/')) {
     // 	exit(0);
     // }
 
-    await fs.rm('./data/', { recursive: true })
+    await fs.rm('./data/en-US', { recursive: true })
+    await fs.rm('./data/zh-CN', { recursive: true })
+} else {
+    await fs.mkdir('./data')
 }
-await fs.mkdir('./data')
 
 // locales.forEach((l) => fs.mkdir("./data/" + l));
 

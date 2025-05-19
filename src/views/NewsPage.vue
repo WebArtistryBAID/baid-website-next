@@ -17,7 +17,7 @@
         v-for="(item, index) in news"
         :key="item.id"
         :class="{ 'md:flex-row-reverse': index % 2 }"
-        :to="item.href"
+        :to="`/${route.params.lang}/news/${item.id}`"
         class="w-full flex flex-col md:flex-row items-center my-10"
         role="listitem"
       >
@@ -34,7 +34,7 @@
             }"
             class="text-3xl font-bold mb-5 border-l-4 pl-3"
           >
-            {{ item.title }}
+            {{ route.params.lang === 'zh-CN' ? item.titleCN : item.title }}
           </h2>
           <time
             :datetime="item.date"
@@ -43,7 +43,7 @@
           </time>
 
           <p class="opacity-80 text-xl font-serif line-clamp-3">
-            {{ item.intro }}
+            {{ route.params.lang === 'zh-CN' ? item.excerptCN : item.excerpt }}
           </p>
         </div>
       </router-link>
@@ -54,19 +54,13 @@
 <script lang="ts" setup>
 import { ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
-import dbZH from '@data/zh-CN/db.json'
-import dbEN from '@data/en-US/db.json'
+import db from '@data/news/db.json'
 
 const route = useRoute()
 const news = ref<any[]>([])
 
 watchEffect(() => {
-  let data: any
-  if (route.params.lang === 'zh-CN') {
-    data = Object.values(dbZH)
-  } else {
-    data = Object.values(dbEN)
-  }
+  const data = Object.values(db)
 
   // Sort by date
   data.sort((a: any, b: any) => {

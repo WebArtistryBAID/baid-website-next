@@ -16,7 +16,7 @@
         class="line-clamp-2 mb-1 !text-xl"
         tabindex="0"
       >
-        {{ props.news.title }}
+        {{ route.params.lang === 'zh-CN' ? props.news.titleCN : props.news.title }}
       </h3>
       <time
         :datetime="props.news.date"
@@ -24,13 +24,13 @@
       >{{ props.news.date }}
       </time>
       <p class="op-80 line-clamp-3 font-serif">
-        {{ props.news.intro }}
+        {{ route.params.lang === 'zh-CN' ? props.news.excerptCN : props.news.excerpt }}
       </p>
     </div>
 
     <ReadMore
       :color="props.light ? 'white' : 'black'"
-      :to="props.news.href"
+      :to="`/${route.params.lang}/news/${props.news.id}`"
       text="newsArticle"
       class="absolute bottom-8 right-8"
       :aria-label="`Read more about ${props.news.title}`"
@@ -40,6 +40,8 @@
 
 <script lang="ts" setup>
 import ReadMore from '../ReadMore.vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
 const props = defineProps([ 'news', 'bg', 'light' ])
 </script>
