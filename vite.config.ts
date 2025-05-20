@@ -20,6 +20,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     },
   },
+  assetsInclude: [ '**/*.md' ],
   define: {
     __VUE_I18N_FULL_INSTALL__: true,
     __VUE_I18N_LEGACY_API__: false,
