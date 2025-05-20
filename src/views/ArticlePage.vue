@@ -34,7 +34,7 @@
         id="article-content-heading"
         class="!mb-16"
       >
-        <vue-markdown>{{ content }}</vue-markdown>
+        <vue-markdown :source="content" />
       </article>
     </section>
   </main>
@@ -44,7 +44,7 @@
 import { useRoute } from 'vue-router'
 import { ref, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
-import VueMarkdown from 'vue-markdown'
+import VueMarkdown from 'vue-markdown-render'
 import '@/assets/styles/article.css'
 
 
@@ -66,9 +66,11 @@ watchEffect(async () => {
   ).default
   content.value = (
       await import(
-          `@data/news/${route.params.id}/content${route.params.lang === 'zh-CN' ? '-zh' : ''}.md`
+          `@data/news/${route.params.id}/content${route.params.lang === 'zh-CN' ? '-zh' : ''}.md?raw`
           )
   ).default
+  console.log(metadata.value)
+  console.log(content.value)
   document.title = route.params.lang === 'zh-CN' ? metadata.value.titleCN : metadata.value.title + ' | ' + t('brand')
 
   loading.value = false

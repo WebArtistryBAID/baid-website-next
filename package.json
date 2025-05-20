@@ -70,10 +70,11 @@
     "vue": "^3.5.13",
     "vue-eslint-parser": "^10.1.2",
     "vue-i18n": "^11.1.2",
-    "vue-markdown": "^2.2.4",
+    "vue-markdown-render": "^2.2.1",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
     "@types/vue-markdown": "^2.2.4"
   }
 }
