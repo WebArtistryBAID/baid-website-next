@@ -76,3 +76,13 @@ watchEffect(async () => {
   loading.value = false
 })
 </script>
+
+<style scoped>
+img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+</style>
