@@ -7,7 +7,7 @@
       <img
         :alt="`Cover image for article: ${metadata?.title}`"
         :src="metadata?.cover"
-        class="w-full h-96 object-cover mb-5"
+        class="w-full h-96 object-cover mb-5 cover-image"
       >
       <h1
         id="article-title-heading"
@@ -78,11 +78,11 @@ watchEffect(async () => {
 </script>
 
 <style scoped>
-img {
-  max-width: 800px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+img:not(.cover-image) {
+  max-width: 800px !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  display: block !important;
 }
 </style>
