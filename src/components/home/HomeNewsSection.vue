@@ -40,23 +40,25 @@
     class="section !mb-24"
   >
     <div
-      v-if="props.newsList.length >= 3"
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
       aria-label="Latest news"
       role="list"
     >
       <HomeNews
+        v-if="props.newsList.length >= 1"
         role="listitem"
         :light="true"
         :news="props.newsList[0]"
         bg="var(--standard-blue)"
       />
       <HomeNews
+        v-if="props.newsList.length >= 2"
         role="listitem"
         :news="props.newsList[1]"
         bg="#eee"
       />
       <HomeNews
+        v-if="props.newsList.length >= 3"
         role="listitem"
         :light="true"
         :news="props.newsList[2]"
