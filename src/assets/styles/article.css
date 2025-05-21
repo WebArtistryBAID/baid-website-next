@@ -105,10 +105,11 @@ article sup {
 }
 
 article img {
-    border-style: none;
+    max-width: 800px;
     width: 100%;
-    box-sizing: content-box;
-    background-color: #ffffff;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 article code,

@@ -76,13 +76,3 @@ watchEffect(async () => {
   loading.value = false
 })
 </script>
-
-<style scoped>
-img:not(.cover-image) {
-  max-width: 800px !important;
-  width: 100% !important;
-  height: auto !important;
-  margin: 0 auto !important;
-  display: block !important;
-}
-</style>
