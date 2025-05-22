@@ -6,6 +6,7 @@
       <HighlightsSection />
     </section>
     <MottoSection />
+    <PicturesSection />
     <section id="activities">
       <ActivitiesSection />
     </section>
@@ -29,6 +30,7 @@ import dataEN from '@data/en-US/life.json'
 
 import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'
+import PicturesSection from '@/components/home/PicturesSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 
