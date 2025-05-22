@@ -8,7 +8,7 @@
     <img
       :src="props.news.cover"
       :alt="`Cover image for ${props.news.title}`"
-      class="h-64 object-cover w-full"
+      class="!h-64 object-cover w-full"
     >
     <div class="p-6">
       <h3
