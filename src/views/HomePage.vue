@@ -15,6 +15,9 @@
     >
       <HomeNewsSection :news-list="news" />
     </section>
+    <section id="picturesSection">
+      <PicturesSection />
+    </section>
     <section id="educationPhilosophy">
       <PhiloSection />
     </section>
@@ -44,6 +47,7 @@ import db from '@data/news/db.json'
 import dataZH from '@data/zh-CN/home.json'
 import dataEN from '@data/en-US/home.json'
 import HighlightsSection from '@/components/home/HighlightsSection.vue'
+import PicturesSection from '@/components/home/PicturesSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

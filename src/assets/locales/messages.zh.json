@@ -15,7 +15,9 @@
   },
   "home": {
     "news": "BAID 故事",
-    "philo": "教育理念"
+    "philo": "教育理念",
+    "pictures": "图说 BAID",
+    "picturesPart1": "图说"
   },
   "academics": {
     "restrictions": "课程有先修课程和年级限制；详情请参阅学生指南。"

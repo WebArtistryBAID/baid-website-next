@@ -15,7 +15,9 @@
   },
   "home": {
     "news": "BAID Stories",
-    "philo": "Education Philosophy"
+    "philo": "Education Philosophy",
+    "pictures": "Picture BAID",
+    "picturesPart1": "Picture"
   },
   "academics": {
     "restrictions": "Courses subject to prerequisites and grade-level restrictions; refer to student guide for details."
