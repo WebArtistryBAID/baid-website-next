@@ -20,7 +20,23 @@
     "picturesPart1": "图说"
   },
   "academics": {
-    "restrictions": "课程有先修课程和年级限制；详情请参阅学生指南。"
+    "restrictions": "课程有先修课程和年级限制；详情请参阅学生指南。",
+    "curriculum": {
+      "national": "语文",
+      "english": "核心英语",
+      "math": "核心数学",
+      "science": "核心科学",
+      "humanities": "核心人文",
+      "arts": "核心艺术",
+      "academic": "学院系列",
+      "experiential": "阅历系列",
+      "art1": "雅趣系列",
+      "fitness": "健身系列",
+      "service": "服务系列",
+      "leadership": "领导力系列",
+      "innovation": "创造力系列",
+      "art2": "优势力系列"
+    }
   },
   "admissions": {
     "download": "下载",

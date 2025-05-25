@@ -20,7 +20,23 @@
     "picturesPart1": "Picture"
   },
   "academics": {
-    "restrictions": "Courses subject to prerequisites and grade-level restrictions; refer to student guide for details."
+    "restrictions": "Courses subject to prerequisites and grade-level restrictions; refer to student guide for details.",
+    "curriculum": {
+      "national": "Chinese Language Arts",
+      "english": "Core English",
+      "math": "Core Mathematics",
+      "science": "Core Sciences",
+      "humanities": "Core Humanities",
+      "arts": "Core Arts",
+      "academic": "Academic Series",
+      "experiential": "Experiential Series",
+      "art1": "Fine Arts Series",
+      "fitness": "Fitness Series",
+      "service": "Service Series",
+      "leadership": "Leadership Series",
+      "innovation": "Innovation Series",
+      "art2": "Arts Series"
+    }
   },
   "admissions": {
     "download": "Download",
