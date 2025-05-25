@@ -12,13 +12,23 @@
     </h2>
 
     <div class="flex">
-      <div class="w-1/4">
+      <div
+        aria-label="Curriculum sections"
+        class="w-1/4"
+        role="tablist"
+      >
         <button
           v-for="(item, index) in pageData.curricula"
+          :id="`curriculum-tab-${index}`"
           :key="index"
           :class="{ active: activeDesktopItem === index }"
           class="desktop-section-title mb-5 block"
+          :aria-controls="`curriculum-panel-${index}`"
+          :aria-selected="activeDesktopItem === index"
+          :tabindex="activeDesktopItem === index ? 0 : -1"
+          role="tab"
           @click="activeDesktopItem = index"
+          @keydown="handleTabKey($event, index)"
         >
           {{ item.name }}
         </button>
@@ -26,8 +36,12 @@
       <div class="w-3/4">
         <div
           v-for="(item, index) in pageData.curricula"
+          :id="`curriculum-panel-${index}`"
           :key="index"
-          :class="{ hidden: activeDesktopItem !== index }"
+          :aria-labelledby="`curriculum-tab-${index}`"
+          :hidden="activeDesktopItem !== index"
+          role="tabpanel"
+          tabindex="0"
         >
           <h3 class="text-2xl font-semibold mb-3">
             {{ item.name }}
@@ -63,6 +77,15 @@ const contents = [
   [ 'academics.curriculum.academic', 'academics.curriculum.experiential', 'academics.curriculum.art1', 'academics.curriculum.fitness', 'academics.curriculum.service' ],
   [ 'academics.curriculum.leadership', 'academics.curriculum.innovation', 'academics.curriculum.art2' ]
 ]
+
+const handleTabKey = (event: KeyboardEvent, index: number) => {
+  const count = pageData.curricula.length
+  if (event.key === 'ArrowRight') {
+    activeDesktopItem.value = (index + 1) % count
+  } else if (event.key === 'ArrowLeft') {
+    activeDesktopItem.value = (index - 1 + count) % count
+  }
+}
 </script>
 
 <style scoped>
