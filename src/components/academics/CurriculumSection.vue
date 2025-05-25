@@ -11,7 +11,43 @@
       {{ pageData.curriculum_title }}
     </h2>
 
-    <div class="flex">
+    <div class="md:hidden">
+      <div
+        v-for="(item, index) in pageData.curricula"
+        :key="index"
+        class="mb-4"
+      >
+        <details
+          :open="activeMobileItem === index"
+          class="!rounded-lg"
+          @toggle="handleAccordionToggle($event, index)"
+        >
+          <summary class="p-4 bg-gray-100 rounded-lg cursor-pointer font-medium">
+            {{ item.name }}
+          </summary>
+          <div class="p-4">
+            <h3 class="text-2xl font-semibold mb-3">
+              {{ item.name }}
+            </h3>
+            <div
+              class="mb-5"
+              v-html="item.description"
+            />
+            <div class="grid grid-cols-1 gap-3">
+              <div
+                v-for="(content, contentIndex) in contents[index]"
+                :key="contentIndex"
+                class="bg-gray-100 p-3 rounded-lg"
+              >
+                {{ $t(content) }}
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="hidden md:flex">
       <div
         aria-label="Curriculum sections"
         class="w-1/4"
@@ -22,7 +58,7 @@
           :id="`curriculum-tab-${index}`"
           :key="index"
           :class="{ active: activeDesktopItem === index }"
-          class="desktop-section-title mb-5 block"
+          class="desktop-section-title mb-5 block text-left"
           :aria-controls="`curriculum-panel-${index}`"
           :aria-selected="activeDesktopItem === index"
           :tabindex="activeDesktopItem === index ? 0 : -1"
@@ -71,6 +107,7 @@ import { inject, ref } from 'vue'
 
 const pageData = inject('data')
 const activeDesktopItem = ref(0)
+const activeMobileItem = ref<number | null>(null)
 
 const contents = [
   [ 'academics.curriculum.national', 'academics.curriculum.english', 'academics.curriculum.math', 'academics.curriculum.science', 'academics.curriculum.humanities' ],
@@ -85,6 +122,11 @@ const handleTabKey = (event: KeyboardEvent, index: number) => {
   } else if (event.key === 'ArrowLeft') {
     activeDesktopItem.value = (index - 1 + count) % count
   }
+}
+
+const handleAccordionToggle = (event: Event, index: number) => {
+  const details = event.target as HTMLDetailsElement
+  activeMobileItem.value = details.open ? index : null
 }
 </script>
 
