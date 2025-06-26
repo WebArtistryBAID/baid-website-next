@@ -12,7 +12,7 @@
     @blur="$emit('deactivate')"
     @focus="$emit('activate')"
   >
-    <div class="w-full h-full bg-[#103c74]/80 transition-all duration-500 relative">
+    <div class="w-full h-full bg-red-900/20 transition-all duration-500 relative">
       <pre
         :class="{ 'opacity-0': !delay, 'opacity-100': delay }"
         class="leading-normal text-right !font-sans !text-3xl"
@@ -85,8 +85,7 @@ h2::before {
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.5s;
-
-  background-color: var(--standard-red);
+  background-color: oklch(50.5% 0.213 27.518);
 }
 
 .center {

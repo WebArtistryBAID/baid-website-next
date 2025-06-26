@@ -1,11 +1,11 @@
 <template>
   <router-link
     :to="to"
-    class="decoration-none op-80 hover:op-100 active:op-70 transition-opacity"
+    class="decoration-none opacity-80 hover:opacity-100 active:opacity-70 transition-opacity"
     :aria-label="$t(props.text)"
     role="link"
   >
-    <div class="flex items-center w-min">
+    <div class="flex items-center w-min group">
       <i
         aria-hidden="true"
         class="mr-2 flex items-center"
@@ -28,7 +28,7 @@
       </i>
       <span
         :style="{ color: props.color }"
-        class="w-max !font-sans tracking-wide"
+        class="w-max !font-sans tracking-wide group-hover:border-l-2 border-transparent transition-all duration-100"
       >{{ $t(props.text) }}</span>
     </div>
   </router-link>
@@ -46,7 +46,7 @@ const props = defineProps({
   color: {
     type: String,
     required: false,
-    default: 'var(--standard-blue)'
+    default: 'oklch(39.6% 0.141 25.723)'
   },
   text: {
     type: String,

@@ -1,7 +1,6 @@
 <template>
   <section
-    class="lg:pb-8 xl:pb-24 px-8 rounded-t-3xl bg-[#103c7405]"
-    style="box-shadow: 0 -24px 40px 0 #103c7415"
+    class="lg:pb-8 xl:pb-24 px-8 rounded-t-3xl bg-red-50/40"
   >
     <div
       class="mx-auto py-16"

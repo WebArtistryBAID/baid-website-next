@@ -18,7 +18,7 @@
           <img
             :src="pageData.highlights[0].image"
             alt="English drama festival activity"
-            class="max-w-4/5 mb-5"
+            class="w-full rounded-3xl mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">
@@ -38,7 +38,7 @@
           <img
             :src="pageData.highlights[1].image"
             alt="The SLSD club"
-            class="max-w-4/5 mb-5"
+            class="w-full rounded-3xl mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">
@@ -58,7 +58,7 @@
           <img
             :src="pageData.highlights[2].image"
             alt="Athletics at BAID"
-            class="max-w-4/5 mb-5"
+            class="w-full rounded-3xl mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">

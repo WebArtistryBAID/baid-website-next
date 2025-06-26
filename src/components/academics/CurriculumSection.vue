@@ -91,7 +91,7 @@
             <div
               v-for="(content, contentIndex) in contents[index]"
               :key="contentIndex"
-              class="bg-gray-100 p-3 rounded-lg"
+              class="bg-gray-100 p-3 rounded-lg transition-shadow duration-200 hover:shadow-md"
             >
               {{ $t(content) }}
             </div>
@@ -147,7 +147,7 @@ const handleAccordionToggle = (event: Event, index: number) => {
 }
 
 .desktop-section-title.active {
-  border-left-color: var(--standard-blue);
+  border-left-color: oklch(50.5% 0.213 27.518);
   color: black;
 }
 </style>

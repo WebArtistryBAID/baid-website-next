@@ -1,7 +1,7 @@
 <template>
   <section
     aria-labelledby="news-heading"
-    class="mt-24 border-b border-black"
+    class="mt-24 border-black"
   >
     <div
       class="mx-auto flex items-center px-5 md:px-0"
@@ -16,7 +16,7 @@
 
       <router-link
         :to="'/' + $i18n.locale + '/news'"
-        class="flex items-center gap-1 text-black decoration-none op-80 hover:op-100 transition"
+        class="flex items-center gap-1 text-black decoration-none opacity-80 hover:opacity-100 transition"
         aria-label="Read more news"
       >
         <span class="!font-sans">{{ $t('readMore') }}</span>

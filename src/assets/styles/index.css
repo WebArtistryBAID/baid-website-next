@@ -111,3 +111,26 @@ pre {
     --swiper-theme-color: #83050e !important;
     --shrink-limit: 750px;
 }
+
+.fancy-link {
+    position: relative;
+}
+
+.fancy-link::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+
+.fancy-link:hover::before {
+    width: 100%;
+}
+
+.link-white::before {
+    background-color: white;
+}
+

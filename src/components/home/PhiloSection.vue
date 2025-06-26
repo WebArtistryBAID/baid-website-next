@@ -1,7 +1,7 @@
 <template>
   <div class="hidden lg:block">
     <section aria-labelledby="philo-heading">
-      <div class="bg-[var(--standard-blue)] mb-16 flex items-center">
+      <div class="bg-red-900 mb-16 flex items-center">
         <div class="py-8 px-16 xl:px-24 shrink max-w-1/4">
           <h2
             id="philo-heading"

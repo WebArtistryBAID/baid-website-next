@@ -12,7 +12,7 @@
     </section>
     <section
       id="accreditation"
-      class="bg-[var(--standard-blue)]"
+      class="bg-red-900"
     >
       <AccreditationSection />
     </section>

@@ -22,7 +22,7 @@
             <img
               :src="pageData.highlights[0].image"
               alt="BAID students collaborating on a project"
-              class="max-w-4/5 mb-5"
+              class="w-full rounded-3xl mb-5"
             >
           </div>
           <p class="text-3xl mb-1 font-bold !font-sans">
@@ -43,7 +43,7 @@
             <img
               :src="pageData.highlights[1].image"
               alt="BAID students working in a lab"
-              class="max-w-4/5 mb-5"
+              class="w-full rounded-3xl mb-5"
             >
           </div>
           <p class="text-3xl mb-1 font-bold !font-sans">
@@ -64,7 +64,7 @@
             <img
               :src="pageData.highlights[2].image"
               alt="BAID students dancing at a school event"
-              class="max-w-4/5 mb-5"
+              class="w-full rounded-3xl mb-5"
             >
           </div>
           <p class="text-3xl mb-1 font-bold !font-sans">

@@ -24,7 +24,7 @@
         <img
           :alt="`Cover image for ${item.title}`"
           :src="item.cover"
-          class="w-full md:w-1/3 aspect-video object-cover"
+          class="w-full rounded-3xl md:w-1/3 aspect-video object-cover"
         >
         <div class="md:px-10 py-10 w-full md:w-2/3">
           <h2

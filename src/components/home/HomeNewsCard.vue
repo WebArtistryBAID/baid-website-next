@@ -1,14 +1,14 @@
 <template>
   <article
     :style="{ background: props.bg, color: props.light ? 'white' : 'black' }"
-    class="h-[33rem] relative hover:shadow-md"
+    class="h-[33rem] relative hover:shadow-md rounded-3xl"
     :aria-labelledby="`news-title-${props.news.id}`"
     role="region"
   >
     <img
       :src="props.news.cover"
       :alt="`Cover image for ${props.news.title}`"
-      class="!h-64 object-cover w-full"
+      class="!h-64 object-cover w-full rounded-t-3xl"
     >
     <div class="p-6">
       <h3

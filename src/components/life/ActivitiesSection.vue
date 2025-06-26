@@ -13,7 +13,7 @@
     </div>
     <div
       aria-label="Activities"
-      class="sm:grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-xl"
+      class="sm:grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-xl rounded-3xl overflow-clip"
       role="list"
     >
       <ActivityBlock

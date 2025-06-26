@@ -28,7 +28,7 @@
           <img
             :src="pageData.specialties_highlights[0].image"
             :alt="`Highlight: ${pageData.specialties_highlights[0].title}`"
-            class="max-w-4/5 mb-5"
+            class="w-full rounded-3xl mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">
@@ -48,7 +48,7 @@
           <img
             :src="pageData.specialties_highlights[1].image"
             :alt="`Highlight: ${pageData.specialties_highlights[1].title}`"
-            class="max-w-4/5 mb-5"
+            class="w-full rounded-3xl mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">
@@ -68,7 +68,7 @@
           <img
             :src="pageData.specialties_highlights[2].image"
             :alt="`Highlight: ${pageData.specialties_highlights[2].title}`"
-            class="max-w-4/5 mb-5"
+            class="w-full rounded-3xl mb-5"
           >
         </div>
         <p class="text-3xl mb-1 font-bold !font-sans">

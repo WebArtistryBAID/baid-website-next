@@ -72,7 +72,7 @@
         >
         <div
           :class="{ 'opacity-0': transition }"
-          class="absolute bottom-0 p-10 pt-20 text-white from-[var(--standard-blue)] to-[var(--standard-blue)]/0
+          class="absolute bottom-0 p-10 pt-20 text-white from-red-900/70 to-transparent
           bg-gradient-to-t w-full transition-opacity duration-300"
         >
           <h2 class="text-4xl font-bold mb-2">

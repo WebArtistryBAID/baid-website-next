@@ -24,7 +24,7 @@
         :tabindex="selected === course.id ? 0 : -1"
         role="tab"
         :class="{
-          'bg-[var(--standard-blue)] text-white': selected === course.id,
+          'bg-red-900 text-white': selected === course.id,
         }"
         class="w-full h-full p-3 rounded-md transition-colors duration-300"
         @click="change(course.id)"
@@ -33,28 +33,30 @@
       </button>
     </div>
 
-    <div
-      v-for="course in pageData.courses"
-      :id="`panel-${course.id}`"
-      :key="course.id"
-      :aria-labelledby="`tab-${course.id}`"
-      aria-label="Courses list"
-      role="tabpanel"
-      :class="{
-        'hidden': selected !== course.id
-      }"
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-5 mb-5 "
-      tabindex="0"
+    <Transition
+      mode="out-in"
+      name="fade"
     >
-      <p
-        v-for="c in course.courses"
-        :key="c"
-        role="listitem"
-        class="text-2xl border-l-4 border-[var(--standard-blue)] pl-3 col-span-1 md:col-span-2"
+      <div
+        v-if="currentCourse.id !== null"
+        :id="`panel-${currentCourse.id}`"
+        :key="currentCourse.id"
+        :aria-labelledby="`tab-${currentCourse.id}`"
+        aria-label="Courses list"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-5 mb-5"
+        role="tabpanel"
+        tabindex="0"
       >
-        {{ c }}
-      </p>
-    </div>
+        <p
+          v-for="item in currentCourse.courses"
+          :key="item"
+          class="text-2xl border-l-4 border-red-800 pl-3 col-span-1 md:col-span-2"
+          role="listitem"
+        >
+          {{ item }}
+        </p>
+      </div>
+    </Transition>
 
     <p class="italic text-sm">
       {{ $t('academics.restrictions') }}
@@ -63,7 +65,7 @@
 </template>
 
 <script lang="ts" setup>
-import { inject, ref, watch } from 'vue'
+import { computed, inject, ref, watch } from 'vue'
 
 const pageData = inject('data')
 const selected = ref(1)
@@ -81,4 +83,21 @@ watch(
 function change(index: number) {
   selected.value = index
 }
+
+const currentCourse = computed(() => {
+  const courses = pageData?._value?.courses || []
+  return courses.find(c => c.id === selected.value) || courses[0] || { id: null, courses: [] }
+})
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -25,7 +25,7 @@
           tabindex="0"
         >
           <p
-            class="text-5xl md:text-7xl font-serif text-[var(--standard-blue)]"
+            class="text-5xl md:text-7xl font-serif text-red-900"
             aria-hidden="true"
             v-html="stat.content"
           />
