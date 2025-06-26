@@ -17,7 +17,7 @@
     >
       <router-link
         :to="route.path"
-        active-class="opacity-100"
+        :active-class="route.name === 'life' ? 'opacity-100' : 'opacity-100 text-red-900'"
         class="inline-block w-30 h-full decoration-none opacity-50 transition-colors text-inherit hover:opacity-100 active:opacity-60"
         style="line-height: 70px"
       >
