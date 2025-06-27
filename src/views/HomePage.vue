@@ -3,6 +3,9 @@
     <section id="firstSection">
       <HeroSection />
     </section>
+    <section id="betterSection">
+      <BetterSection />
+    </section>
     <section id="secondSection">
       <SecondSection />
     </section>
@@ -48,6 +51,7 @@ import dataZH from '@data/zh-CN/home.json'
 import dataEN from '@data/en-US/home.json'
 import HighlightsSection from '@/components/home/HighlightsSection.vue'
 import PicturesSection from '@/components/home/PicturesSection.vue'
+import BetterSection from '@/components/home/BetterSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

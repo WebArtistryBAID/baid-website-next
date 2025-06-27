@@ -107,7 +107,7 @@ pre {
 
 :root {
     --standard-blue: #103c74;
-    --standard-red: #83050e;
+    --standard-red: oklch(39.6% 0.141 25.723);
     --swiper-theme-color: #83050e !important;
     --shrink-limit: 750px;
 }

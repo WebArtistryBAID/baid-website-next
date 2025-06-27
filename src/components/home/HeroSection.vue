@@ -1,25 +1,56 @@
 <template>
   <section
     :style="heroStyle"
-    class="h-screen w-screen flex flex-col bg-cover bg-center justify-center relative"
+    class="w-screen flex flex-col bg-cover bg-center justify-center relative"
     aria-labelledby="hero-heading"
     role="banner"
   >
-    <div
-      class="absolute inset-0 pointer-events-none"
-      style="background: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.4) 100%);"
-    />
-    <div class="absolute bottom-16 text-white w-screen">
-      <h1
-        id="hero-heading"
-        class="font-bold mb-3 text-white text-center !font-sans text-5xl md:leading-[1.1]"
-      >
-        <span>Better</span> Starts Here
-      </h1>
-      <p
-        class="text-lg md:text-xl text-center"
-        v-html="pageData.hero_subtitle"
+    <transition name="fade">
+      <div
+        v-show="animationStart"
+        class="absolute inset-0 pointer-events-none from-transparent to-gray-950 bg-gradient-to-b"
       />
+    </transition>
+    <div class="absolute bottom-0 text-white w-screen flex flex-col justify-center items-center">
+      <div class="max-w-2xl flex flex-col justify-center items-center">
+        <transition name="slide-up-fade">
+          <h1
+            v-show="animationStart"
+            id="hero-heading"
+            class="font-bold mb-3 text-white text-center !font-sans text-5xl md:leading-[1.1]"
+          >
+            Better Starts Here
+          </h1>
+        </transition>
+        <transition name="slide-up-fade-2">
+          <p
+            v-show="animationStart"
+            class="text-lg md:text-xl text-center !mb-8"
+          >
+            "Better me, better world." At Beijing Academy, our talented students and dedicated faculty embark on a
+            journey of discovery,
+            growth, and excellence, transforming the world for the better every step of the way.
+          </p>
+        </transition>
+        <transition name="slide-up-fade-2">
+          <div
+            v-show="animationStart"
+            class="mb-8"
+          >
+            <ReadMore
+              color="white"
+              icon-color="#fb2c36"
+              text="Learn more about how our students are making a difference"
+              to="/projects"
+            />
+          </div>
+        </transition>
+
+        <div
+          class="border-l border-white h-32"
+          style="width: 1px"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -27,12 +58,11 @@
 <script lang="ts" setup>
 import { computed, inject, onMounted, onUnmounted, ref } from 'vue'
 import bg4 from '@/assets/images/home/hero/home-bg-4.webp'
-
-const bg = [ bg4 ]
-const usedBg = bg[Math.floor(Math.random() * bg.length)]
+import ReadMore from '@/components/ReadMore.vue'
 
 const pageData = inject('data')
 
+// Parallax
 const scrollY = ref(0)
 const onScroll = () => {
   scrollY.value = window.scrollY
@@ -40,9 +70,62 @@ const onScroll = () => {
 onMounted(() => window.addEventListener('scroll', onScroll))
 onUnmounted(() => window.removeEventListener('scroll', onScroll))
 const heroStyle = computed(() => ({
-  backgroundImage: `url(${usedBg})`,
+  backgroundImage: `url(${bg4})`,
   backgroundPosition: `center ${scrollY.value * 0.5}px`,
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  height: '105vh'
 }))
+
+// Animation
+const animationStart = ref(false)
+setTimeout(() => {
+  animationStart.value = true
+}, 200)
+
 </script>
+
+<style scoped>
+.fade-enter-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
+
+.slide-up-fade-enter-active {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-up-fade-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.slide-up-fade-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up-fade-2-enter-active {
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  transition-delay: 0.2s;
+}
+
+.slide-up-fade-2-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.slide-up-fade-2-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>

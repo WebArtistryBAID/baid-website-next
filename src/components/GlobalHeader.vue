@@ -1,19 +1,24 @@
 <template>
+  <a
+    class="sr-only focus:not-sr-only"
+    href="#main-content"
+  >
+    Skip to main content
+  </a>
   <header
     role="banner"
-    :class="{
-      'fixed top-0 bg-white/50 backdrop-filter backdrop-blur-lg': fixed,
-      'absolute top-0 bg-transparent': !fixed && !fixedShow,
-      'absolute -top-16 bg-transparent': !fixed && fixedShow
-    }"
-    class="w-screen px-4 sm:px-8 gap-3 flex z-50 transition-all duration-300"
+    :class="[
+      'fixed top-0 left-0 w-screen px-4 sm:px-8 gap-3 flex z-50 transform transition-transform duration-300',
+      headerVisible ? 'translate-y-0' : '-translate-y-full',
+      backgroundClass
+    ]"
   >
     <div class="mr-auto py-2">
-      <SchoolLogo :color="fixedShow ? 'black' : 'white'" />
+      <SchoolLogo :color="isTransparent ? 'white' : 'black'" />
     </div>
 
     <nav
-      :class="{ 'text-black': fixedShow, 'text-white': !fixedShow }"
+      :class="{ 'text-white': isTransparent, 'text-black': !isTransparent }"
       class="hidden lg:flex"
       aria-label="Primary navigation"
     >
@@ -34,14 +39,15 @@
     >
       <button
         class="lg:hidden transition-colors duration-100 opacity-50 hover:opacity-100 active:opacity-80 pt-1.5"
-        :aria-expanded="mobileOpen"
+        :aria-expanded="mobileOpen.toString()"
         aria-controls="mobile-menu"
         aria-haspopup="true"
+        :aria-label="mobileOpen ? 'Close menu' : 'Open menu'"
         @click="mobileOpen = !mobileOpen"
       >
         <svg
-          :stroke="fixedShow ? '#000' : '#fff'"
-          aria-label="Menu"
+          :stroke="isTransparent ? '#fff' : '#000'"
+          aria-hidden="true"
           class="h-6 w-6"
           fill="none"
           viewBox="0 0 24 24"
@@ -57,7 +63,8 @@
       </button>
 
       <router-link
-        :style="{ color: fixedShow ? 'black' : 'white' }"
+        :style="{ color: isTransparent ? 'white' : 'black' }"
+        aria-label="Switch language"
         :to="
           route.path.replace(
             $i18n.locale,
@@ -97,7 +104,7 @@
           @click="mobileOpen = !mobileOpen"
         >
           <svg
-            aria-label="Close"
+            aria-hidden="true"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -132,24 +139,42 @@
 import SchoolLogo from '@/components/header/SchoolLogo.vue'
 import RouterLinks from '@/components/header/RouterLinks.vue'
 import GlobalFooter from '@/components/GlobalFooter.vue'
-import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
-const fixed = ref(false)
-const fixedShow = ref(false)
-const mobileOpen = ref(false)
-
 const route = useRoute()
+const prevScrollY = ref(window.scrollY)
+const scrollY = ref(window.scrollY)
+const headerVisible = ref(true)
 
-const handleScroll = () => {
-  if (route.meta.headerAnimate === false) {
-    fixed.value = true
-    fixedShow.value = true
-    return
+const backgroundClass = computed(() => {
+  if (route.meta.headerAnimate) {
+    return scrollY.value < window.innerHeight
+        ? 'bg-transparent'
+        : 'bg-white'
+  } else {
+    return 'bg-white'
   }
-  fixedShow.value = window.scrollY > 24 * 16
-  fixed.value = window.scrollY > window.innerHeight
+})
+
+const isTransparent = computed(() =>
+    route.meta.headerAnimate && scrollY.value < window.innerHeight
+)
+
+const onScroll = () => {
+  scrollY.value = window.scrollY
+  headerVisible.value = scrollY.value < prevScrollY.value
+  prevScrollY.value = scrollY.value
 }
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', onScroll)
+})
+
+const mobileOpen = ref(false)
 
 const closeButton = ref<HTMLElement | null>(null)
 watch(mobileOpen, async (open: boolean) => {
@@ -166,13 +191,10 @@ const handleKeydown = (e: KeyboardEvent) => {
 }
 
 onMounted(() => {
-  handleScroll()
   window.addEventListener('keydown', handleKeydown)
 })
 watch(() => route.fullPath, () => {
-  handleScroll()
   mobileOpen.value = false
 })
 onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
-window.addEventListener('scroll', handleScroll)
 </script>
