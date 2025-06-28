@@ -26,7 +26,7 @@
       <img
         :src="pageData.principal_avatar"
         :alt="`Portrait of ${pageData.principal_name}`"
-        class="object-contain w-64"
+        class="object-contain w-64 rounded-3xl"
       >
     </div>
 

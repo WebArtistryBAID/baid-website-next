@@ -21,8 +21,8 @@
     <!--<section id="picturesSection">
       <PicturesSection />
     </section>-->
-    <section id="educationPhilosophy">
-      <PhiloSection />
+    <section id="bento">
+      <BentoSection />
     </section>
     <section id="quote">
       <QuoteSection
@@ -43,14 +43,13 @@ import { useI18n } from 'vue-i18n'
 import { computed, provide, ref, watchEffect } from 'vue'
 import HeroSection from '@/components/home/HeroSection.vue'
 import SecondSection from '@/components/home/SecondSection.vue'
-import PhiloSection from '@/components/home/PhiloSection.vue'
+import BentoSection from '@/components/home/BentoSection.vue'
 import QuoteSection from '@/components/home/QuoteSection.vue'
 import HomeNewsSection from '@/components/home/HomeNewsSection.vue'
 import db from '@data/news/db.json'
 import dataZH from '@data/zh-CN/home.json'
 import dataEN from '@data/en-US/home.json'
 import HighlightsSection from '@/components/home/HighlightsSection.vue'
-import PicturesSection from '@/components/home/PicturesSection.vue'
 import BetterSection from '@/components/home/BetterSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
