@@ -108,8 +108,6 @@
 
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-import PhilosophyBlock from './PhilosophyBlock.vue'
-import PhilosophyBlockMobile from '@/components/home/PhilosophyBlockMobile.vue'
 
 const pageData = inject('data')
 const blocks = [ 'motto', 'spirit', 'literacy', 'pathway' ]

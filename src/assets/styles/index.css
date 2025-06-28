@@ -97,26 +97,16 @@ pre {
 }
 
 .fancy-link {
-    position: relative;
-    @apply inline-block;
+    display: inline;
+    background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, black, black);
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
 }
 
-.fancy-link::before {
-    position: absolute;
-    content: '';
-    bottom: 0.2em;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s ease-in-out;
-}
-
-.fancy-link:hover::before {
-    width: 100%;
-}
-
-.group:hover .fancy-link::before {
-    width: 100%;
+.fancy-link:hover, .fancy-link:focus {
+    background-size: 0 0.1em, 100% 0.1em;
 }
 
 .group-hover-scale {

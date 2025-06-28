@@ -9,7 +9,7 @@
     >
       <h2
         id="news-heading"
-        class="text-4xl lg:text-5xl xl:text-7xl font-serif mr-auto xl:-mb-2"
+        class="text-4xl lg:text-5xl xl:text-6xl font-bold mr-auto xl:-mb-2"
       >
         {{ $t('home.news') }}
       </h2>
@@ -51,7 +51,7 @@
             class="object-cover w-full h-full rounded-t-3xl transform transition-transform duration-300 ease-in-out group-hover:scale-105"
           >
         </div>
-        <p class="text-5xl font-serif fancy-link">
+        <p class="text-3xl font-serif fancy-link">
           {{ newsList[0].title }}
         </p>
       </router-link>
@@ -59,7 +59,7 @@
         <div
           v-for="news in newsList.slice(1, 4)"
           :key="news.id"
-          class="pb-3 border-b border-black"
+          class="pb-3 border-b border-black mb-5"
         >
           <p
             aria-hidden="true"
