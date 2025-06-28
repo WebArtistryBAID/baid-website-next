@@ -8,7 +8,7 @@
         id="intro-heading"
         class="text-3xl font-serif font-bold"
       >
-        {{ pageData.intro_title }}
+        {{ $t('home.introTitle') }}
       </h2>
       <div
         class="text-xl"

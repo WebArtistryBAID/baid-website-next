@@ -15,10 +15,28 @@
   },
   "home": {
     "title": "Better Starts Here",
+    "subtitle": "\"Better me, better world.\" At Beijing Academy, our talented students and dedicated faculty embark on a journey of discovery, growth, and excellence, transforming the world for the better every step of the way.",
+    "projects": "Learn about how our students are making a difference",
+    "startTopText": "Every step, every change",
+    "startMainText": "It all starts at <span class=\"text-amber-300\">BAID</span>.",
+    "introTitle": "This is BAID",
+    "introText": "At BAID, you are empowered to explore your passions, build meaningful connections, and uncover new pathways to your full potential — every single day.",
     "news": "BAID Stories",
-    "philo": "Education Philosophy",
-    "pictures": "Picture BAID",
-    "picturesPart1": "Picture"
+    "atAGlance": "At a Glance",
+    "newsOther": "In Other News",
+    "bento": {
+      "motto": "Better Me,<br>Better World",
+      "mottoText": "The motto that sits at the heart of everything we do at Beijing Academy",
+      "outcome": "<span class=\"opacity-80\">Continuing the legacy</span><br><span class=\"font-bold\">Top university outcomes</span>",
+      "outcomeText": "Students and graduates from Beijing Academy have been accepted to Harvard, Stanford, Imperial, McGill, HKU, University of Tokyo, and more.",
+      "faculty": "<span class=\"opacity-80\">World-class faculty</span><br><span class=\"font-bold\">93% with graduate degrees</span>",
+      "countriesTitle": "From Beijing to the world",
+      "countriesText": "This year, BAID graduates will study in six countries/regions around the globe.",
+      "academicsTitle": "Academic Excellence",
+      "academicsText": "With over 20 AP courses and undergraduate-level courses, the MFP research program, project-based learning and more, BAID prepares students for success in college and beyond.",
+      "life": "Live the best years of your life",
+      "diversity": "Faculty from <span class=\"font-bold\">6 countries</span>"
+    }
   },
   "academics": {
     "restrictions": "Courses subject to prerequisites and grade-level restrictions; refer to student guide for details.",

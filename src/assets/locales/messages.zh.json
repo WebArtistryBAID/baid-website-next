@@ -15,10 +15,28 @@
   },
   "home": {
     "title": "更好从这里开始",
-    "news": "BAID Stories",
-    "philo": "教育理念",
-    "pictures": "Picture BAID",
-    "picturesPart1": "图说"
+    "subtitle": "\"世界因我更美好。\" 在北京中学，我们优秀的学生和敬业的教师踏上发现、探索和成长的旅程，在每一步中改变世界，让世界因我们而更加美好。",
+    "projects": "了解我们的学生如何改变世界",
+    "startTopText": "每一步，每一次改变",
+    "startMainText": "我们正让世界因我们而<span class=\"text-amber-300\">更美好</span>。",
+    "introTitle": "我们是 BAID",
+    "introText": "在北京中学国际部 (BAID)，你可以尽情探索热爱，收获深厚情谊，并在日常点滴中不断发现通往自我潜能的新路径。\n",
+    "news": "BAID 故事",
+    "atAGlance": "一览 BAID",
+    "newsOther": "其他新闻",
+    "bento": {
+      "motto": "世界因我更美好",
+      "mottoText": "我们的校训，也是我们一切工作的核心",
+      "outcome": "<span class=\"opacity-80\">鹰击长空</span><br><span class=\"font-bold\">优异的升学结果</span>",
+      "outcomeText": "北京中学的学生已被哈佛、斯坦福、帝国理工、麦吉尔、香港大学、东京大学等世界顶尖大学录取。",
+      "faculty": "<span class=\"opacity-80\">顶级师资力量</span><br><span class=\"font-bold\">93% 拥有硕博学位</span>",
+      "countriesTitle": "来自北京 面向世界",
+      "countriesText": "今年，BAID 的毕业生将前往六个国家和地区继续深造。",
+      "academicsTitle": "学术卓越",
+      "academicsText": "BAID 提供二十多门 AP 课程、本科级别课程、MFP 科研项目和项目式学习，全面支持学生为大学和未来发展做好准备。",
+      "life": "享受人生的青葱年华",
+      "diversity": "<span class=\"font-bold\">来自六个国家</span>的教师团队"
+    }
   },
   "academics": {
     "restrictions": "课程有先修课程和年级限制；详情请参阅学生指南。",

@@ -39,12 +39,12 @@
     aria-labelledby="news-heading"
     class="section !mb-24"
   >
-    <div class="w-full flex gap-8">
+    <div class="w-full flex flex-col md:flex-row gap-8">
       <router-link
         :to="`news/${newsList[0].id}`"
-        class="w-2/3 group block"
+        class="w-full md:w-2/3 group block"
       >
-        <div class="w-full h-96 overflow-hidden rounded-3xl mb-3">
+        <div class="w-full h-64 md:h-96 overflow-hidden rounded-3xl mb-3">
           <img
             :alt="`Cover image for ${newsList[0].title}`"
             :src="newsList[0].cover"
@@ -55,7 +55,7 @@
           {{ newsList[0].title }}
         </p>
       </router-link>
-      <div class="w-1/3">
+      <div class="w-full md:w-1/3">
         <div
           v-for="news in newsList.slice(1, 4)"
           :key="news.id"
@@ -65,7 +65,7 @@
             aria-hidden="true"
             class="uppercase text-gray-400 !mb-2 text-sm"
           >
-            {{ news.keyword ?? 'In Other News' }}
+            {{ news.keyword ?? $t('home.newsOther') }}
           </p>
           <router-link
             :to="`news/${news.id}`"

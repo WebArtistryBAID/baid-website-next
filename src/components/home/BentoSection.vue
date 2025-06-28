@@ -1,58 +1,70 @@
 <template>
   <div class="w-full p-3">
-    <p class="uppercase text-center tracking-widest !mb-8 text-3xl">
-      At a glance
-    </p>
+    <h2
+      aria-level="2"
+      class="uppercase text-center tracking-widest mb-8 text-3xl"
+      role="heading"
+      v-html="$t('home.atAGlance')"
+    />
 
     <div
-      class="grid grid-cols-8 auto-rows-min gap-x-6 gap-y-5 mx-auto"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 auto-rows-min gap-x-6 gap-y-5 mx-auto"
       style="max-width: 77rem"
     >
       <div
-        class="col-start-1 col-span-3 row-start-1 row-span-5 bg-red-700 rounded-3xl p-8 flex text-center justify-center items-center flex-col text-white"
+        class="col-span-1 md:col-span-3 row-span-5 lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:row-span-5 bg-red-700 rounded-3xl p-8 flex text-center justify-center items-center flex-col text-white"
       >
-        <p class="text-4xl font-bold !leading-tight !mb-5">
-          Better Me,<br> Better World
-        </p>
+        <h3
+          aria-level="3"
+          class="text-4xl font-bold leading-tight mb-5"
+          role="heading"
+          v-html="$t('home.bento.motto')"
+        />
 
         <img
           alt="Beijing Academy icon"
+          loading="lazy"
           class="w-48 h-48 mb-5 p-5 bg-white rounded-full"
           src="/icon.png"
         >
 
-        <p>The motto that sits at the heart of everything we do at Beijing Academy</p>
+        <p v-html="$t('home.bento.mottoText')" />
       </div>
 
       <div
-        class="col-start-4 col-span-5 row-start-1 row-span-4 from-yellow-500/5 to-gray-50 bg-gradient-to-br rounded-3xl p-8 flex items-center gap-8"
+        class="col-span-1 md:col-span-5 row-span-4 lg:col-start-4 lg:col-span-5 lg:row-start-1 lg:row-span-4 from-yellow-500/5 to-gray-50 bg-gradient-to-br rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8"
       >
         <div>
-          <p class="text-2xl !leading-tight !mb-3">
-            <span class="opacity-80">Continuing the legacy</span><br>
-            <span class="font-bold">Top university outcomes</span>
-          </p>
-          <p class="opacity-80 text-sm">
-            Students and graduates from Beijing Academy have been accepted to Harvard, Stanford, Imperial, McGill, HKU,
-            University of Tokyo, and more.
-          </p>
+          <h3
+            aria-level="3"
+            class="text-2xl leading-tight mb-3"
+            role="heading"
+            v-html="$t('home.bento.outcome')"
+          />
+          <p
+            class="opacity-80 text-sm"
+            v-html="$t('home.bento.outcomeText')"
+          />
         </div>
         <div>
           <img
             :src="stanford"
             alt="Campus of Stanford University, where students from BAID have been admitted"
+            loading="lazy"
             class="rounded-3xl w-2xl"
           >
         </div>
       </div>
 
       <div
-        class="col-start-1 col-span-3 row-start-6 row-span-1 from-orange-500/5 to-gray-50 bg-gradient-to-br rounded-3xl p-8 flex items-center gap-3"
+        class="col-span-1 md:col-span-3 row-span-1 lg:col-start-1 lg:col-span-3 lg:row-start-6 lg:row-span-1 from-orange-500/5 to-gray-50 bg-gradient-to-br rounded-3xl p-8 flex items-center gap-3"
       >
-        <p class="text-lg">
-          <span class="opacity-80">World-class faculty</span><br>
-          <span class="font-bold">93% with graduate degrees</span>
-        </p>
+        <h3
+          aria-level="3"
+          class="text-lg"
+          role="heading"
+          v-html="$t('home.bento.faculty')"
+        />
         <div
           aria-hidden="true"
           class="relative flex justify-start pr-5 items-center"
@@ -60,45 +72,53 @@
           <img
             :src="lj"
             alt=""
+            loading="lazy"
             class="w-20 h-20 rounded-full relative z-10 translate-x-8 p-1 bg-yellow-100"
           >
           <img
             :src="rj"
             alt=""
+            loading="lazy"
             class="w-20 h-20 rounded-full relative z-20 p-1 bg-amber-100"
           >
           <img
             :src="lx"
             alt=""
+            loading="lazy"
             class="w-20 h-20 rounded-full relative z-30 -translate-x-8 p-1 bg-red-100"
           >
         </div>
       </div>
 
       <div
-        class="col-start-1 col-span-3 row-start-7 row-span-2 bg-gray-50 rounded-3xl flex items-center gap-3 overflow-hidden"
+        class="col-span-1 md:col-span-3 row-span-2 lg:col-start-1 lg:col-span-3 lg:row-start-7 lg:row-span-2 bg-gray-50 rounded-3xl flex items-center gap-3 overflow-hidden"
       >
         <img
           :src="countries"
           alt="Hong Kong SAR China, Australia, Japan, United States, Canada, and United Kingdom"
+          loading="lazy"
           class="h-48 transform translate-y-5 -translate-x-5"
         >
         <div
           class="py-8 pr-8"
         >
-          <p class="text-lg !mb-1 font-bold">
-            From Beijing to the world
-          </p>
-          <p class="opacity-80 text-sm">
-            This year, BAID graduates will study in six countries/regions around the globe.
-          </p>
+          <h3
+            aria-level="3"
+            class="text-lg mb-1 font-bold"
+            role="heading"
+            v-html="$t('home.bento.countriesTitle')"
+          />
+          <p
+            class="opacity-80 text-sm"
+            v-html="$t('home.bento.countriesText')"
+          />
         </div>
       </div>
 
       <div
-        class="col-start-4 col-span-3 row-start-5 row-span-4 from-red-500/5 to-gray-50 bg-gradient-to-br rounded-3xl overflow-hidden"
+        class="col-span-1 md:col-span-3 row-span-4 lg:col-start-4 lg:col-span-3 lg:row-start-5 lg:row-span-4 from-red-500/5 to-gray-50 bg-gradient-to-br rounded-3xl overflow-hidden"
       >
-        <div class="relative w-full h-1/2">
+        <div class="relative w-full h-48 lg:h-1/2">
           <div
             aria-hidden="true"
             class="flex w-full h-full justify-center items-center text-center"
@@ -183,27 +203,33 @@
         </div>
 
         <div class="px-8 flex items-center justify-center flex-col text-center">
-          <p class="text-2xl !mb-1">
-            Academic Excellence
-          </p>
-          <p class="opacity-80 text-sm">
-            With over 20 AP courses and undergraduate-level courses, the MFP research program, project-based learning
-            and more, BAID prepares students for success in college and beyond.
-          </p>
+          <h3
+            aria-level="3"
+            class="text-2xl mb-1"
+            role="heading"
+            v-html="$t('home.bento.academicsTitle')"
+          />
+          <p
+            class="opacity-80 text-sm"
+            v-html="$t('home.bento.academicsText')"
+          />
         </div>
       </div>
 
       <div
         :style="{backgroundImage: `url(${life})`}"
-        class="col-start-7 col-span-2 row-start-5 row-span-2 rounded-3xl p-8 bg-cover flex flex-col justify-end"
+        class="hidden sm:flex col-span-1 md:col-span-2 row-span-2 lg:col-start-7 lg:col-span-2 lg:row-start-5 lg:row-span-2 rounded-3xl p-8 bg-cover flex-col justify-end"
       >
-        <p class="text-white text-center">
-          Live the best years of your life
-        </p>
+        <h3
+          aria-level="3"
+          class="text-white text-center"
+          role="heading"
+          v-html="$t('home.bento.life')"
+        />
       </div>
 
       <div
-        class="col-start-7 col-span-2 row-start-7 row-span-2 from-sky-500/5 to-gray-50 bg-gradient-to-br rounded-3xl p-8 flex justify-center items-center flex-col text-center"
+        class="col-span-1 md:col-span-2 row-span-2 lg:col-start-7 lg:col-span-2 lg:row-start-7 lg:row-span-2 from-sky-500/5 to-gray-50 bg-gradient-to-br rounded-3xl p-8 flex justify-center items-center flex-col text-center"
       >
         <div class="mb-3">
           <svg
@@ -222,9 +248,12 @@
           </svg>
         </div>
 
-        <p class="text-lg">
-          Faculty from <span class="font-bold">6 countries</span>
-        </p>
+        <h3
+          aria-level="3"
+          class="text-lg"
+          role="heading"
+          v-html="$t('home.bento.diversity')"
+        />
       </div>
     </div>
   </div>

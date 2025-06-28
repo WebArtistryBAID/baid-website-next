@@ -11,7 +11,7 @@
         class="absolute inset-0 pointer-events-none from-transparent to-gray-950 bg-gradient-to-b"
       />
     </transition>
-    <div class="absolute bottom-0 text-white w-screen flex flex-col justify-center items-center">
+    <div class="absolute bottom-0 text-white w-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl flex flex-col justify-center items-center">
         <transition name="slide-up-fade">
           <h1
@@ -19,7 +19,7 @@
             id="hero-heading"
             class="mb-3 text-white text-center font-bold font-serif text-5xl md:text-7xl"
           >
-            Better Starts Here
+            {{ $t('home.title') }}
           </h1>
         </transition>
         <transition name="slide-up-fade-2">
@@ -27,9 +27,7 @@
             v-show="animationStart"
             class="text-lg md:text-xl text-center !mb-8"
           >
-            "Better me, better world." At Beijing Academy, our talented students and dedicated faculty embark on a
-            journey of discovery,
-            growth, and excellence, transforming the world for the better every step of the way.
+            {{ $t('home.subtitle') }}
           </p>
         </transition>
         <transition name="slide-up-fade-2">
@@ -40,7 +38,7 @@
             <ReadMore
               color="white"
               icon-color="#fb2c36"
-              text="Learn more about how our students are making a difference"
+              text="home.projects"
               to="/projects"
             />
           </div>

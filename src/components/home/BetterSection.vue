@@ -1,19 +1,19 @@
 <template>
   <section
     :class="[
-      'w-screen bg-gray-950 text-white slide-up-fade-enter-active',
+      'w-full bg-gray-950 text-white slide-up-fade-enter-active',
     ]"
   >
     <div
-      class="mx-auto"
+      class="mx-auto px-4 sm:px-6 lg:px-8"
       style="max-width: 77rem"
     >
-      <div class="grid grid-cols-2 grid-rows-3 mb-8 relative">
+      <div class="grid grid-cols-1 md:grid-cols-2 mb-8 relative gap-8">
         <div
-          class="absolute top-0 bottom-0 pointer-events-none bg-white left-1/2"
+          class="absolute top-0 bottom-0 pointer-events-none bg-white left-1/2 hidden md:block"
           style="width: 1px; height: 80%"
         />
-        <div class="px-8 py-16 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from">
+        <div class="hidden md:block px-8 py-16 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from">
           <img
             :src="bg4"
             alt="Temporary"
@@ -56,7 +56,7 @@
             to="/projects/test"
           />
         </div>
-        <div class="px-8 py-16 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from">
+        <div class="hidden md:block px-8 py-16 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from">
           <img
             :src="bg4"
             alt="Temporary"
@@ -64,7 +64,7 @@
           >
         </div>
 
-        <div class="px-8 py-16 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from">
+        <div class="hidden md:block px-8 py-16 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from">
           <img
             :src="bg4"
             alt="Temporary"
@@ -90,14 +90,15 @@
         </div>
 
         <div
-          class="col-span-2 flex flex-col items-center justify-center text-center p-32 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from"
+          class="col-span-1 md:col-span-2 flex flex-col items-center justify-center text-center px-8 py-32 sm:px-16 md:px-32 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from"
         >
           <p class="text-lg uppercase tracking-wider text-gray-400 !mb-3">
-            Every step, every change
+            {{ $t('home.startTopText') }}
           </p>
-          <h2 class="text-4xl md:text-5xl">
-            It all starts at <span class="text-amber-300">BAID</span>.
-          </h2>
+          <h2
+            class="text-4xl md:text-5xl"
+            v-html="$t('home.startMainText')"
+          />
         </div>
       </div>
     </div>
@@ -120,8 +121,10 @@ onMounted(() => {
             observer.unobserve(entry.target)
           }
         })
+        {
+          0.7
+        }
       },
-      { threshold: 0.7 }
   )
   document.querySelectorAll<HTMLElement>('.animate-on-scroll').forEach((el) => {
     observer.observe(el)
