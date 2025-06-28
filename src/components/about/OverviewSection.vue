@@ -10,7 +10,7 @@
       {{ pageData.overview_title }}
     </h2>
     <div
-      class="w-full grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !font-serif !text-2xl md:!text-xl lg:!text-2xl"
+      class="w-full grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !text-2xl md:!text-xl lg:!text-2xl"
       aria-label="Overview items"
       role="list"
     >

@@ -14,7 +14,7 @@
       </div>
       <div class="w-full md:w-2/3">
         <div
-          class="!font-serif text-2xl md:text-3xl lg:text-4xl"
+          class="text-2xl md:text-3xl lg:text-4xl"
           v-html="pageData.top_text"
         />
       </div>

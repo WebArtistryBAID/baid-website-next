@@ -17,7 +17,7 @@
         v-for="(item, index) in news"
         :key="item.id"
         :class="{ 'md:flex-row-reverse': index % 2 }"
-        :to="`/${route.params.lang}/news/${item.id}`"
+        :to="`/news/${item.id}`"
         class="w-full flex flex-col md:flex-row items-center my-10"
         role="listitem"
       >
@@ -42,7 +42,7 @@
           >{{ item.date }}
           </time>
 
-          <p class="opacity-80 text-xl font-serif line-clamp-3">
+          <p class="opacity-80 text-xl line-clamp-3">
             {{ route.params.lang === 'zh-CN' ? item.excerptCN : item.excerpt }}
           </p>
         </div>

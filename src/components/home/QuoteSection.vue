@@ -12,7 +12,7 @@
     </h2>
     <div class="w-full md:w-1/2">
       <p
-        class="tracking-wide !text-3xl !font-serif !mb-3"
+        class="tracking-wide !text-3xl !mb-3"
         aria-label="Principal’s quote"
         role="region"
         tabindex="0"

@@ -17,7 +17,7 @@
           <h1
             v-show="animationStart"
             id="hero-heading"
-            class="font-bold mb-3 text-white text-center !font-sans text-5xl md:leading-[1.1]"
+            class="mb-3 text-white text-center font-bold font-serif text-5xl md:text-7xl"
           >
             Better Starts Here
           </h1>

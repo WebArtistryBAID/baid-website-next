@@ -15,7 +15,7 @@
       >
         {{ pageData.contact_title }}
       </h2>
-      <p class="text-2xl font-serif !mb-3">
+      <p class="text-2xl !mb-3">
         {{ pageData.contact_description }}
       </p>
       <div class="rounded-3xl p-4 md:p-5 bg-white max-w-md w-full">

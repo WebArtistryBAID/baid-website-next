@@ -79,7 +79,7 @@
             {{ pageData.specialties[current].name }}
           </h2>
           <p
-            class="text-xl font-serif"
+            class="text-xl"
             v-html="pageData.specialties[current].description"
           />
         </div>

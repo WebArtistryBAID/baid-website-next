@@ -32,7 +32,7 @@
             class="transition-all duration-300 md:h-80 justify-center flex flex-col"
           >
             <p
-              class="!font-serif text-3xl mb-3"
+              class="text-3xl mb-3"
               v-html="pageData.alumni[current].content"
             />
             <p class="text-right">

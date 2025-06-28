@@ -1,7 +1,7 @@
 <template>
   <div class="section">
     <div
-      class="font-serif text-3xl md:text-4xl"
+      class="text-3xl md:text-4xl"
       v-html="pageData.application_status_text"
     />
   </div>

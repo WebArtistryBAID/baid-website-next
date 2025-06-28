@@ -12,7 +12,7 @@
     @blur="$emit('deactivate')"
     @focus="$emit('activate')"
   >
-    <div class="w-full h-full bg-red-900/20 transition-all duration-500 relative">
+    <div class="w-full h-full bg-red-900/50 transition-all duration-500 relative">
       <pre
         :class="{ 'opacity-0': !delay, 'opacity-100': delay }"
         class="leading-normal text-right !font-sans !text-3xl"

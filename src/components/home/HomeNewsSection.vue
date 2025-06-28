@@ -9,7 +9,7 @@
     >
       <h2
         id="news-heading"
-        class="text-4xl lg:text-5xl xl:text-7xl font-bold !font-sans mr-auto xl:-mb-2"
+        class="text-4xl lg:text-5xl xl:text-7xl font-serif mr-auto xl:-mb-2"
       >
         {{ $t('home.news') }}
       </h2>
@@ -39,38 +39,49 @@
     aria-labelledby="news-heading"
     class="section !mb-24"
   >
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
-      aria-label="Latest news"
-      role="list"
-    >
-      <HomeNews
-        v-if="props.newsList.length >= 1"
-        role="listitem"
-        :light="true"
-        :news="props.newsList[0]"
-        bg="var(--standard-blue)"
-      />
-      <HomeNews
-        v-if="props.newsList.length >= 2"
-        role="listitem"
-        :news="props.newsList[1]"
-        bg="#eee"
-      />
-      <HomeNews
-        v-if="props.newsList.length >= 3"
-        role="listitem"
-        :light="true"
-        :news="props.newsList[2]"
-        bg="var(--standard-red)"
-      />
+    <div class="w-full flex gap-8">
+      <router-link
+        :to="`news/${newsList[0].id}`"
+        class="w-2/3 group block"
+      >
+        <div class="w-full h-96 overflow-hidden rounded-3xl mb-3">
+          <img
+            :alt="`Cover image for ${newsList[0].title}`"
+            :src="newsList[0].cover"
+            class="object-cover w-full h-full rounded-t-3xl transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+          >
+        </div>
+        <p class="text-5xl font-serif fancy-link">
+          {{ newsList[0].title }}
+        </p>
+      </router-link>
+      <div class="w-1/3">
+        <div
+          v-for="news in newsList.slice(1, 4)"
+          :key="news.id"
+          class="pb-3 border-b border-black"
+        >
+          <p
+            aria-hidden="true"
+            class="uppercase text-gray-400 !mb-2 text-sm"
+          >
+            {{ news.keyword ?? 'In Other News' }}
+          </p>
+          <router-link
+            :to="`news/${news.id}`"
+            class="block group"
+          >
+            <p class="text-xl font-bold fancy-link">
+              {{ news.title }}
+            </p>
+          </router-link>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-import HomeNews from './HomeNewsCard.vue'
-
 const props = defineProps([ 'newsList' ])
 </script>
 

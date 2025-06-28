@@ -92,10 +92,10 @@
         <div
           class="col-span-2 flex flex-col items-center justify-center text-center p-32 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from"
         >
-          <p class="text-lg uppercase tracking-wider text-gray-400 mb-2">
+          <p class="text-lg uppercase tracking-wider text-gray-400 !mb-3">
             Every step, every change
           </p>
-          <h2 class="text-3xl sm:text-4xl font-bold text-white">
+          <h2 class="text-4xl md:text-5xl">
             It all starts at <span class="text-amber-300">BAID</span>.
           </h2>
         </div>
@@ -121,7 +121,7 @@ onMounted(() => {
           }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.7 }
   )
   document.querySelectorAll<HTMLElement>('.animate-on-scroll').forEach((el) => {
     observer.observe(el)

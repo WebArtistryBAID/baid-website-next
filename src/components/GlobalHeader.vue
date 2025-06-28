@@ -8,18 +8,18 @@
   <header
     role="banner"
     :class="[
-      'fixed top-0 left-0 w-screen px-4 sm:px-8 gap-3 flex z-50 transform transition-transform duration-300',
+      'fixed top-0 left-0 w-screen px-4 sm:px-8 gap-3 flex z-50 transform transition-all duration-300',
       headerVisible ? 'translate-y-0' : '-translate-y-full',
       backgroundClass
     ]"
   >
-    <div class="mr-auto py-2">
+    <div class="mr-auto py-2 transition-colors duration-300">
       <SchoolLogo :color="isTransparent ? 'white' : 'black'" />
     </div>
 
     <nav
       :class="{ 'text-white': isTransparent, 'text-black': !isTransparent }"
-      class="hidden lg:flex"
+      class="hidden lg:flex transition-colors duration-300"
       aria-label="Primary navigation"
     >
       <RouterLinks />
@@ -48,8 +48,7 @@
         <svg
           :stroke="isTransparent ? '#fff' : '#000'"
           aria-hidden="true"
-          class="h-6 w-6"
-          fill="none"
+          class="h-6 w-6 transition-colors duration-300"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -94,7 +93,7 @@
         id="mobile-menu"
         aria-label="Mobile menu"
         aria-modal="true"
-        class="fixed inset-0 bg-[var(--standard-blue)] h-screen overflow-y-auto z-50"
+        class="fixed inset-0 bg-[var(--standard-red)] h-screen overflow-y-auto z-50"
         role="dialog"
       >
         <button
@@ -105,7 +104,6 @@
         >
           <svg
             aria-hidden="true"
-            fill="none"
             height="24"
             stroke="currentColor"
             stroke-linecap="round"

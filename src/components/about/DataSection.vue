@@ -28,7 +28,7 @@
           <div>
             <p
               aria-hidden="true"
-              class="text-5xl md:text-7xl font-serif text-red-900"
+              class="text-5xl md:text-7xl text-red-900"
             >
               {{ stat.content }}
             </p>

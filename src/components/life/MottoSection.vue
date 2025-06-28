@@ -6,7 +6,7 @@
   >
     <div class="w-full">
       <p
-        class="tracking-wide text-3xl md:text-5xl !font-serif !mb-3"
+        class="tracking-wide text-3xl md:text-5xl !mb-3"
         v-html="pageData.quote"
       />
     </div>

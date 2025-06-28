@@ -1,38 +1,6 @@
 @import 'tailwindcss';
 
 @font-face {
-    font-family: "EB Garamond";
-    src: url("../fonts/EBGaramond-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0100-017F;
-}
-
-@font-face {
-    font-family: "EB Garamond";
-    src: url("../fonts/EBGaramond-Italic.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic;
-    unicode-range: U+0000-00FF, U+0100-017F;
-}
-
-@font-face {
-    font-family: "EB Garamond";
-    src: url("../fonts/EBGaramond-Bold.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0100-017F;
-}
-
-@font-face {
-    font-family: "EB Garamond";
-    src: url("../fonts/EBGaramond-BoldItalic.woff2") format("woff2");
-    font-weight: 700;
-    font-style: italic;
-    unicode-range: U+0000-00FF, U+0100-017F;
-}
-
-@font-face {
     font-family: "Lato";
     src: url("../fonts/Lato-Regular.woff2") format("woff2");
     font-weight: 400;
@@ -65,25 +33,41 @@
 }
 
 @font-face {
-    font-family: "Lato";
-    src: url("../fonts/Lato-Thin.woff2") format("woff2");
-    font-weight: 100;
+    font-family: "Gandhi Serif";
+    src: url("../fonts/GandhiSerif-Regular.otf") format("opentype");
+    font-weight: 400;
     font-style: normal;
     unicode-range: U+0000-00FF, U+0100-017F;
 }
 
 @font-face {
-    font-family: "Lato";
-    src: url("../fonts/Lato-ThinItalic.woff2") format("woff2");
-    font-weight: 100;
+    font-family: "Gandhi Serif";
+    src: url("../fonts/GandhiSerif-Italic.otf") format("opentype");
+    font-weight: 400;
     font-style: italic;
     unicode-range: U+0000-00FF, U+0100-017F;
 }
 
+@font-face {
+    font-family: "Gandhi Serif";
+    src: url("../fonts/GandhiSerif-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0100-017F;
+}
+
+@font-face {
+    font-family: "Gandhi Serif";
+    src: url("../fonts/GandhiSerif-BoldItalic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+    unicode-range: U+0000-00FF, U+0100-017F;
+}
 
 @theme {
     --font-sans: Lato, "Source Hans Sans", "PingFang SC", "SimHei", "黑体", "Microsoft YaHei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: "EB Garamond", "Source Hans Serif", "STSong", "FangSong", "华文宋体", "仿宋", Georgia, Cambria, "Times New Roman", Times, serif;
+    /*--font-serif: "Gandhi Serif", "Source Hans Serif", "STSong", "FangSong", "华文宋体", "仿宋", Georgia, Cambria, "Times New Roman", Times, serif;*/
+    --font-serif: Lato, "Source Hans Sans", "PingFang SC", "SimHei", "黑体", "Microsoft YaHei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 button {
@@ -114,12 +98,13 @@ pre {
 
 .fancy-link {
     position: relative;
+    @apply inline-block;
 }
 
 .fancy-link::before {
     position: absolute;
     content: '';
-    bottom: 0;
+    bottom: 0.2em;
     width: 0;
     height: 2px;
     background-color: black;
@@ -128,6 +113,14 @@ pre {
 
 .fancy-link:hover::before {
     width: 100%;
+}
+
+.group:hover .fancy-link::before {
+    width: 100%;
+}
+
+.group-hover-scale {
+    @apply transform transition-transform duration-300 ease-in-out group-hover:scale-105;
 }
 
 .link-white::before {

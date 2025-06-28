@@ -18,9 +18,9 @@
     >
       <HomeNewsSection :news-list="news" />
     </section>
-    <section id="picturesSection">
+    <!--<section id="picturesSection">
       <PicturesSection />
-    </section>
+    </section>-->
     <section id="educationPhilosophy">
       <PhiloSection />
     </section>
