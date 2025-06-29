@@ -1,8 +1,10 @@
 <template>
   <div>
-    <section id="firstSection">
-      <HeroSection />
-    </section>
+    <div id="main-content">
+      <section id="firstSection">
+        <HeroSection />
+      </section>
+    </div>
     <section id="betterSection">
       <BetterSection />
     </section>

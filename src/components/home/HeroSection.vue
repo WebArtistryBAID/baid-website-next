@@ -12,7 +12,7 @@
       />
     </transition>
     <div class="absolute bottom-0 text-white w-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl flex flex-col justify-center items-center">
+      <div class="w-full md:max-w-2xl flex flex-col justify-center items-center">
         <transition name="slide-up-fade">
           <h1
             v-show="animationStart"

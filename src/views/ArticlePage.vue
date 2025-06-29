@@ -1,5 +1,6 @@
 <template>
   <main
+    id="main-content"
     class="mt-24"
     role="main"
   >

@@ -46,13 +46,13 @@
       >
         <div class="w-full h-64 md:h-96 overflow-hidden rounded-3xl mb-3">
           <img
-            :alt="`Cover image for ${newsList[0].title}`"
+            :alt="`Cover image for ${route.params.lang == 'zh-CN' ? newsList[0].titleCN : newsList[0].title}`"
             :src="newsList[0].cover"
             class="object-cover w-full h-full rounded-t-3xl transform transition-transform duration-300 ease-in-out group-hover:scale-105"
           >
         </div>
         <p class="text-3xl font-serif fancy-link">
-          {{ newsList[0].title }}
+          {{ route.params.lang === 'zh-CN' ? newsList[0].titleCN : newsList[0].title }}
         </p>
       </router-link>
       <div class="w-full md:w-1/3">
@@ -65,14 +65,14 @@
             aria-hidden="true"
             class="uppercase text-gray-400 !mb-2 text-sm"
           >
-            {{ news.keyword ?? $t('home.newsOther') }}
+            {{ (route.params.lang === 'zh-CN' ? news.keywordCN : news.keyword) ?? $t('home.newsOther') }}
           </p>
           <router-link
             :to="`news/${news.id}`"
             class="block group"
           >
             <p class="text-xl font-bold fancy-link">
-              {{ news.title }}
+              {{ route.params.lang === 'zh-CN' ? news.titleCN : news.title }}
             </p>
           </router-link>
         </div>
@@ -82,7 +82,15 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps([ 'newsList' ])
+import { useRoute } from 'vue-router'
+
+const props = defineProps({
+  newsList: {
+    type: Array,
+    required: true
+  }
+})
+const route = useRoute()
 </script>
 
 <style scoped>

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <HeroSection />
+    <div id="main-content">
+      <HeroSection />
+    </div>
     <SecondSection />
     <section id="highlights">
       <HighlightsSection />

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <HeadSection />
+    <div id="main-content">
+      <HeadSection />
+    </div>
     <HeroSection />
     <SecondSection />
     <DataSection />

@@ -1,5 +1,6 @@
 <template>
   <section
+    id="main-content"
     aria-labelledby="news-heading"
     class="section"
   >
