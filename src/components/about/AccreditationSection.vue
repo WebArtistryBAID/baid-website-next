@@ -12,7 +12,6 @@
       <SwiperWrapper
         :autoplay="true"
         :slides="1"
-        effect="coverflow"
         arrow-color="white"
         aria-live="polite"
       >

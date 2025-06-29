@@ -31,7 +31,10 @@
     </div>
 
     <!-- The quotes -->
-    <div class="absolute left-4 top-0">
+    <div
+      aria-hidden="true"
+      class="absolute left-4 top-0"
+    >
       <svg
         fill="none"
         height="53"
@@ -83,7 +86,10 @@
         </g>
       </svg>
     </div>
-    <div class="absolute right-4 bottom-0">
+    <div
+      aria-hidden="true"
+      class="absolute right-4 bottom-0"
+    >
       <svg
         fill="none"
         height="53"
