@@ -105,7 +105,7 @@ pre {
     transition: background-size 300ms;
 }
 
-.fancy-link:hover, .fancy-link:focus {
+.fancy-link:hover, .fancy-link:focus, .group:hover .fancy-link {
     background-size: 0 0.1em, 100% 0.1em;
 }
 
