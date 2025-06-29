@@ -1,7 +1,7 @@
 <template>
   <section
     aria-labelledby="accreditation-heading"
-    class="section !py-12 md:!py-16 gap-8 md:gap-16 text-white flex flex-col md:flex-row items-center"
+    class="section !py-12 md:!py-16 gap-8 md:gap-16 text-white flex flex-col md:flex-row items-center !my-24"
   >
     <div
       aria-label="Accreditations carousel"
@@ -12,7 +12,6 @@
       <SwiperWrapper
         :autoplay="true"
         :slides="1"
-        arrow-color="white"
         aria-live="polite"
       >
         <swiper-slide

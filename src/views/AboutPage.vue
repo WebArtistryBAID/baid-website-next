@@ -9,6 +9,9 @@
     <section id="overview">
       <OverviewSection />
     </section>
+    <section id="bento">
+      <BentoSection />
+    </section>
     <section id="data">
       <DataSection />
     </section>
@@ -21,9 +24,8 @@
     <section id="alumni">
       <AlumniSection />
     </section>
-    <section id="motto">
-      <MottoSection />
-    </section>
+
+    I think there should be a "leadership" section here...
   </div>
 </template>
 
@@ -41,7 +43,7 @@ import { useI18n } from 'vue-i18n'
 import { computed, provide } from 'vue'
 import MissionSection from '@/components/about/MissionSection.vue'
 import HeroSection from '@/components/about/HeroSection.vue'
-import MottoSection from '@/components/about/MottoSection.vue'
+import BentoSection from '@/components/home/BentoSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 

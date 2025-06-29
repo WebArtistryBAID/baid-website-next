@@ -9,10 +9,10 @@
   >
     <swiper
       ref="swiperEl"
-      :autoplay="{
+      :autoplay="autoplay ? {
         delay: 2500,
         disableOnInteraction: false
-      }"
+      } : undefined"
       :pagination="{ clickable: true }"
       :loop="true"
       :modules="modules"
@@ -37,10 +37,10 @@
     <!-- Swiper instance -->
     <swiper
       ref="swiperEl"
-      :autoplay="{
-        delay: 2500,
+      :autoplay="autoplay ? {
+        delay: props.autoplayDelay,
         disableOnInteraction: false
-      }"
+      } : undefined"
       :pagination="{ clickable: true }"
       :loop="true"
       :modules="modules"
@@ -74,6 +74,10 @@ const props = defineProps({
   autoplay: {
     type: Boolean,
     default: false
+  },
+  autoplayDelay: {
+    type: Number,
+    default: 2500
   }
 })
 </script>

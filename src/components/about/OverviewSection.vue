@@ -1,7 +1,7 @@
 <template>
   <section
     aria-labelledby="overview-heading"
-    class="section !py-16"
+    class="section !py-16 !mb-24"
   >
     <h2
       id="overview-heading"

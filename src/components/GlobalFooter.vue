@@ -192,7 +192,6 @@
           {{ $t('footer.chn') }}
         </a>
       </p>
-      <!--<p><a href="https://beian.miit.gov.cn">京ICP备12345678号</a></p>-->
     </div>
   </footer>
 </template>

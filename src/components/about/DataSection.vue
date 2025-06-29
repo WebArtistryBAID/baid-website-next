@@ -1,7 +1,7 @@
 <template>
   <section
     aria-labelledby="statistics-heading"
-    class="section !py-16"
+    class="section !py-16 !my-24"
   >
     <div class="flex flex-col md:flex-row">
       <div class="w-full md:w-1/3 mb-8 md:mb-0">
