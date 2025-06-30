@@ -14,11 +14,14 @@
     "article": "新闻"
   },
   "home": {
-    "title": "更好从这里开始",
-    "subtitle": "\"世界因我更美好。\" 在北京中学，我们优秀的学生和敬业的教师踏上发现、探索和成长的旅程，在每一步中改变世界，让世界因我们而更加美好。",
-    "projects": "了解我们的学生如何改变世界",
-    "startTopText": "每一步，每一次改变",
-    "startMainText": "我们正让世界因我们而<span class=\"text-amber-300\">更美好</span>。",
+    "inFocus": "焦点新闻",
+    "better": {
+      "title": "更好从这里开始",
+      "subtitle": "\"世界因我更美好。\" 在北京中学，我们优秀的学生和敬业的教师踏上发现、探索和成长的旅程，在每一步中改变世界，让世界因我们而更加美好。",
+      "projects": "了解我们的学生如何改变世界",
+      "startTopText": "每一步，每一次改变",
+      "startMainText": "我们正让世界因我们而<span class=\"text-amber-300\">更美好</span>。"
+    },
     "introTitle": "我们是 BAID",
     "introText": "在北京中学国际部 (BAID)，你可以尽情探索热爱，收获深厚情谊，并在日常点滴中不断发现通往自我潜能的新路径。\n",
     "news": "BAID 故事",

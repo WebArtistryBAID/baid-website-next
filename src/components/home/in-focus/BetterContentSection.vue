@@ -10,8 +10,8 @@
     >
       <div class="grid grid-cols-1 md:grid-cols-2 mb-8 relative gap-8">
         <div
-          class="absolute top-0 bottom-0 pointer-events-none bg-white left-1/2 hidden md:block"
-          style="width: 1px; height: 80%"
+          class="absolute top-0 bottom-0 pointer-events-none from-white to-transparent bg-gradient-to-b left-1/2 hidden md:block"
+          style="width: 1px; height: 65%"
         />
         <div class="hidden md:block px-8 py-16 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from">
           <img
@@ -89,15 +89,73 @@
           />
         </div>
 
+        <div class="col-span-1 md:col-span-2 p-8 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group">
+              <p class="font-bold text-2xl !mb-3">
+                Agriculture
+              </p>
+              <div class="rounded-3xl overflow-hidden mb-5 w-full h-60">
+                <img
+                  :src="ag"
+                  alt="Temporary image"
+                  class="rounded-3xl group-hover-scale w-full h-full object-cover"
+                >
+              </div>
+              <p>
+                This year, Audrey and her team are developing a new, more effective pesticide.
+                There needs to be a longer description of this project. But I hardly know
+                what you guys are doing. Can you please write something?
+              </p>
+            </div>
+
+            <div class="group">
+              <p class="font-bold text-2xl !mb-3">
+                Gender Identity
+              </p>
+              <div class="rounded-3xl overflow-hidden mb-5 w-full h-60">
+                <img
+                  :src="pads"
+                  alt="Temporary image"
+                  class="rounded-3xl group-hover-scale w-full h-full object-cover"
+                >
+              </div>
+              <p>
+                This year, Audrey and her team are developing a new, more effective pesticide.
+                There needs to be a longer description of this project. But I hardly know
+                what you guys are doing. Can you please write something?
+              </p>
+            </div>
+
+            <div class="group">
+              <p class="font-bold text-2xl !mb-3">
+                Music
+              </p>
+              <div class="rounded-3xl overflow-hidden mb-5 w-full h-60">
+                <img
+                  :src="delivery"
+                  alt="Temporary image"
+                  class="rounded-3xl group-hover-scale w-full h-full object-cover"
+                >
+              </div>
+              <p>
+                This year, Audrey and her team are developing a new, more effective pesticide.
+                There needs to be a longer description of this project. But I hardly know
+                what you guys are doing. Can you please write something?
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div
-          class="col-span-1 md:col-span-2 flex flex-col items-center justify-center text-center px-8 py-32 sm:px-16 md:px-32 animate-on-scroll slide-up-fade-enter-active slide-up-fade-enter-from"
+          class="col-span-1 md:col-span-2 flex flex-col items-center justify-center text-center px-8 py-32 sm:px-16 md:px-32"
         >
           <p class="text-lg uppercase tracking-wider text-gray-400 !mb-3">
-            {{ $t('home.startTopText') }}
+            {{ $t('home.better.startTopText') }}
           </p>
           <h2
             class="text-4xl md:text-5xl"
-            v-html="$t('home.startMainText')"
+            v-html="$t('home.better.startMainText')"
           />
         </div>
       </div>
@@ -107,6 +165,9 @@
 
 <script lang="ts" setup>
 import bg4 from '@/assets/images/home/hero/home-bg-4.webp'
+import ag from '@/assets/images/home/better/ag.webp'
+import delivery from '@/assets/images/home/better/delivery.webp'
+import pads from '@/assets/images/home/better/pads.webp'
 import ReadMore from '@/components/ReadMore.vue'
 import { onBeforeUnmount, onMounted } from 'vue'
 

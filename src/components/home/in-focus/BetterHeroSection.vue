@@ -14,12 +14,20 @@
     <div class="absolute bottom-0 text-white w-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
       <div class="w-full md:max-w-2xl flex flex-col justify-center items-center">
         <transition name="slide-up-fade">
+          <p
+            v-show="animationStart"
+            class="text-lg uppercase tracking-wider text-gray-300 !mb-3"
+          >
+            {{ $t('home.inFocus') }}
+          </p>
+        </transition>
+        <transition name="slide-up-fade">
           <h1
             v-show="animationStart"
             id="hero-heading"
             class="mb-3 text-white text-center font-bold font-serif text-5xl md:text-7xl"
           >
-            {{ $t('home.title') }}
+            {{ $t('home.better.title') }}
           </h1>
         </transition>
         <transition name="slide-up-fade-2">
@@ -27,7 +35,7 @@
             v-show="animationStart"
             class="text-lg md:text-xl text-center !mb-8"
           >
-            {{ $t('home.subtitle') }}
+            {{ $t('home.better.subtitle') }}
           </p>
         </transition>
         <transition name="slide-up-fade-2">
@@ -38,7 +46,7 @@
             <ReadMore
               color="white"
               icon-color="#fb2c36"
-              text="home.projects"
+              text="home.better.projects"
               to="/projects"
             />
           </div>

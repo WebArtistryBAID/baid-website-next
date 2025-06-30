@@ -14,11 +14,14 @@
     "article": "Article"
   },
   "home": {
-    "title": "Better Starts Here",
-    "subtitle": "\"Better me, better world.\" At Beijing Academy, our talented students and dedicated faculty embark on a journey of discovery, growth, and excellence, transforming the world for the better every step of the way.",
-    "projects": "Learn about how our students make a difference",
-    "startTopText": "Every step, every change",
-    "startMainText": "It all starts at <span class=\"text-amber-300\">BAID</span>.",
+    "inFocus": "In Focus",
+    "better": {
+      "title": "Better Starts Here",
+      "subtitle": "\"Better me, better world.\" At Beijing Academy, our talented students and dedicated faculty embark on a journey of discovery, growth, and excellence, transforming the world for the better every step of the way.",
+      "projects": "Learn about how our students make a difference",
+      "startTopText": "Every step, every change",
+      "startMainText": "It all starts at <span class=\"text-amber-300\">BAID</span>."
+    },
     "introTitle": "This is BAID",
     "introText": "At BAID, you are empowered to explore your passions, build meaningful connections, and uncover new pathways to your full potential — every single day.",
     "news": "BAID Stories",

@@ -2,11 +2,11 @@
   <div>
     <div id="main-content">
       <section id="firstSection">
-        <HeroSection />
+        <BetterHeroSection />
       </section>
     </div>
     <section id="betterSection">
-      <BetterSection />
+      <BetterContentSection />
     </section>
     <section id="secondSection">
       <SecondSection />
@@ -43,7 +43,7 @@
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { computed, provide, ref, watchEffect } from 'vue'
-import HeroSection from '@/components/home/HeroSection.vue'
+import BetterHeroSection from '@/components/home/in-focus/BetterHeroSection.vue'
 import SecondSection from '@/components/home/SecondSection.vue'
 import BentoSection from '@/components/home/BentoSection.vue'
 import QuoteSection from '@/components/home/QuoteSection.vue'
@@ -52,7 +52,7 @@ import db from '@data/news/db.json'
 import dataZH from '@data/zh-CN/home.json'
 import dataEN from '@data/en-US/home.json'
 import HighlightsSection from '@/components/home/HighlightsSection.vue'
-import BetterSection from '@/components/home/BetterSection.vue'
+import BetterContentSection from '@/components/home/in-focus/BetterContentSection.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 
