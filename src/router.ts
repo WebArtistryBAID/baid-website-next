@@ -37,6 +37,14 @@ export const routes = [
         }
     },
     {
+        path: prefix + '/projects',
+        name: 'projects',
+        component: () => import('./views/ProjectsPage.vue'),
+        meta: {
+            headerAnimate: true
+        }
+    },
+    {
         path: prefix + '/admissions',
         name: 'admissions',
         component: () => import('./views/AdmissionsPage.vue'),

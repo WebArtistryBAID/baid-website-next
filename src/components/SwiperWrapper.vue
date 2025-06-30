@@ -10,7 +10,7 @@
     <swiper
       ref="swiperEl"
       :autoplay="autoplay ? {
-        delay: 2500,
+        delay: props.autoplayDelay,
         disableOnInteraction: false
       } : undefined"
       :pagination="{ clickable: true }"
