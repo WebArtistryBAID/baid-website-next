@@ -7,8 +7,9 @@
       aria-level="2"
       class="uppercase text-center tracking-widest mb-8 text-3xl"
       role="heading"
-      v-html="$t('about.alumniTitle')"
-    />
+    >
+      {{ $t('about.alumniTitle') }}
+    </h2>
 
     <SwiperWrapper
       :slides="1"

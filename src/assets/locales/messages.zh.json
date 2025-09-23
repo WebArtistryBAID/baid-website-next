@@ -43,10 +43,25 @@
     }
   },
   "about": {
-    "alumniTitle": "校友说"
+    "dataTitle": "从数字看 BAID",
+    "alumniTitle": "校友说",
+    "missionTitle": "我们的使命",
+    "missionText": "以立足北京、植根中国、面向世界的现代教育，培养全面发展的未来领袖。",
+    "overview": {
+      "title": "总览",
+      "text1": "北京中学成立于 2013 年 9 月，是经北京市政府批准，由朝阳区政府创办的一所十二年一贯制的公办学校，致力于办成一所具有北京风格、中国气质与世界胸怀的现代学校。",
+      "text2": "2020 年，北京中学中外合作办学项目 (北京中学国际部) 获北京市教委批准。我们是 AP 授权校、CIS 认证成员学校、ACT 考试中心与剑桥国际课程学校。北京中学国际部提供中国高中课程、AP 课程与特色课程融合的课程体系。",
+      "text3": "北京中学始终致力于学生的全面与自由成长。我们相信，在全体师生的努力下，“世界因我更美好”的校训将真正照进现实。"
+    },
+    "accreditationTitle": "认证",
+    "accreditationText": "北京中学国际部获美国 College Board 认证，成为 AP 课程学校；是中国首家获得 CIS 认证的公立中学；同时获授权开设 ACT-GAC 和剑桥课程，并被评为“Apple 杰出学校”。"
   },
   "academics": {
+    "topTitle": "不一样的学习方式",
+    "topText": "在 BAID，学习不止于课堂。无论是挑战高阶课程、深入科研实践，还是走进文化现场、行走于天地之间，处处皆课堂，时时可成长。",
+    "coursesTitle": "课程",
     "restrictions": "课程有先修课程和年级限制；详情请参阅学生指南。",
+    "curriculumTitle": "课程体系",
     "curriculum": {
       "national": "语文",
       "english": "核心英语",
@@ -62,13 +77,25 @@
       "leadership": "领导力系列",
       "innovation": "创造力系列",
       "art2": "优势力系列"
-    }
+    },
+    "dataTitle": "学术卓越",
+    "highlightsTitle": "不一样的学习方式",
+    "specialties": "特色课程"
   },
   "admissions": {
+    "topTitle": "招生与申请",
+    "topText": "书写你的故事，点亮你的热爱 — 加入 BAID，是你人生新旅程的起点。在这里，你的真实将被看见，你的独特将被珍惜。",
     "download": "下载",
     "phone": "电话:",
     "email": "邮箱:",
     "comment": "本页信息只适用于通过中考加入 BAID 的学生。"
+  },
+  "life": {
+    "topTitle": "享受人生的青葱岁月",
+    "topText": "在 BAID，学生生活不仅关乎学术，更是一段探索兴趣、收获友谊、珍藏青春的精彩旅程。",
+    "activities": "校园活动",
+    "clubs": "学生社团",
+    "quote": "在 BAID，生活是一段我们共同走过的旅程 — 每个人都在成长与探索，每一步都有彼此的陪伴与支持。"
   },
   "footer": {
     "contact": "(手机/微信)",

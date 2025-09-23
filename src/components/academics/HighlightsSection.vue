@@ -8,7 +8,7 @@
       id="highlights-heading"
       class="text-4xl lg:text-5xl xl:text-7xl font-bold px-5 md:px-0 mb-1"
     >
-      {{ pageData.specialties_title }}
+      {{ $t('academics.highlightsTitle') }}
     </h2>
   </section>
 

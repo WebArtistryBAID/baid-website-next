@@ -8,7 +8,7 @@
       id="specialties-heading"
       class="sr-only"
     >
-      Specialties
+      {{ $t('academics.specialties') }}
     </h2>
     <!-- Mobile Layout -->
     <div class="md:hidden">

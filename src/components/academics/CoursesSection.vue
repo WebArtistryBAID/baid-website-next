@@ -7,7 +7,7 @@
       id="courses-heading"
       class="text-4xl font-bold md:text-right mb-5"
     >
-      {{ pageData.courses_title }}
+      {{ $t('academics.coursesTitle') }}
     </h2>
 
     <div

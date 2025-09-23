@@ -8,7 +8,7 @@
         id="activities-heading"
         class="text-4xl font-bold mb-5"
       >
-        {{ pageData.activities_title }}
+        {{ $t('life.activities') }}
       </h2>
     </div>
     <div

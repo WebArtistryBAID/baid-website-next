@@ -5,10 +5,9 @@
     aria-label="Motto section"
   >
     <div class="w-full">
-      <p
-        class="tracking-wide text-3xl md:text-5xl !mb-3"
-        v-html="pageData.quote"
-      />
+      <p class="tracking-wide text-3xl md:text-5xl !mb-3">
+        {{ $t('life.quote') }}
+      </p>
     </div>
 
     <!-- The quotes -->

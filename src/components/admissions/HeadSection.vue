@@ -9,14 +9,13 @@
           id="head-section-heading"
           class="text-3xl md:text-4xl font-bold"
         >
-          {{ pageData.top_title }}
+          {{ $t('admissions.topTitle') }}
         </h2>
       </div>
       <div class="w-full md:w-2/3">
-        <div
-          class="text-2xl md:text-3xl lg:text-4xl"
-          v-html="pageData.top_text"
-        />
+        <p class="text-2xl md:text-3xl lg:text-4xl">
+          {{ $t('admissions.topText') }}
+        </p>
       </div>
     </div>
   </section>

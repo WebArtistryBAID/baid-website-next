@@ -43,10 +43,25 @@
     }
   },
   "about": {
-    "alumniTitle": "Alumni Words"
+    "dataTitle": "BAID in Numbers",
+    "alumniTitle": "Alumni Words",
+    "missionTitle": "Our Mission",
+    "missionText": "Cultivate well-rounded, forward-thinking leaders of the future with a modern education rooted in Chinese values and global perspectives.",
+    "overview": {
+      "title": "Overview",
+      "text1": "Beijing Academy was established in September 2013. We are a 12-year public school approved by the Beijing Municipal Government and funded by the Chaoyang District Government. Our school is built to become a modern community with a unique Beijing style, a distinctive Chinese character and a global perspective.",
+      "text2": "In 2020, our international department was approved by the Beijing Municipal Education Commission as a sino-foreign cooperative high school education program. We are an authorized AP school, a CIS member school, an ACT testing center, and a Cambridge International Curriculum school.",
+      "text3": "Beijing Academy promotes students' comprehensive personal growth. We believe that through the efforts of both our students and teachers, we can realize our motto: \"Better me, better world,\" wand that all of us will make the world a better place."
+    },
+    "accreditationTitle": "Accreditation",
+    "accreditationText": "BAID is authorized as an AP curriculum school by the College Board. We are the first public high school in China to receive CIS accreditation, and an authorized global ACT-GAC official teaching and testing center. We are authorized with the Cambridge international curriculum, and has been designated as an \"Apple Distinguished School.\""
   },
   "academics": {
+    "topTitle": "A better way to learn",
+    "topText": "Taking advanced courses, diving into research, exploring Chinese culture, or even traveling across the nation and the world... At BAID, learning takes place where you could have never imagined.",
+    "coursesTitle": "Courses",
     "restrictions": "Courses subject to prerequisites and grade-level restrictions; refer to student guide for details.",
+    "curriculumTitle": "The BAID Curriculum",
     "curriculum": {
       "national": "Chinese Language Arts",
       "english": "Core English",
@@ -62,13 +77,25 @@
       "leadership": "Leadership Series",
       "innovation": "Innovation Series",
       "art2": "Arts Series"
-    }
+    },
+    "dataTitle": "Academic Excellence",
+    "highlightsTitle": "A better way to learn",
+    "specialties": "Specialties"
   },
   "admissions": {
+    "topTitle": "Applying to BAID",
+    "topText": "Writing your story, showing your passions, imagining your future — applying to BAID is the beginning of a journey where who you are truly matters.",
     "download": "Download",
     "phone": "Phone:",
     "email": "Email:",
     "comment": "This page is applicable only to students joining BAID through the 中考 (zhongkao)."
+  },
+  "life": {
+    "topTitle": "Live the best years of your life",
+    "topText": "At BAID, student life is about more than just academics. It's about exploring your passions, meeting new friends, and making the most of your precious high school years.",
+    "activities": "Activities",
+    "clubs": "Clubs",
+    "quote": "Life at BAID feels like a shared journey — everyone's growing, exploring, and supporting each other every step of the way."
   },
   "footer": {
     "contact": "(Phone/WeChat)",

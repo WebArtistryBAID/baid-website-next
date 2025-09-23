@@ -7,20 +7,31 @@
       id="overview-heading"
       class="text-4xl font-sans font-bold mb-5"
     >
-      {{ pageData.overview_title }}
+      {{ $t('about.overview.title') }}
     </h2>
     <div
       class="w-full grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !text-2xl md:!text-xl lg:!text-2xl"
       aria-label="Overview items"
       role="list"
     >
-      <div
-        v-for="ov in pageData.overview_items"
-        :key="ov.id"
+      <p
         role="listitem"
         tabindex="0"
-        v-html="ov.text"
-      />
+      >
+        {{ $t('about.overview.text1') }}
+      </p>
+      <p
+        role="listitem"
+        tabindex="0"
+      >
+        {{ $t('about.overview.text2') }}
+      </p>
+      <p
+        role="listitem"
+        tabindex="0"
+      >
+        {{ $t('about.overview.text3') }}
+      </p>
     </div>
   </section>
 </template>

@@ -7,12 +7,14 @@
       <h2
         id="intro-heading"
         class="text-3xl font-serif font-bold"
-        v-html="pageData.intro_title"
-      />
-      <div
+      >
+        {{ $t('life.topTitle') }}
+      </h2>
+      <p
         class="text-xl"
-        v-html="pageData.intro_text"
-      />
+      >
+        {{ $t('life.topText') }}
+      </p>
     </div>
   </section>
 </template>

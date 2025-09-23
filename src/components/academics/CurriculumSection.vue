@@ -8,7 +8,7 @@
       id="curriculum-heading"
       class="text-4xl font-bold !mb-8"
     >
-      {{ pageData.curriculum_title }}
+      {{ $t('academics.curriculumTitle') }}
     </h2>
 
     <div class="md:hidden">

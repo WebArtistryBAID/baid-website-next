@@ -40,12 +40,11 @@
         id="accreditation-heading"
         class="text-3xl md:text-4xl font-bold mb-2 md:mb-3"
       >
-        {{ pageData.accreditation_title }}
+        {{ $t('about.accreditationTitle') }}
       </h2>
-      <p
-        class="opacity-80 text-sm md:text-base"
-        v-html="pageData.accreditation_text"
-      />
+      <p class="opacity-80 text-sm md:text-base">
+        {{ $t('about.accreditationText') }}
+      </p>
     </div>
   </section>
 </template>

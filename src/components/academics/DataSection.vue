@@ -9,7 +9,7 @@
           id="statistics-heading"
           class="text-3xl md:text-4xl font-bold"
         >
-          {{ pageData.statistics_title }}
+          {{ $t('academics.dataTitle') }}
         </h2>
       </div>
       <div

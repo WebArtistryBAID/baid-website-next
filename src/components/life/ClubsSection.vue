@@ -8,7 +8,7 @@
         id="clubs-heading"
         class="mb-5 text-4xl font-bold"
       >
-        {{ pageData.clubs_title }}
+        {{ $t('life.clubs') }}
       </h2>
 
       <SwiperWrapper

@@ -9,14 +9,15 @@
           id="mission-heading"
           class="text-3xl md:text-4xl font-bold"
         >
-          {{ pageData.top_title }}
+          {{ $t('about.missionTitle') }}
         </h2>
       </div>
       <div class="w-full md:w-2/3">
-        <div
+        <p
           class="text-2xl md:text-3xl lg:text-4xl"
-          v-html="pageData.top_text"
-        />
+        >
+          {{ $t('about.missionText') }}
+        </p>
       </div>
     </div>
   </section>

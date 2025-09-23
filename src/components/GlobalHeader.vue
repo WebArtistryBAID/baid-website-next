@@ -160,9 +160,18 @@ const isTransparent = computed(() =>
 )
 
 const onScroll = () => {
-  scrollY.value = window.scrollY
-  headerVisible.value = scrollY.value < prevScrollY.value
-  prevScrollY.value = scrollY.value
+  const y = window.scrollY
+  scrollY.value = y
+
+  // Always show the header when at the very top
+  if (y <= 0) {
+    headerVisible.value = true
+  } else {
+    // Show when scrolling up, hide when scrolling down
+    headerVisible.value = y < prevScrollY.value
+  }
+
+  prevScrollY.value = y
 }
 
 onMounted(() => {
